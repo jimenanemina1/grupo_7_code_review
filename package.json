@@ -1,0 +1,23 @@
+{
+  "name": "grupo_7_code_review",
+  "version": "1.0.0",
+  "description": "Hola, somos Code Review; un equipo que se encargará de crear un e-commerce enfocado a la venta de café...",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimenanemina1/grupo_7_code_review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimenanemina1/grupo_7_code_review/issues"
+  },
+  "homepage": "https://github.com/jimenanemina1/grupo_7_code_review#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
