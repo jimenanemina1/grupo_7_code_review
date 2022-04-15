@@ -10,11 +10,12 @@ Hola, somos Code Review; un equipo que se encargará de crear un e-commerce enfo
 
 
 ## Referentes 🔍
-- 
--
--
--
--
+- https://www.drinktrade.com/
+- https://cowboy.com/
+- https://www.privios.com/index.html
+- https://thesusoutdoors.com/
+- https://www.nespresso.com/ar/es/
+- https://www.bigbox.com.ar/
 
 
 
