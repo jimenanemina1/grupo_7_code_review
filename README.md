@@ -1,6 +1,9 @@
 # Grupo 7 - Code Review 💻
 
-Hola, somos Code Review; un equipo que se encargará de crear un e-commerce enfocado a la venta de café...
+Hola, somos Code Review; un equipo que se encargará de crear un e-commerce llamado Barizta; enfocado a la venta de productos relacionados con el café.
+ 
+El mercado objetivo de Barizta se dividirá en dos grupos: Los adultos contemporáneos (de entre 25 a 40 años) que tienden a ser urbanos con ingresos relativamente altos, carrera profesional y un enfoque en el bienestar social y los adultos jóvenes (de entre 18 y 24 años) que en su mayoría son estudiantes universitarios son atraídos directamente a través de la introducción de la tecnología en el proceso del café. 
+
 
 ## Integrantes 👩🏻‍💻👨🏻‍💻
 - Victor Roca: Hola, soy Victor, antes me gustaban las integraciones de instalaciones móviles pero ahora me está gustando más programar. 😅
