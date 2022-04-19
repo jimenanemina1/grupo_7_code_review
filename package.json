@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jimenanemina1/grupo_7_code_review#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
   }
 }
