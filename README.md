@@ -9,6 +9,7 @@ El mercado objetivo de Barizta se dividirá en dos grupos: Los adultos contempor
 - Victor Roca: Hola, soy Victor, antes me gustaban las integraciones de instalaciones móviles pero ahora me está gustando más programar. 😅
 - Jimena Nemiña: soy una QA automation apasionada por conocer más de las aplicaciones con las que trabajo. 😎
 - Alexander Ramirez: Me considero un desarrollador comprometido con mi carrera, es por esto que trato de estar actualizado en las ultimas tecnologias y herramientas.
+ - Esteban Garcia: Hola, me llamo Esteban, soy nuevo en esto del mundo de la programacion, pero me intriga saber el funcionamiento detras de las aplicaciones y webs que usamos cotidianamente, es por eso que ingrese a este curso. 
 
 
 
