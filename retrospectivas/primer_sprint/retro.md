@@ -11,5 +11,5 @@ Incumplimiento de entregables o tareas pactadas en otros contextos.
 ## Invent:
 Ejecutar peer programming cuando podamos. En caso de querer ser proactivos con alguna tarea, ser asertivos en la comunicación para no llevar por delante a los compañeros.
 
-## Usage:
+## Act:
 Crear rama en el git para versionar el código y evitar problemas. Avisar con tiempo cuando estemos demorados con las tareas o tengamos algún bloqueo.
