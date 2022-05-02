@@ -22,8 +22,8 @@ El mercado objetivo de Barizta se dividirá en dos grupos: Los adultos contempor
 - https://www.nespresso.com/ar/es/
 - https://www.bigbox.com.ar/
 
-
-
+## Tablero de trabajo
+ - https://trello.com/b/TPWu9GUC/proyectointegrador
 ## Tecnologías Utilizadas 📚
 - Node Js
 - Java Script
