@@ -4,6 +4,7 @@
   "description": "Hola, somos Code Review; un equipo que se encargará de crear un e-commerce enfocado a la venta de café...",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
