@@ -1,0 +1,35 @@
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main .productDetails article img,
+main .calificaciones-positivas article img{
+    width: 60%;
+}
+
+main .productDetails article{
+    background-color: #fff;    
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+main .calificaciones-positivas article{
+    background-color: #fff;    
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+
+main .calificaciones-positivas{
+    text-align: center;
+}
+
+main .por-que-elegimos{
+    text-align: center;
+}
+
+
