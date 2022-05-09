@@ -1,0 +1,82 @@
+/* paleta de colores 
+#b8aca5
+#900E1E
+#000000
+#c6a15b
+#4a6554
+#c6a15b*/
+
+
+main .imagen-principal img, main .imagen-principal{
+    width: 100%;
+}
+
+main .imag-producto img{
+     width: 100%;
+ }
+
+.datos-producto{
+    display:flex;
+    flex-direction:column;
+    margin: 1rem;
+    align-items:center;
+    
+}
+
+
+.titulo-producto, .descripcion-producto, .oferta-producto, .condiciones-producto{
+    margin: 0.5rem;
+}
+
+.datos-producto .descripcion-producto{
+   text-align:center;
+}
+
+.producto .mas-informacion{
+    text-align:center;
+    margin: 2rem;
+    border: 1px solid black
+}
+
+.art-prod-relacionados{
+    margin: 1rem;
+}
+
+.imag-producto-relacionados{
+    text-align:center;
+}
+
+.info-producto-relacionado{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    
+}
+
+.precio-producto-relacionado-agregar{
+    width: 25%;
+    display:flex;
+    justify-content: space-around;
+
+}
+
+.titulo-productos-relacionados{
+    margin: 0px 0px;
+}
+
+
+
+
+@media (min-width: 600px){
+    
+
+    .producto{
+        display: flex;
+        align-items: center;
+        
+    }
+    .mas-informacion{
+        display: none;
+    }
+}
+
