@@ -122,7 +122,6 @@ main.register{
 }
 
 div.register-login-box{
- background-color: blue;
  display: inline-block;
  width: 90%;
 }
@@ -138,7 +137,10 @@ div.register-login-box button{
     align-items: center;
     align-content: center;
 }
-
+ a { 
+     text-decoration: none;
+    color: #090808;
+    }
 
 @media (min-width: 361px){
 
