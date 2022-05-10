@@ -140,7 +140,13 @@ div.register-login-box{
    .register-login-banner a { 
         text-decoration: none;
         color: #090808;
+        transition: text-decoration 1000ms;
        }
+
+       .register-login-banner a:hover{ 
+        text-decoration: underline ;
+        color:#900E1E
+       }   
    
    .register-login-banner{
        display: flex;
@@ -162,6 +168,9 @@ div.register-login-box{
    .forgotPassword{
        text-decoration: underline;
    }
+
+
+
 @media (min-width: 361px){
 
     div.burger-menu{

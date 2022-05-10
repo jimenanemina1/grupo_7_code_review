@@ -136,9 +136,15 @@ div.register-login-box button{
     align-content: center;
 }
 .register-login-banner a { 
-     text-decoration: none;
-     color: #090808;
-    }
+    text-decoration: none;
+    color: #090808;
+    transition: text-decoration 1000ms;
+   }
+
+   .register-login-banner a:hover{ 
+    text-decoration: underline ;
+    color:#900E1E
+   } 
 
 .register-login-banner{
     display: flex;
