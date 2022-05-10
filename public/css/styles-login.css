@@ -94,7 +94,7 @@ div.burger-menu i{
     width: 40px;
 }
 
-main.register{
+main.login{
     display: inline-block;
     flex-direction: row;
     width: 100%;
@@ -104,19 +104,20 @@ main.register{
     padding: 5px;
     justify-content: center;
 }
- .register input{
-     display: flex; 
-     width: 90%;
-     background: transparent;
-     border: none;
-     border-bottom: 1px solid #000000;
-     padding: 5px;
-     margin-bottom: 5px;
-     font-size: small;
-    
+
+.login input{
+    display: flex; 
+    width: 90%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: small;
+   
 }
 
-.register ::placeholder{
+.login ::placeholder{
     color:#b2afaf;
     font-family: 'MOMCAKE', sans-serif;
 }
@@ -137,7 +138,10 @@ div.register-login-box button{
     align-items: center;
     align-content: center;
 }
-
+ a { 
+     text-decoration: none;
+    color: #090808;
+    }
 
 @media (min-width: 361px){
 
