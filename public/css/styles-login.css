@@ -95,12 +95,10 @@ div.burger-menu i{
 }
 
 main.login{
-    display: inline-block;
+    display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
+   margin: 5px;
     padding: 5px;
     justify-content: center;
 }
@@ -129,7 +127,7 @@ div.register-login-box{
    }
    
    div.register-login-box button{
-       display: flex;
+       display: block;
        margin-bottom: 5px;
        padding: 5px;
    }
@@ -152,7 +150,16 @@ div.register-login-box{
        align-items: center;
    }
    
+   .loginApple button, .loginGoogle button{
+       width: 80%;
+       font-family: 'MOMCAKE', sans-serif;
+       align-content: center;
+   }
 
+
+   .forgotPassword{
+       text-decoration: underline;
+   }
 @media (min-width: 361px){
 
     div.burger-menu{
