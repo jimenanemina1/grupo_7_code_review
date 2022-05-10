@@ -15,68 +15,87 @@
 <body>
     <header>
         <div class="top-header">
-            <div class="logo"> 
+            <div class="logo">
                 <img src="images/logo.png" alt="Logo CoffeShop">
             </div>
             <div class="registro">
-                <div class="login"> 
+                <div class="login">
                     <i class="fas fa-user"></i>
                 </div>
-                <div class="compras"> 
+                <div class="compras">
                     <i class="fas fa-shopping-basket"></i>
                 </div>
 
             </div>
         </div>
         <div class="barra-secundaria">
-        <nav>
-            <ul>
-                
-                <li><a href="#"><i class="fas fa-coffee"></i>  Café</a></li>
-                <li><a href="#"><i class="fas fa-home"></i>  Tiendas </a></li>
-                <li><a href="#"><i class="fas fa-gift"></i>  Regalos</a></li>
-            </ul>
-            
-        </nav>
-    </div>
+            <nav>
+                <ul>
+
+                    <li><a href="#"><i class="fas fa-coffee"></i> Café</a></li>
+                    <li><a href="#"><i class="fas fa-home"></i> Tiendas </a></li>
+                    <li><a href="#"><i class="fas fa-gift"></i> Regalos</a></li>
+                </ul>
+
+            </nav>
+        </div>
         <div class="burger-menu">
             <i class="fa fa-bars burger"></i>
         </div>
     </header>
-<main class="register">
-    <form action="" method="post">
-        <div class="nameField">
-            <label>Nombre</label><input  type="text" required name="name" placeholder="Solo carateres abc"></input>
+    <main class="register">
+        <div class="register-login-box">
+            <div class="register-login-button">
+                <a href="/register">Registrarse</a>           
+             </div>
+            <div class="register-login-button">
+                <a href="/login">Inciar sesión</a>
+            </div>
+
+
+            <form action="" method="post">
+
+                <div class="form-login-register">
+                    <div class="nameField">
+                        <label>Nombre</label><input type="text" required name="name"
+                            placeholder="Solo carateres abc"></input>
+                    </div>
+                    <div class="lastnameField">
+                        <label>Apellido</label><input type="text" name="lastname"
+                            placeholder="Solo carateres abc"></input>
+                    </div>
+                    <div class="emailField">
+                        <label>Correo electrónico</label><input type="email" name="email"
+                            placeholder="minombre@xxxx.com.xx"></input>
+                    </div>
+                    <div class="passwordField">
+                        <label>Contraseña</label><input type="password" name="password"
+                            placeholder="Mínimo 6 carateres y una mayúscula"></input>
+                    </div>
+                    <div class="phoneField">
+                        <label>Teléfono celular</label><input type="phone" name="phone"
+                            placeholder="Mínimo 8 caracteres"></input>
+                    </div>
+                </div>
         </div>
-        <div class="lastnameField">
-            <label>Apellido</label><input type="text" name="lastname" placeholder="Solo carateres abc"></input>
-        </div>
-       <div class="emailField">
-            <label>Correo electrónico</label><input type="email" name="email" placeholder="minombre@xxxx.com.xx"></input>
-        </div>
-        <div class="passwordField">
-            <label>Contraseña</label><input type="password" name="password" placeholder="Mínimo 6 carateres y una mayúscula"></input>
-        </div>
-        <div class="phoneField">
-            <label>Teléfono celular</label><input type="phone" name="phone" placeholder="Mínimo 8 caracteres"></input>
-        </div>
- 
-    </form>
-</main>
-    
+
+
+        </form>
+    </main>
+
     <footer>
-       
+
         <section class="pie_pagina">
-            <div class="logo_footer"> 
+            <div class="logo_footer">
                 <img src="images/logo.png" alt="Logo CoffeShop">
             </div>
             <hr style="color: #b20000;" />
             <article>
                 <div class="pasarela_pago">
-                  
+
                     <i class="fas fa-credit-card"></i>
                     <h5>Pagá con tarjeta o en efectivo</h5>
-                    
+
                     <p class="descripcion_pasarela">
                         Con CoffeShop, tenés cuotas sin interés con tarjeta o efectivo en
                         puntos de pago. ¡Y siempre es seguro!
@@ -95,10 +114,10 @@
             </article>
             <article>
                 <div class="seguridad">
-                    
+
                     <i class="fas fa-user-shield"></i>
                     <h5>Seguridad, de principio a fin</h5>
-                   
+
                     <p class="descripcion_seguridad">
                         ¿No te gusta? ¡Devolvelo! En CoffeShop, no hay nada que no puedas hacer,
                         porque estás siempre protegid@.
@@ -108,14 +127,14 @@
         </section>
 
         <section class="Copyright">
-            
+
             <p>Copyright © 2022 CoffeShop</p>
-           
+
         </section>
 
 
     </footer>
-    
+
 </body>
 
 </html>
