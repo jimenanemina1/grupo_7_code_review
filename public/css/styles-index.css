@@ -6,6 +6,10 @@
 #4a6554
 #c6a15b*/
 
+body{
+    background: url(https://images.unsplash.com/photo-1538645731800-4640c639bba7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80);
+    
+}
 
 main .imagen-principal img, main .imagen-principal{
     width: 100%;
@@ -61,7 +65,8 @@ main .imag-producto img{
 }
 
 .titulo-productos-relacionados{
-    margin: 0px 0px;
+    margin-left: 10px;
+    
 }
 
 
@@ -70,7 +75,7 @@ main .imag-producto img{
 @media (min-width: 600px){
 
     main .imagen-principal img, main .imagen-principal{
-        height: 40vh;
+        height: 79vh;
     }
     
 
