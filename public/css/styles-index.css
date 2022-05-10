@@ -68,16 +68,25 @@ main .imag-producto img{
 
 
 @media (min-width: 600px){
+
+    main .imagen-principal img, main .imagen-principal{
+        height: 40vh;
+    }
     
 
     .producto{
         display: flex;
         align-items: center;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        
+        
         
     }
+
     .mas-informacion{
-        display: none;
+        width: 20%;
+        
     }
 }
-© 2022 GitHub, Inc.
-Terms
