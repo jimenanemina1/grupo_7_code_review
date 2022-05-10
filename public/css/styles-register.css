@@ -137,10 +137,18 @@ div.register-login-box button{
     align-items: center;
     align-content: center;
 }
- a { 
+.register-login-banner a { 
      text-decoration: none;
-    color: #090808;
+     color: #090808;
     }
+
+.register-login-banner{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+}
 
 @media (min-width: 361px){
 

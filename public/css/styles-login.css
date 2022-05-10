@@ -122,26 +122,36 @@ main.login{
     font-family: 'MOMCAKE', sans-serif;
 }
 
-div.register-login-box{
- display: inline-block;
- width: 90%;
-}
 
-div.register-login-box button{
-    display: flex;
-    margin-bottom: 5px;
-    padding: 5px;
-}
-.register-login-button{
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-}
- a { 
-     text-decoration: none;
-    color: #090808;
-    }
+div.register-login-box{
+    display: inline-block;
+    width: 90%;
+   }
+   
+   div.register-login-box button{
+       display: flex;
+       margin-bottom: 5px;
+       padding: 5px;
+   }
+   .register-login-button{
+       display: inline-flex;
+       justify-content: space-between;
+       align-items: center;
+       align-content: center;
+   }
+   .register-login-banner a { 
+        text-decoration: none;
+        color: #090808;
+       }
+   
+   .register-login-banner{
+       display: flex;
+       justify-content: space-evenly;
+       padding: 10px;
+       width: 100%;
+       align-items: center;
+   }
+   
 
 @media (min-width: 361px){
 
