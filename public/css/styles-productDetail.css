@@ -3,9 +3,19 @@ main {
     margin: 0 auto;
 }
 
-main .productDetails article img,
+main .productDetails article img{
+    width: 100%;
+    padding-top: 10px;
+}
 main .calificaciones-positivas article img{
     width: 60%;
+    padding:0 5px 5px 0; 
+    background-color: #0000002d;
+}
+
+main .calificaciones-positivas .estrellas{
+    color: #bc0909;
+    font-size: 1.5rem;
 }
 
 main .productDetails article{
@@ -15,13 +25,51 @@ main .productDetails article{
     flex-direction: row;
 }
 
+
+article div.main-articlepd {
+    padding: 15px;
+    margin: auto;
+}
+
+article .btncomprar{
+    background: #4a6554;
+    color: #fff;
+    border: solid;
+    padding: 10px;
+}
+
+main .productDetails article .quantityMas{
+    font-size: 1.5rem;
+    color: #fff ; ;
+    background-color: #000;
+}
+
+
+main .productDetails article .quantityMenos{
+    font-size: 1.5rem;
+    color: #fff ;
+    background-color: #000;
+}
+
+main .productDetails article .inputSpinner{
+    font-size: 1.5rem;
+    width: 40px;
+
+}
+
+
 main .calificaciones-positivas article{
-    background-color: #fff;    
+    background-color: #fff;
     margin: 10px 0px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     justify-items: center;
+    align-items: center;
+}
+
+main .calificaciones-positivas article i{
+    font-size: 2rem;
 }
 
 main .calificaciones-positivas{
@@ -30,6 +78,7 @@ main .calificaciones-positivas{
 
 main .por-que-elegimos{
     text-align: center;
+    margin: 50px;
 }
 
 
