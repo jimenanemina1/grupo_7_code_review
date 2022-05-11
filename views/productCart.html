@@ -16,7 +16,7 @@
     <header>
         <div class="top-header">
             <div class="logo"> 
-                <img src="images/logo.png" alt="Logo CoffeShop">
+                <a href="/"><img src="images/logo.png" alt="Logo CoffeShop"></a>
             </div>
             <div class="registro">
                 <div class="login"> 
@@ -43,8 +43,49 @@
             <i class="fa fa-bars burger"></i>
         </div>
     </header>
+    <main>
+        <section class="Cart">
+            <div class="title">
+                <h2>Tu carrito</h2>
+            </div>
+                <div>
+                    <a href="/">Agregar al carrito</a>
+                </div>
+                <div>
+                    <a href="">Pagar</a>
+                </div>
+        </section>
+        <section class="product">
+           <div>
+                <article>
+                
+                    <div class="img-product">
+                        <img src="images/img-cafetera-moulinex.jpg" alt="Cafetera" class="product_img">
+                    </div>
+                    <div class="main-article">
+                        <H3 class="nombre-producto">Cafetera Moulinex</H3>
+                        <p class="Precio-unidad">$166.770</p>
+                        <p class="Precio-total">$166.770</p>
+                        <button class="quantity--input__button quantity--input__incr" onclick="cartPage.quantityHandler(event, false)">-</button>
+                        <INPUT TYPE="NUMBER" MIN="0" MAX="15" STEP="1" VALUE="6" SIZE="6">
+                        <button class="quantity--input__button quantity--input__incr" onclick="cartPage.quantityHandler(event, false)">+</button>
+                        <button type="reset" name="borrar"><i class="fas fa-times-circle"></i></button>
+                    </div>   
+                    <div>
+                        <a href="/">Seguir comprando</a>
+                    </div>
+                    <div class="formulario">
+                        <form method="post">
+                            <label for="formulario">formulario</label>
+                                <textarea name="formuario-notas" id="notas-adicionales" cols="30" rows="10"></textarea>
+                            
+                        </form>
+                    </div>
+                </article>
+            </div>   
+        </section>
+    </main>
 
-    
     <footer>
        
         <section class="pie_pagina">
