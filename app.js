@@ -11,6 +11,10 @@ app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/index.html');
 });
 
+app.get('/index_', (req,res)=>{
+    res.sendFile(__dirname + '/views/index_.html');
+});
+
 app.get('/productDetail', (req,res)=>{
     res.sendFile(__dirname + '/views/productDetail.html');
 });
