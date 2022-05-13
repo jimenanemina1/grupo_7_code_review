@@ -6,11 +6,12 @@
 
 body{
     font-family: 'BIZ UDPGothic', sans-serif; 
+
 }
 
 #header .primera-barra, #header .barra-navegacion{
     background-color: rgb(0, 0, 0);
-    height: 8.5vh;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between
