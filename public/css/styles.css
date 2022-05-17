@@ -49,7 +49,9 @@ header ul li a{
 }
 
 
-
+ul{
+    list-style: none;
+}
 
 header .registro{
     display: flex;
