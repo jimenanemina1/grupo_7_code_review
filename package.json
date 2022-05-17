@@ -2,9 +2,9 @@
   "name": "grupo_7_code_review",
   "version": "1.0.0",
   "description": "Hola, somos Code Review; un equipo que se encargará de crear un e-commerce enfocado a la venta de café...",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

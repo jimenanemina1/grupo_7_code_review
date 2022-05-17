@@ -29,7 +29,9 @@ header div.registro{
     width: 50%;
     
 }
-
+ul{
+    list-style: none;
+}
 
 
 header div.top-header {
