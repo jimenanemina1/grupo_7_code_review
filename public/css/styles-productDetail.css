@@ -31,6 +31,9 @@ article div.main-articlepd {
     margin: auto;
 }
 
+ul{
+    list-style: none;
+}
 article .btncomprar{
     background: #4a6554;
     color: #fff;

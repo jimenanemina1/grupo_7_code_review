@@ -37,7 +37,9 @@ main .imag-producto img{
     align-items:center;
     
 }
-
+ ul{
+     list-style: none;
+ }
 
 .titulo-producto, .descripcion-producto, .oferta-producto, .condiciones-producto{
     margin: 0.5rem;

@@ -63,6 +63,10 @@ header .registro{
    
 }
 
+ul{
+    list-style: none;
+}
+
 body header .login i{
     font-size: 2em;  
     color:#FFF;
