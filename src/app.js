@@ -1,14 +1,14 @@
 const express = require('express');
 
-const loginRouter = require('./routers/login')
-const registerRouter = require('./routers/register')
+const userRouter = require('./routers/user')
+
 const app = express();
 
 
 const port = process.env.PORT || 3000;
 
-app.use('/', loginRouter);
-app.use('/', registerRouter);
+app.use('/user', userRouter);
+
 
 app.use(express.static('public'));
 
