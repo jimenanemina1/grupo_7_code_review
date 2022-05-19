@@ -3,6 +3,7 @@ const express = require('express');
 const userRouter = require('./routers/user')
 
 const app = express();
+app.set('view engine', 'ejs');
 
 
 const port = process.env.PORT || 3000;
