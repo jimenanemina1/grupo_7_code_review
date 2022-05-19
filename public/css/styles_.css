@@ -1,0 +1,67 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "BIZ UDPGothic", sans-serif;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+#header .primera-barra,
+#header .barra-navegacion {
+  background-color: rgb(0, 0, 0);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header .primera-barra .logo {
+  width: 7rem;
+  display: flex;
+  margin-left: 5px;
+}
+
+#header .primera-barra .logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+#header .primera-barra .usuario-carrito {
+  display: flex;
+  margin-right: 8px;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+#header .primera-barra .usuario-carrito .usuario {
+  margin-right: 8px;
+}
+
+#header .barra-navegacion {
+  background-color: #900e1e;
+}
+
+#header .barra-navegacion ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  list-style: none;
+}
+
+/* #header .barra-navegacion .ul li{
+
+} */
+
+#header .barra-navegacion ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
