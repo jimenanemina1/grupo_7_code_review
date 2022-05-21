@@ -39,6 +39,25 @@
                 </div>
             </article>
         </section>
+        <section class="recomendados">
+            <h2 class="titulo-recomendados">Recomendados por Barizta:</h2>
+            <div class="contenedor-articulos-recomendados">
+               <% let productosMostrados = [] %> 
+               <% for (let i = 0; i < 4; i++){
+                   productosMostrados.push(data[i])
+               } %> 
+               <% for (let producto of productosMostrados) { %> 
+                <article class="articulo-recomendado">
+                    <div class="imagen-articulo-recomendado">
+                        <img src="<%=producto.imgPath%>" alt="producto recomendado">
+                    </div>
+                    <h5 class="nombre-producto-recomendado"><%=producto.name%></h5>
+                    <i class="fa-solid fa-square-plus"></i>
+                </article>
+                <% } %>
+            </div>
+
+        </section>
     </main>
     <!-- Footer -->
     <%- include("./partials/footer.ejs") %>
