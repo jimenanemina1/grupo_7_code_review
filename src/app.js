@@ -1,33 +1,17 @@
 const express = require('express');
+const path = require('path');
 
-const userRouter = require('./routers/user')
-
+const mainRouter=require("./routers/mainRutes");
 const app = express();
-
-
-const port = process.env.PORT || 3000;
-
-app.use('/user', userRouter);
-
-
 app.use(express.static('public'));
+
+app.set('view engine','ejs');
+app.set('views',path.resolve(__dirname,'./views'));
+
+app.use('/',mainRouter);
+
 
 app.listen(3001, ()=>{
     console.log('Servidor funcionando, en el puerto 3001');
 });
 
-app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/index.html');
-});
-
-app.get('/index_', (req,res)=>{
-    res.sendFile(__dirname + '/views/index_.html');
-});
-
-app.get('/productDetail', (req,res)=>{
-    res.sendFile(__dirname + '/views/productDetail.html');
-});
-
-app.get('/shoppingCart', (req,res)=>{
-    res.sendFile(__dirname + '/views/shoppingCart.html');
-});

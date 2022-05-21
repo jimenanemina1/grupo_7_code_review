@@ -1,0 +1,21 @@
+const controller = {
+    index : (req, res) => {
+        res.render('index');
+    },
+    productDetail : (req, res) => {
+        res.render('productDetail');
+    },
+    login: (req, res) => {
+        res.render('login');
+    },
+    register: (req, res) => {
+        res.render('register');
+    },
+    shoppingCart: (req, res) => {
+        res.render('shoppingCart');
+    }
+
+}
+
+module.exports = controller;
+
