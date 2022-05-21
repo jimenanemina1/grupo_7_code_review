@@ -1,4 +1,4 @@
-const productos = [
+const products = [
   {
     id: 1,
     name: "Báscula Electrónica",
@@ -80,3 +80,5 @@ const productos = [
     imgPath: "images/vasos-latte.png",
   },
 ];
+
+module.exports = products;
