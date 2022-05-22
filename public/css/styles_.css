@@ -72,6 +72,9 @@ body {
 
 #footer {
   background: black;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
 
 #footer .logo-footer {
