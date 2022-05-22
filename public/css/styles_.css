@@ -10,6 +10,10 @@ body {
 
 /* *********Header******** */
 
+#header a {
+  text-decoration: none;
+}
+
 #header {
   position: fixed;
   top: 0;
