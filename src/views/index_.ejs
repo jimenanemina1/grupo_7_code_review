@@ -46,7 +46,8 @@
                <% for (let i = 0; i < 4; i++){
                    productosMostrados.push(data[i])
                } %> 
-               <% for (let producto of productosMostrados) { %> 
+               <% for (let producto of productosMostrados) { %>
+                <a href="/products/<%= producto.id%>">
                 <article class="articulo-recomendado">
                     <div class="imagen-articulo-recomendado">
                         <img src="<%=producto.imgPath%>" alt="producto recomendado">
@@ -54,6 +55,7 @@
                     <h5 class="nombre-producto-recomendado"><%=producto.name%></h5>
                     <i class="fa-solid fa-square-plus"></i>
                 </article>
+                </a>
                 <% } %>
             </div>
 
