@@ -25,7 +25,6 @@ main.login {
     padding: 5px;
     justify-content: center;
     margin-top: 150px
-
 }
 
 .login input {
@@ -87,11 +86,36 @@ div.register-login-box button {
 .loginGoogle button {
     display: flex;
     width: 80%;
-    font-family: 'MOMCAKE', sans-serif;
     align-content: center;
     width: 90%;
 }
 
+
+.loginButton a,
+.registerButton a {
+    display: inline;
+    align-content: center;
+    width: 40%;
+    text-decoration: none;
+
+}
+
+
+.loginButton a button,
+.registerButton a button {
+    display: flex;
+    width: 100%;
+    align-content: center;
+
+}
+
+
+.buttonBox {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    margin-block: 15px;
+}
 
 .forgotPassword {
     text-decoration: underline;

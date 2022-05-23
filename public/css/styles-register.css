@@ -65,6 +65,7 @@ div.register-login-box button {
     align-content: center;
 }
 
+
 .register-login-banner a {
     text-decoration: none;
     color: #090808;
@@ -82,4 +83,29 @@ div.register-login-box button {
     padding: 10px;
     width: 100%;
     align-items: center;
+}
+
+.registerButton a,
+.registerButton a {
+    display: inline;
+    align-content: center;
+    width: 40%;
+    text-decoration: none;
+}
+
+
+.registerButton a button,
+.registerButton a button {
+    display: flex;
+    width: 100%;
+    align-content: center;
+}
+
+
+.buttonBox {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    margin-block: 15px;
+
 }
