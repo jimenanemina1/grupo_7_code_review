@@ -1,0 +1,79 @@
+<!-- Head -->
+<%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="/css/styles-productDetail.css">
+
+
+<body>
+   
+    <!-- Header -->
+    <%- include("./partials/header.ejs") %>
+
+
+    <main>
+        <section class="productDetails">
+            <div class="products">
+                <article>
+            
+                    <div class="imagen-producto"><img src=<%=items.imgPath%> alt="Cafetera" class="product_img"></div>
+                    <div class="main-articlepd">
+                        <h4 class="Nombre Producto"> <%=items.name%> </h4>
+                        <p class="price"><%=items.price%></p>
+                        <p class="descripcion"><%=items.description%></p>
+                        <br>
+                        <br>
+                        <div class="spinnerQty">
+                        <button class="quantityMas">+</button>
+                        <INPUT TYPE="NUMBER" MIN="0" MAX="100" STEP="1" VALUE="1" class="inputSpinner">
+                        <button class="quantityMenos" >-</button>
+                        <button type="reset" name="borrar"><i class="fas fa-times-circle"></i></button>
+                        </div>
+                        <br>
+                        <div>Disponible en stock: 15</div>
+                        <br><br>
+                        <div class="comprar">
+                          
+                            <a href="\shoppingCart" class="btncomprar">COMPRAR AHORA</a>
+                        </div>
+                    </div>
+                    
+                </article>
+            </div>
+        </section>
+        <section class="calificaciones-positivas">
+         <div class="calificaciones">
+             <h1>Calificaciones positivas</h1>
+             <br><br><br>
+             <div class="estrellas" >
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+                <h1>Andrea Palacios</h1>
+           <article>
+            <i class="fas fa-angle-left"></i>
+            <img src="/images/clientea.png" alt="Cafetera" class="product_img">
+            <i class="fas fa-angle-right"></i>
+           </article>
+         </div>
+        </section>
+        <section class="por-que-elegimos">
+            <div class="elegimos">
+                <br>
+                <h1>Por que lo elegimos</h1>
+                <br>
+              <article>
+               <p>Me encanta el sabor de capsulas para Dolce, esta Maquina es super amigable y funciona perfectamente y te indica todo muy claro.</p>
+              <br>
+              <img src="/images/elegimos.jpg" alt="Cafetera" class="product_img">
+            </article>
+            </div>
+           </section>
+    </main>       
+    <!-- Footer -->
+    <%- include("./partials/footer.ejs") %>
+    
+</body>
+
+</html>

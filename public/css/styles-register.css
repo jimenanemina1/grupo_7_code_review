@@ -28,6 +28,8 @@ main.register {
     padding: 5px;
     justify-content: center;
     margin-top: 150px;
+    margin-bottom: 200px
+
 }
 
 .register input {
