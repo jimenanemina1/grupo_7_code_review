@@ -10,10 +10,6 @@ body {
 
 /* *********Header******** */
 
-#header a {
-  text-decoration: none;
-}
-
 #header {
   position: fixed;
   top: 0;
@@ -50,6 +46,14 @@ body {
 
 #header .primera-barra .usuario-carrito .usuario {
   margin-right: 8px;
+}
+
+#header .primera-barra .usuario-carrito a,
+#header .primera-barra .usuario-carrito a:hover,
+#header .primera-barra .usuario-carrito a:focus,
+#header .primera-barra .usuario-carrito a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 #header .barra-navegacion {
