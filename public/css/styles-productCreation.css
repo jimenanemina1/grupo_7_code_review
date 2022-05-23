@@ -1,26 +1,4 @@
-header .registro {
-    display: flex;
-    direction: rows;
-    align-items: center;
-    margin-right: 10%;
-    margin-top: 10px;
-    font-size: 12px;
-    justify-content: right;
-
-
-}
-
-body header .login i {
-    font-size: 2em;
-    color: #FFF;
-    margin-bottom: 10px;
-    padding-right: 30px;
-
-}
-
-
-
-main.register {
+main.createProduct {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -30,9 +8,10 @@ main.register {
     margin-top: 150px;
     margin-bottom: 200px
 
+
 }
 
-.register input {
+.createProduct input {
     display: flex;
     width: 90%;
     background: transparent;
@@ -45,42 +24,42 @@ main.register {
 
 }
 
-.register ::placeholder {
+.createProduct ::placeholder {
     color: #b2afaf;
     font-family: 'MOMCAKE', sans-serif;
 }
 
-div.register-login-box {
+
+div.createProduct-box {
     display: inline-block;
     width: 90%;
 }
 
-div.register-login-box button {
-    display: flex;
+div.createProduct-box {
+    display: block;
     margin-bottom: 5px;
     padding: 5px;
 }
 
-.register-login-button {
+.createProduct-button {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
 }
 
-
-.register-login-banner a {
+.createProduct-banner a {
     text-decoration: none;
     color: #090808;
     transition: text-decoration 1000ms;
 }
 
-.register-login-banner a:hover {
+.createProduct-banner a:hover {
     text-decoration: underline;
     color: #900E1E
 }
 
-.register-login-banner {
+.createProduct-banner {
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
@@ -88,8 +67,14 @@ div.register-login-box button {
     align-items: center;
 }
 
-.registerButton a,
-.registerButton a {
+
+
+.createProduct{
+    margin-top: 150px;
+}
+
+.createButton a,
+.createButton a {
     display: inline;
     align-content: center;
     width: 40%;
@@ -97,8 +82,8 @@ div.register-login-box button {
 }
 
 
-.registerButton a button,
-.registerButton a button {
+.createButton a button,
+.createButton a button {
     display: flex;
     width: 100%;
     align-content: center;
