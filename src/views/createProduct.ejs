@@ -9,48 +9,39 @@
 <!-- Header -->
 <%- include("./partials/header.ejs") %>
 
-    <main class="createProduct">
-        <div class="createProduct-box">
-            <div class="createProduct-banner">
+<main class="createProduct">
+    <div class="createProduct-box">
+        <div class="createProduct-banner">
             <div class="createProduct-button">
-                <a href="/product/create-product">Crear producto</a>           
-             </div>
+                <a href="/product/create-product">Crear producto</a>
+            </div>
         </div>
 
-       <!--     <div class="loginApple">
+        <!--     <div class="loginApple">
                 <button>Continuar con Apple</button>
             </div>
             <div class="loginGoogle">
                 <button>Continuar con Google</button>
             </div>
 -->
-        
 
-            <form action="" method="post">
-               
-                <div class="form-productCreation">
-                    <div class="productNameField">
-                        <label>Nombre del producto</label><input type="text" required name="name"
-                            placeholder="Elija un nombre descriptivo"></input>
-                    </div>
-                    <div class="Descripción del tipo de café">
-                        <label>Descripciçon del tipo de café</label><input type="text" name="description"
-                            placeholder="Mínimo 20 carateres."></input>
-                    </div>
+
+        <form action="" method="post">
+
+            <div class="form-productCreation">
+                <div class="productNameField">
+                    <label>Nombre del producto</label><input type="text" required name="name"
+                        placeholder="elija un nombre descriptivo"></input>
+                </div>
+                <div class="Descripción del tipo de café">
+                    <label>Descripción del tipo de café</label><input type="text" name="description"
+                        placeholder="Mínimo 20 carateres."></input>
+                </div>
                 <div>
                     <p>
                         Sube imagenes del producto(máximo 6):
                         <input type="file" name="archivosubido">
-                      </p>
-                </div>
-
-                <div class="category">
-                    <label>Elegir categoría</label>
-                    <select name="selectCategory">
-                        <option value="value1">Café</option>
-                        <option value="value2">Cafeteras</option>
-                        <input></input>
-                      </select>
+                    </p>
                 </div>
                 <div class="size">
                     <label>Tamaño del contenedor</label><input type="text" name="size"
@@ -60,22 +51,31 @@
                     <label>Precio del producto</label><input type="text" name="price"
                         placeholder="Mínimo 500 grms."></input>
                 </div>
-
-                <div class="createButton">
-                    <a href="/products/congrats">
-                   <input type="submit ">Publicar producto</input></a>
+                <div class="category">
+                    <label>Elegir categoría</label>
+                    <select name="selectCategory">
+                        <option value="value1">Café</option>
+                        <option value="value2">Cafeteras</option>
+                    </select>
                 </div>
 
+                <div class="buttonBox">
+                    <div class="createButton">
+                        <a href="/products/congrats">
+                            <button type="submit">Publicar productos</button></a>
+                    </div>
                 </div>
-        </div>
+
+            </div>
+    </div>
 
 
-        </form>
-    </main>
-    
-    <!-- Footer -->
-    <%- include("./partials/footer.ejs") %>
-    
+    </form>
+</main>
+
+<!-- Footer -->
+<%- include("./partials/footer.ejs") %>
+
 </body>
 
 </html>

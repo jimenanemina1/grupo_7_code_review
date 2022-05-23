@@ -9,57 +9,57 @@
 <!-- Header -->
 <%- include("./partials/header.ejs") %>
 
-    <main class="login">
-        <div class="register-login-box">
-            <div class="register-login-banner">
+<main class="login">
+    <div class="register-login-box">
+        <div class="register-login-banner">
             <div class="register-login-button">
-                <a href="/user/register">Registrarse</a>           
-             </div>
+                <a href="/user/register">Registrarse</a>
+            </div>
             <div class="register-login-button">
                 <a href="/user/login"><strong>Iniciar sesión</strong> </a>
             </div>
         </div>
 
-            <div class="loginApple">
-                <button>Continuar con Apple</button>
-            </div>
-            <div class="loginGoogle">
-                <button>Continuar con Google</button>
-            </div>
-
-        
-
-            <form action="" method="post">
-               
-                <div class="form-login-register">
-                    <div class="correoElectronicoField">
-                        <label>Correo electrónico</label><input type="text" required name="name"
-                            placeholder="Solo carateres abc"></input>
-                    </div>
-                    <div class="passwordField">
-                        <label>Contraseña</label><input type="password" name="password"
-                            placeholder="Mínimo 6 carateres y una mayúscula"></input>
-                    </div>
-                    <div class="forgotPassword">
-                        <label>Olvide mi contraseña<a href="/forgot-password"></a></label>
-                    </div>
-                    <div class="buttonBox">
-                    <div class="loginButton">
-                        <a href="/">
-                       <button type="submit">Iniciar sesión</button></a>
-                    </div>
-                </div>
-                </div>
+        <div class="loginApple">
+            <button>Continuar con Apple</button>
+        </div>
+        <div class="loginGoogle">
+            <button>Continuar con Google</button>
         </div>
 
-        
 
-        </form>
-    </main>
-    
-    <!-- Footer -->
-    <%- include("./partials/footer.ejs") %>
-    
+
+        <form action="" method="post">
+
+            <div class="form-login-register">
+                <div class="correoElectronicoField">
+                    <label>Correo electrónico</label><input type="text" required name="name"
+                        placeholder="Solo carateres abc"></input>
+                </div>
+                <div class="passwordField">
+                    <label>Contraseña</label><input type="password" name="password"
+                        placeholder="Mínimo 6 carateres y una mayúscula"></input>
+                </div>
+                <div class="forgotPassword">
+                    <label>Olvide mi contraseña<a href="/forgot-password"></a></label>
+                </div>
+                <div class="buttonBox">
+                    <div class="loginButton">
+                        <a href="/">
+                            <button type="submit">Iniciar sesión</button></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+    </form>
+</main>
+
+<!-- Footer -->
+<%- include("./partials/footer.ejs") %>
+
 </body>
 
 </html>

@@ -1,11 +1,18 @@
-main.congrats{
+main.congrats {
     margin-top: 150px
-
 }
 
-.createButton{
-    display: flex;
-    width: 80%;
+.createButton a {
+    display: inline;
     align-content: center;
-    width: 90%;
+    width: 40%;
+    text-decoration: none;
+}
+
+
+
+.createButton a input {
+    display: flex;
+    width: 100%;
+    align-content: center;
 }

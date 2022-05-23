@@ -8,55 +8,54 @@
 </head>
 <!-- Header -->
 <%- include("./partials/header.ejs") %>
-    <main class="register">
-        <div class="register-login-box">
-            <div class="register-login-banner">
+<main class="register">
+    <div class="register-login-box">
+        <div class="register-login-banner">
             <div class="register-login-button">
-                <a href="/user/register"><strong>Registrarse</strong></a>           
-             </div>
+                <a href="/user/register"><strong>Registrarse</strong></a>
+            </div>
             <div class="register-login-button">
                 <a href="/user/login">Inciar sesión</a>
             </div>
         </div>
 
-            <form action="" method="post">
+        <form action="" method="post">
 
-                <div class="form-login-register">
-                    <div class="nameField">
-                        <label>Nombre</label><input type="text" required name="name"
-                            placeholder="Solo carateres abc"></input>
-                    </div>
-                    <div class="lastnameField">
-                        <label>Apellido</label><input type="text" name="lastname"
-                            placeholder="Solo carateres abc"></input>
-                    </div>
-                    <div class="emailField">
-                        <label>Correo electrónico</label><input type="email" name="email"
-                            placeholder="minombre@xxxx.com.xx"></input>
-                    </div>
-                    <div class="passwordField">
-                        <label>Contraseña</label><input type="password" name="password"
-                            placeholder="Mínimo 6 carateres y una mayúscula"></input>
-                    </div>
-                    <div class="phoneField">
-                        <label>Teléfono celular</label><input type="phone" name="phone"
-                            placeholder="Mínimo 8 caracteres"></input>
-                    </div>
-                    <div class="buttonBox">
-                        <div class="registerButton">
-                            <a href="/">
-                           <button type="submit">Registrarse</button></a>
-                        </div>
+            <div class="form-login-register">
+                <div class="nameField">
+                    <label>Nombre</label><input type="text" required name="name"
+                        placeholder="Solo carateres abc"></input>
+                </div>
+                <div class="lastnameField">
+                    <label>Apellido</label><input type="text" name="lastname" placeholder="Solo carateres abc"></input>
+                </div>
+                <div class="emailField">
+                    <label>Correo electrónico</label><input type="email" name="email"
+                        placeholder="minombre@xxxx.com.xx"></input>
+                </div>
+                <div class="passwordField">
+                    <label>Contraseña</label><input type="password" name="password"
+                        placeholder="Mínimo 6 carateres y una mayúscula"></input>
+                </div>
+                <div class="phoneField">
+                    <label>Teléfono celular</label><input type="phone" name="phone"
+                        placeholder="Mínimo 8 caracteres"></input>
+                </div>
+                <div class="buttonBox">
+                    <div class="registerButton">
+                        <a href="/">
+                            <button type="submit">Registrarse</button></a>
                     </div>
                 </div>
-        </div>
-       
+            </div>
+    </div>
 
-        </form>
-    </main>
 
-      <!-- Footer -->
-      <%- include("./partials/footer.ejs") %>
+    </form>
+</main>
+
+<!-- Footer -->
+<%- include("./partials/footer.ejs") %>
 
 </body>
 
