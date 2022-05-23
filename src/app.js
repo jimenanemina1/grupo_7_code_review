@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001;
 
 app.use('/', mainRouter)
 app.use('/user', userRouter);
-app.use('/product',productRouter);
+app.use('/products',productRouter);
 
 
 app.use(express.static('public'));
