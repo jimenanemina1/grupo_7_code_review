@@ -1,13 +1,15 @@
 const express = require('express');
 const path = require("path");
-const userRouter = require('./routers/user')
+const userRouter = require('./routers/user');
 const mainRouter = require("./routers/main");
+const productRouter = require("./routers/product");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 
 app.use('/', mainRouter)
 app.use('/user', userRouter);
+app.use('/product',productRouter);
 
 
 app.use(express.static('public'));
@@ -19,10 +21,3 @@ app.listen(port, ()=>{
 app.set('view engine', 'ejs');
 app.set("views", path.resolve(__dirname, "./views"));
 
-app.get('/productDetail', (req,res)=>{
-    res.sendFile(__dirname + '/views/productDetail.html');
-});
-
-app.get('/shoppingCart', (req,res)=>{
-    res.sendFile(__dirname + '/views/shoppingCart.html');
-});
