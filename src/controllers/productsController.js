@@ -5,10 +5,14 @@ const productsController = {
         res.render('createProduct.ejs')
     },
     editProduct: (req, res) => {
-        res.render('editProduct.ejs')
+        const product = data.find(items => items.id == req.params.idProduct)
+        res.render('editProduct.ejs',{items:product})
     },
-    congrats: (req, res) => {
-        res.render('congrats.ejs')
+    createCongrats: (req, res) => {
+        res.render('createProductCongrats.ejs')
+    },
+    editCongrats: (req, res) => {
+        res.render('editProductCongrats.ejs')
     },
     detail: (req,res) =>{
         const product = data.find(items => items.id == req.params.idProduct)
