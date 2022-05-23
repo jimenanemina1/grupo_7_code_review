@@ -2,12 +2,14 @@ const express = require('express');
 const path = require("path");
 const userRouter = require('./routers/user')
 const mainRouter = require("./routers/main");
+const productsRouter = require("./routers/products");
 const app = express();
 const port = process.env.PORT || 3000;
 
 
 app.use('/', mainRouter)
 app.use('/user', userRouter);
+app.use('/products', productsRouter);
 
 
 app.use(express.static('public'));

@@ -1,0 +1,75 @@
+main.createProduct {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    justify-content: center;
+    margin-top: 150px
+
+}
+
+.createProduct input {
+    display: flex;
+    width: 90%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: small;
+
+}
+
+.createProduct ::placeholder {
+    color: #b2afaf;
+    font-family: 'MOMCAKE', sans-serif;
+}
+
+
+div.createProduct-box {
+    display: inline-block;
+    width: 90%;
+}
+
+div.createProduct-box {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.createProduct-button {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.createProduct-banner a {
+    text-decoration: none;
+    color: #090808;
+    transition: text-decoration 1000ms;
+}
+
+.createProduct-banner a:hover {
+    text-decoration: underline;
+    color: #900E1E
+}
+
+.createProduct-banner {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.createProduct{
+    margin-top: 150px;
+}
+
+.createProduct-button{
+
+}
