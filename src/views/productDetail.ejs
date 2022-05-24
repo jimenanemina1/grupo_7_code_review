@@ -14,8 +14,13 @@
             <div class="products">
                 <h1 class="Nombre-Producto"> <%=items.name%> </h1>
                 <article>
+
              
                     <div class="imagen-producto"><img src=<%=items.imgPath%> alt="Cafetera" class="product_img"></div>
+
+            
+                    <div class="imagen-producto"><img alt="Cafetera" class="product_img" src=<%=items.imgPath%> </div>
+
                     <div class="main-articlepd">
                         <br>
                         <p class="price">Precio $ <%=items.price%></p>
@@ -34,7 +39,7 @@
                         <br><br>
                         <div class="comprar">
                           
-                            <a href="\shoppingCart" class="btncomprar">COMPRAR AHORA</a>
+                            <a href="\shopping-cart" class="btncomprar">COMPRAR AHORA</a>
                         </div>
                     </div>
                     

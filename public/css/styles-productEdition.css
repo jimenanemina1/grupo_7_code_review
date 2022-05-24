@@ -1,26 +1,4 @@
-header .registro {
-    display: flex;
-    direction: rows;
-    align-items: center;
-    margin-right: 10%;
-    margin-top: 10px;
-    font-size: 12px;
-    justify-content: right;
-
-
-}
-
-body header .login i {
-    font-size: 2em;
-    color: #FFF;
-    margin-bottom: 10px;
-    padding-right: 30px;
-
-}
-
-
-
-main.register {
+main.editProduct {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -30,9 +8,10 @@ main.register {
     margin-top: 150px;
     margin-bottom: 200px
 
+
 }
 
-.register input {
+.editProduct input {
     display: flex;
     width: 90%;
     background: transparent;
@@ -45,42 +24,42 @@ main.register {
 
 }
 
-.register ::placeholder {
+.editProduct ::placeholder {
     color: #b2afaf;
     font-family: 'MOMCAKE', sans-serif;
 }
 
-div.register-login-box {
+
+div.editProduct-box {
     display: inline-block;
     width: 90%;
 }
 
-div.register-login-box button {
-    display: flex;
+div.editProduct-box {
+    display: block;
     margin-bottom: 5px;
     padding: 5px;
 }
 
-.register-login-button {
+.editProduct-button {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
 }
 
-
-.register-login-banner a {
+.editProduct-banner a {
     text-decoration: none;
     color: #090808;
     transition: text-decoration 1000ms;
 }
 
-.register-login-banner a:hover {
+.editProduct-banner a:hover {
     text-decoration: underline;
     color: #900E1E
 }
 
-.register-login-banner {
+.editProduct-banner {
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
@@ -88,8 +67,14 @@ div.register-login-box button {
     align-items: center;
 }
 
-.registerButton a,
-.registerButton a {
+
+
+.editProduct{
+    margin-top: 150px;
+}
+
+
+.editButton a {
     display: inline;
     align-content: center;
     width: 40%;
@@ -97,8 +82,7 @@ div.register-login-box button {
 }
 
 
-.registerButton a button,
-.registerButton a button {
+.editButton a button {
     display: flex;
     width: 100%;
     align-content: center;
