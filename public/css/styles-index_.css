@@ -191,7 +191,7 @@
 #main .recomendados .contenedor-articulos-recomendados a:hover,
 #main .recomendados .contenedor-articulos-recomendados a:focus,
 #main .recomendados .contenedor-articulos-recomendados a:active {
-  width: 40%;
+  width: 80%;
   text-decoration: none;
   color: inherit;
   display: block;
