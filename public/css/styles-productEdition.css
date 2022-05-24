@@ -1,0 +1,98 @@
+main.editProduct {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 200px
+
+
+}
+
+.editProduct input {
+    display: flex;
+    width: 90%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: small;
+
+}
+
+.editProduct ::placeholder {
+    color: #b2afaf;
+    font-family: 'MOMCAKE', sans-serif;
+}
+
+
+div.editProduct-box {
+    display: inline-block;
+    width: 90%;
+}
+
+div.editProduct-box {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.editProduct-button {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.editProduct-banner a {
+    text-decoration: none;
+    color: #090808;
+    transition: text-decoration 1000ms;
+}
+
+.editProduct-banner a:hover {
+    text-decoration: underline;
+    color: #900E1E
+}
+
+.editProduct-banner {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.editProduct{
+    margin-top: 150px;
+}
+
+
+.editButton a {
+    display: inline;
+    align-content: center;
+    width: 40%;
+    text-decoration: none;
+}
+
+
+.editButton a button {
+    display: flex;
+    width: 100%;
+    align-content: center;
+}
+
+
+.buttonBox {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    margin-block: 15px;
+
+}

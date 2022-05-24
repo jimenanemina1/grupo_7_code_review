@@ -1,9 +1,8 @@
-const path = require('path');
 
-const shoppingCartController= {
-    cart: (req, res) => {
-        res.sendFile(path.resolve('src/views/shoppingCart.html'))
+const shoppingCartController = {
+    shoppingCart: (req, res) => {
+        res.render('shoppingCart.ejs')
     }
-};
+}
 
 module.exports = shoppingCartController;

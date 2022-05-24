@@ -1,0 +1,64 @@
+<!-- Head -->
+<%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="css/styles-index_.css">
+
+</head>
+<!-- Header -->
+<%- include("./partials/header.ejs") %>
+
+<body>
+    <!-- Page content -->
+    <main id="main">
+        <section class="seccion-imagen-principal">
+            <div class="imagen-hero">
+                <div class="texto-hero">
+                    <h1> Barizta...</h1>
+                    <p>Pasión por el café.</p>
+                </div>
+            </div>
+        </section>
+        <section class="seccion-productos-principales">
+            <article class="productos-principales">
+                <div class="contenedor-producto-principal">
+                    <i class="fa-solid fa-chevron-left flecha-izquierda"></i>
+                    <i class="fa-solid fa-chevron-right flecha-derecha"></i>
+                    <div class="imagen-producto-principal">
+                        <img src="images/img-cafetera-moulinex-removebg.png" alt="Producto Principal">
+                    </div>
+                    <div class="informacion-producto-principal">
+                        <h3 class="titulo-producto-principal">Cafetera Moulinex</h3>
+                        <p class="descripcion-producto-principal">Reinventa tus momentos de café con toda la
+                            versatilidad
+                            que Moulinex
+                            trae para ti</p>
+                        <h4 class="oferta-producto">15% OFF + 22 cápsulas de obsequio
+                            Ahora: $ 0.0000* </h4>
+                        <p class="condiciones-producto">*El descuento aplica durante el pago</p>
+                        <a href="/products" class="mas-informacion">Más información</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="recomendados">
+            <h2 class="titulo-recomendados">Recomendados por Barizta:</h2>
+            <div class="contenedor-articulos-recomendados">
+                <% for (let producto of productosMostrados) { %>
+                <a href="/products/<%= producto.id%>">
+                    <article class="articulo-recomendado">
+                        <div class="imagen-articulo-recomendado">
+                            <img src="<%=producto.imgPath%>" alt="producto recomendado">
+                        </div>
+                        <h5 class="nombre-producto-recomendado"><%=producto.name%></h5>
+                        <i class="fa-solid fa-square-plus"></i>
+                    </article>
+                </a>
+                <% } %>
+            </div>
+
+        </section>
+    </main>
+    <!-- Footer -->
+    <%- include("./partials/footer.ejs") %>
+</body>
+
+</html>

@@ -8,6 +8,8 @@ body {
   font-family: "BIZ UDPGothic", sans-serif;
 }
 
+/* *********Header******** */
+
 #header {
   position: fixed;
   top: 0;
@@ -46,6 +48,14 @@ body {
   margin-right: 8px;
 }
 
+#header .primera-barra .usuario-carrito a,
+#header .primera-barra .usuario-carrito a:hover,
+#header .primera-barra .usuario-carrito a:focus,
+#header .primera-barra .usuario-carrito a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 #header .barra-navegacion {
   background-color: #900e1e;
 }
@@ -64,4 +74,53 @@ body {
 #header .barra-navegacion ul li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+}
+
+/* *********Footer******** */
+
+#footer {
+  background: black;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+#footer .logo-footer {
+  width: 10rem;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+#footer .logo-footer img {
+  width: 100%;
+  height: auto;
+}
+
+#footer hr {
+  width: 75%;
+  margin: auto;
+}
+
+#footer .siguenos {
+  color: white;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+#footer .contenedor-redes-sociales {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#footer .copyright {
+  background: white;
+}
+
+#footer .copyright .texto-copyright {
+  color: black;
+  font-size: 0.5rem;
+  text-align: center;
 }

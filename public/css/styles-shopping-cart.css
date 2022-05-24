@@ -14,7 +14,7 @@
 }
 
 body{
-    font-family: 'MOMCAKE', sans-serif;
+    font-family: "BIZ UDPGothic", sans-serif;
     background-color: #FFF;
 }
 
@@ -22,6 +22,9 @@ body{
 
 header{
     background-color: #000000;
+}
+#header{
+    position: sticky;
 }
 
 header div.logo,
@@ -113,8 +116,48 @@ main{
     margin: 5px;
 }
 
+main section.Cart{
+    display: flex;
+    justify-content: space-between;
+}
+
+main section.Cart div.add-cart a{
+    font-size: 13px;
+    text-decoration: none;
+    transition: color, text-decoration, 50ms;
+}
+
+main section.Cart div.add-cart a:hover{
+    color:#000000;
+    text-decoration:underline;
+}
+
+main section.Cart div.pay-for-cart a{
+    font-size: 13px;
+    text-decoration: none;
+    transition: color, text-decoration, 50ms;
+}
+
+main section.Cart div.pay-for-cart a:hover{
+    color: #000000;
+    text-decoration: underline;
+}
+
+main section.Cart div a:hover{
+    color: #000000;
+}
+
+main section.product article div.formulario{
+    display: flex;
+    width: 70%;
+}
+
 #notas-adicionales{
     width: 100%;
+}
+
+#footer{
+    position:static
 }
 
 @media (min-width: 361px){
@@ -132,7 +175,7 @@ main{
     
     }
 
-    body header nav ul{
+   /* body header nav ul{
             
         display:flex; 
         justify-content: space-around; 
@@ -142,7 +185,7 @@ main{
         box-sizing: border-box;
     
     
-    }
+    }*/
 
     header ul li a{
         list-style-type:none;
@@ -216,12 +259,12 @@ footer section h5{
     font-size: 18px;
 }
 
-.img-product img{
+/*.img-product img{
     height: 300px;
     width: 300px;
     margin: auto;
     display: flex;
-}
+}*/
 
 
 
@@ -230,7 +273,7 @@ footer section h5{
 @media (min-width: 1200px){
     body header nav {
      /* border:red solid 5px; */
-     max-width: 500px;
+     max-width: 100%;
      margin: auto;
 
      

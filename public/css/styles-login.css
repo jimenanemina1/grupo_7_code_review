@@ -1,304 +1,124 @@
-/* paleta de colores 
-#b8aca5
-#900E1E
-#000000
-#c6a15b
-#4a6554
-#c6a15b*/
-
-
-*{
-    margin: 0px;
-    padding: 0px;    
-    box-sizing: border-box;
-}
-
-body{
-    font-family: 'MOMCAKE', sans-serif;
-    background-color: #FFF;
-}
-
-
-
-header{
-    background-color: #000000;
-}
-
-header div.logo,
-header div.registro{
-    width: 50%;
-    
-}
-
-
-
-header div.top-header {
-    display: flex;
-    justify-content: left;
-    padding-left: 10px;
-   
-}
-
-header ul li a{
-    text-decoration: none;
-    font-size: 1rem;
-    color: white;
-    margin-bottom:10px;
-    white-space: nowrap;
-    overflow:hidden;
-}
-
-ul{
-    list-style: none;
-}
-
-
-
-header .registro{
+header .registro {
     display: flex;
     direction: rows;
     align-items: center;
     margin-right: 10%;
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 12px;
     justify-content: right;
-    
-   
+
+
 }
 
-body header .login i{
-    font-size: 2em;  
-    color:#FFF;
+body header .login i {
+    font-size: 2em;
+    color: #FFF;
     margin-bottom: 10px;
     padding-right: 30px;
-   
 }
 
-body header .compras i{
-    font-size: 2em;  
-    color:#FFF;
-    margin-bottom: 10px;
-}
-
-
-div.burger-menu{
-    text-align: center;
-   
-}
-
-div.burger-menu i{
-    background-color:#c6a15b;
-    border-radius: 5px;
-    color: #FFF;
-    font-size: 20px;
-    height: 40px;
-    margin: 10px 0px 20px 0px;
-    padding: 10px;
-    width: 40px;
-}
-
-main.login{
+main.login {
     display: flex;
     flex-direction: row;
     width: 100%;
-   margin: 5px;
+    margin: 5px;
     padding: 5px;
     justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 200px
 }
 
-.login input{
-    display: flex; 
+.login input {
+    display: flex;
     width: 90%;
     background: transparent;
     border: none;
     border-bottom: 1px solid #000000;
     padding: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     font-size: small;
-   
+
 }
 
-.login ::placeholder{
-    color:#b2afaf;
+.login ::placeholder {
+    color: #b2afaf;
     font-family: 'MOMCAKE', sans-serif;
 }
 
 
-div.register-login-box{
+div.register-login-box {
     display: inline-block;
     width: 90%;
-   }
-   
-   div.register-login-box button{
-       display: block;
-       margin-bottom: 5px;
-       padding: 5px;
-   }
-   .register-login-button{
-       display: inline-flex;
-       justify-content: space-between;
-       align-items: center;
-       align-content: center;
-   }
-   .register-login-banner a { 
-        text-decoration: none;
-        color: #090808;
-        transition: text-decoration 1000ms;
-       }
-
-       .register-login-banner a:hover{ 
-        text-decoration: underline ;
-        color:#900E1E
-       }   
-   
-   .register-login-banner{
-       display: flex;
-       justify-content: space-evenly;
-       padding: 10px;
-       width: 100%;
-       align-items: center;
-   }
-   
-   .loginApple button, .loginGoogle button{
-       display: flex;
-       width: 80%;
-       font-family: 'MOMCAKE', sans-serif;
-       align-content: center;
-       width: 90%;
-   }
-
-
-   .forgotPassword{
-       text-decoration: underline;
-   }
-
-
-
-@media (min-width: 361px){
-
-    div.burger-menu{
-        text-align: center;
-        display: none;
-        
-    }
-
-    body header .barra-secundaria{
-            
-    background-color: #900E1E;
-    padding-top: 10px;
-    
-    }
-
-    body header nav ul{
-            
-        display:flex; 
-        justify-content: space-around; 
-        padding-bottom: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        box-sizing: border-box;
-    
-    
-    }
-
-    header ul li a{
-        list-style-type:none;
-        display: flex;
-        flex-direction: column;
-        font-size: 1.5rem;
-        align-items: center;
-    }
-    
-   
-    
 }
 
-
-/* estilos footer */
-main section h3{
-    margin: 20px 0px;
+div.register-login-box button {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px;
 }
 
-article div.main-article{
-    width: 100%;
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
-   /* display: flex;
-    flex-direction: row*/;
-    
-    flex-wrap: wrap;
-    align-items: baseline;
- 
-
-}
-
-footer section.pie_pagina{
-    background-color:#000000;
-    color: #fffdfd;
-    text-align: center;
-    padding-right: 24.5px;
-    padding-left: 24.5px;
-    box-sizing: border-box;
-    margin-left: 2.5px;
-    margin-right: 2.5px;
-}
-
-footer section article{
-    
-    padding-top: 20%;
-}
-
-footer section article i{
-  font-size: 2em;  
-  color:#ffffff;
-  margin-bottom: 10px;
-  
-}
-
-footer section.Copyright{
-    
-    background-color:#000000;
-    text-align: left;
-    padding-left: 4%;
-    padding-bottom: 5%;
-    padding-top: 10%;
-    margin-left:2.5px;
-    margin-right:2.5px;
-    color: #FFF;
-    
-   
-}
-
-footer section h5{
-    font-size: 18px;
-}
-
-
-
-
-
-@media (min-width: 1200px){
-    body header nav {
-     /* border:red solid 5px; */
-     max-width: 500px;
-     margin: auto;
-
-     
- }
-
- footer .pie_pagina{
-    display: flex;
+.register-login-button {
+    display: inline-flex;
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
 
+.register-login-banner a {
+    text-decoration: none;
+    color: #090808;
+    transition: text-decoration 1000ms;
+}
+
+.register-login-banner a:hover {
+    text-decoration: underline;
+    color: #900E1E
+}
+
+.register-login-banner {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.loginApple button,
+.loginGoogle button {
+    display: flex;
+    width: 80%;
+    align-content: center;
+    width: 90%;
+}
+
+
+.loginButton a,
+.registerButton a {
+    display: inline;
+    align-content: center;
+    width: 40%;
+    text-decoration: none;
 
 }
 
-footer section article i:hover{
-    font-size: 2em;  
-    color:#EAC926;
-    margin-bottom: 10px;
-    
-  }
+
+.loginButton a button,
+.registerButton a button {
+    display: flex;
+    width: 100%;
+    align-content: center;
+
+}
 
 
+.buttonBox {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    margin-block: 15px;
+}
+
+.forgotPassword {
+    text-decoration: underline;
 }
