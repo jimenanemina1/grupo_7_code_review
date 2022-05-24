@@ -4,8 +4,9 @@ main {
 }
 
 main .productDetails article img{
-    width: 400px;
+    width: 100%;
     padding-top: 10px;
+    height: auto;
 
 }
 
