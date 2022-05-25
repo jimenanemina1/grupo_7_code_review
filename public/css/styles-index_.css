@@ -7,7 +7,7 @@
 }
 #main .seccion-imagen-principal .imagen-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(“../images/imag-principal.jpg”);
+    url('../images/imag-principal.jpg');
   height: 70vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(206, 199, 199);
-  font-family: “Yanone Kaffeesatz”, sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 3rem;
 }
 #main .seccion-productos-principales .productos-principales {
