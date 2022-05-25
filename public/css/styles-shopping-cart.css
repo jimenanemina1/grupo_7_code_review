@@ -34,21 +34,55 @@ main section.product div article hr{
     margin-bottom: 5px;
 }
 
-main section.product div article div.pay-for-cart{
+main section.product div article h3{
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+main section.product div article div.main-article{
     display: flex;
-    justify-content: center;
+    margin: auto;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+main section.product div article div.main-article div{
+    display: flex;
+    width: 25%;
+    justify-content: space-evenly;
+}
+
+main section.product div article div.main-article div button{
+    width: 15px;
+}
+
+main section.product div article div.main-article div input{
+    width: auto;
+}
+
+main section.product div article div.main-article button{
+    width: 18px;
+}
+
+main section.product div article div.main-article p{
+    display: flex;
+    align-items: center;
+}
+
+main section.product div article div.pay-for-cart{
+    text-align-last:center ;
 }
 
 main section.product div article div.pay-for-cart button.pay{
-    background-color: green;
+    background-color: #3D8705;
     color:white;
-    border: solid;
-    border-radius: 5px;
+    border: 1px solid #3D8705;
+    border-radius: 4px;
     width: 25%;
     height: 25px;
 }
 
-main section.Cart div.pay-for-cart a{
+/*main section.Cart div.pay-for-cart a{
     font-size: 13px;
     text-decoration: none;
     transition: color, text-decoration, 50ms;
@@ -61,7 +95,7 @@ main section.Cart div.pay-for-cart a:hover{
 
 main section.Cart div a:hover{
     color: #000000;
-}
+}*/
 
 main section.product article div.formulario{
     display: flex;
