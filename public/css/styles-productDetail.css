@@ -5,8 +5,25 @@ main {
 
 main .productDetails article img{
     width: 100%;
-    padding-top: 150px;
+    padding-top: 10px;
+    height: auto;
+
 }
+
+main .productDetails .imagen-producto{
+   
+    padding-top: 10px;
+
+}
+
+
+
+main .productDetails .Nombre-Producto{
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+}
+
 main .calificaciones-positivas article img{
     width: 60%;
     padding:0 5px 5px 0; 
@@ -21,16 +38,16 @@ main .calificaciones-positivas .estrellas{
 main .productDetails article{
     background-color: #fff; 
     padding-top: 350;   
-    margin: 10px 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     
 }
 
 
 article div.main-articlepd {
-    padding: 15px;
-    margin: auto;
+
+    padding-top: 10px;
+    
 }
 
 ul{
@@ -88,3 +105,37 @@ main .por-que-elegimos{
 }
 
 
+@media (min-width: 769px){
+
+    article div.main-articlepd {
+
+        padding-top: 10px;
+        margin-top: 15px;
+    }
+    
+    main .productDetails article{
+        background-color: #fff; 
+        padding-top: 350;   
+        
+        display: flex;
+        flex-direction:column-reverse;
+        
+    }
+
+    main .productDetails article{
+        background-color: #fff; 
+        padding-top: 350;   
+        margin: 50px 0px;
+        display: flex;
+        flex-direction: row;
+        padding-left: 20%;
+                
+    }
+
+    main .productDetails article img{
+        width: 400px;
+        padding-top: 10px;
+    
+    }
+
+ }

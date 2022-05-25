@@ -12,12 +12,16 @@
     <main>
         <section class="productDetails">
             <div class="products">
+                <h1 class="Nombre-Producto"> <%=items.name%> </h1>
                 <article>
-            
+
+             
                     <div class="imagen-producto"><img src=<%=items.imgPath%> alt="Cafetera" class="product_img"></div>
+
                     <div class="main-articlepd">
-                        <h4 class="Nombre Producto"> <%=items.name%> </h4>
-                        <p class="price"><%=items.price%></p>
+                        <br>
+                        <p class="price">Precio $ <%=items.price%></p>
+                        <br>
                         <p class="descripcion"><%=items.description%></p>
                         <br>
                         <br>
@@ -39,6 +43,8 @@
                 </article>
             </div>
         </section>
+        <br>
+        <br>
         <section class="calificaciones-positivas">
          <div class="calificaciones">
              <h1>Calificaciones positivas</h1>

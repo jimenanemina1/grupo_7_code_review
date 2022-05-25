@@ -14,7 +14,6 @@ const productsController = {
     editCongrats: (req, res) => {
         res.render('editProductCongrats.ejs')
     },
-    
     detail: (req,res) =>{
         const product = data.find(items => items.id == req.params.idProduct)
         res.render('productDetail',{items:product})
