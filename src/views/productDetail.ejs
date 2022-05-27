@@ -4,7 +4,7 @@
 
 
 <body>
-   
+
     <!-- Header -->
     <%- include("./partials/header.ejs") %>
 
@@ -15,71 +15,79 @@
                 <h1 class="Nombre-Producto"> <%=items.name%> </h1>
                 <article>
 
-             
+
                     <div class="imagen-producto"><img src=<%=items.imgPath%> alt="Cafetera" class="product_img"></div>
 
                     <div class="main-articlepd">
                         <br>
                         <p class="price">Precio $ <%=items.price%></p>
+                        <p class="descuento">Descuento $ <%=items.discount%></p>
+                        <p class="total">Precio Total $ <%=items.price-items.discount%> </p>
                         <br>
                         <p class="descripcion"><%=items.description%></p>
                         <br>
                         <br>
                         <div class="spinnerQty">
-                        <button class="quantityMas">+</button>
-                        <INPUT TYPE="NUMBER" MIN="0" MAX="100" STEP="1" VALUE="1" class="inputSpinner">
-                        <button class="quantityMenos" >-</button>
-                        <button type="reset" name="borrar"><i class="fas fa-times-circle"></i></button>
+                            <button class="quantityMas">+</button>
+                            <INPUT TYPE="NUMBER" MIN="0" MAX="100" STEP="1" VALUE="1" class="inputSpinner">
+                            <button class="quantityMenos">-</button>
+                            <button type="reset" name="borrar"><i class="fas fa-times-circle"></i></button>
                         </div>
                         <br>
                         <div>Disponible en stock: 15</div>
                         <br><br>
                         <div class="comprar">
-                          
-                            <a href="\shopping-cart" class="btncomprar">COMPRAR AHORA</a>
+                            <form action="/shopping-cart" method="get">
+                                <button class="btncomprar">COMPRAR AHORA </button>
+                            </form>
+
                         </div>
                     </div>
-                    
+
                 </article>
             </div>
         </section>
         <br>
         <br>
-        <section class="calificaciones-positivas">
-         <div class="calificaciones">
-             <h1>Calificaciones positivas</h1>
-             <br><br><br>
-             <div class="estrellas" >
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+       
+        <div class="col-12">
+            <h2 class="products-title">Calificaciones Positivas</h2>
+        </div>
+        <div class="container reviews-wrapper">
+            <div class="row">
+
+              
+                <% items.review.forEach(item => { %>
+    
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <section class="review-box">
+                        
+                        <% for (let p = 0;p<item.point; p++) { %>
+                       
+                            <i class="fas fa-star"></i>
+                                                        
+                       
+                        <% } %>
+
+                        <h1><%=item.name %></h1>
+                            <figure class="review-box_image">
+                                <img src=<%=item.imgPath %> alt="imagen del cliente">
+                            </figure>
+                            <article class="review-box_data">
+                                <p><%=item.comment %></p>
+                            </article>
+                        </a>
+                    </section>
                 </div>
-                <h1>Andrea Palacios</h1>
-           <article>
-            <i class="fas fa-angle-left"></i>
-            <img src="/images/clientea.png" alt="Cafetera" class="product_img">
-            <i class="fas fa-angle-right"></i>
-           </article>
-         </div>
-        </section>
-        <section class="por-que-elegimos">
-            <div class="elegimos">
-                <br>
-                <h1>Por que lo elegimos</h1>
-                <br>
-              <article>
-               <p>Me encanta el sabor de capsulas para Dolce, esta Maquina es super amigable y funciona perfectamente y te indica todo muy claro.</p>
-              <br>
-              <img src="/images/elegimos.jpg" alt="Cafetera" class="product_img">
-            </article>
+                <% }) %>
             </div>
-           </section>
-    </main>       
+        </div>
+
+    </main>
     <!-- Footer -->
     <%- include("./partials/footer.ejs") %>
-    
+
 </body>
 
 </html>
