@@ -99,9 +99,24 @@ main section.Cart div a:hover{
     color: #000000;
 }*/
 
+main section.product div article div.buy{
+    display: flex;
+}
+
+main section.product div article div.buy a{
+    color:black;
+    text-decoration: none;
+}
+
+main section.product div article div.buy div.icon-arrow{
+    padding-right: 5px;
+}
+
 main section.product article div.formulario{
     display: flex;
     width: 70%;
+    padding-top: 5px;
+    padding-left: 18px;
 }
 
 .formulario{
