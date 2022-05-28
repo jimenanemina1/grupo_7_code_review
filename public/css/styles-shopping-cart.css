@@ -25,7 +25,7 @@ main{
 
 main section.Cart{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 main section.product div article hr{
@@ -44,6 +44,7 @@ main section.product div article div.main-article{
     margin: auto;
     justify-content: space-between;
     margin-bottom: 7px;
+    padding-top: 10px;
 }
 
 main section.product div article div.main-article div{
@@ -71,6 +72,7 @@ main section.product div article div.main-article p{
 
 main section.product div article div.pay-for-cart{
     text-align-last:center ;
+    padding: 10px;
 }
 
 main section.product div article div.pay-for-cart button.pay{
