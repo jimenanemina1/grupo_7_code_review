@@ -332,26 +332,14 @@
  },
  {
   "id": 13,
-  "name": "mi nuevo item",
-  "description": "desc mi nuevo item sdfgsdfgsdfgs sdfg sdfg sdfg sdfg sdfg sdfg sdfg sdfg sdfg dfg sdfg sdfg dfg dfgsdfg dfgs fdgdf gsdfg dfg sdfgsdfg sdfgdfg",
+  "name": "mi nuevo producto",
+  "description": "easfdsdfnajsdbfafkjabsdf a asfhasdfhasdhfjkashdjfhasdjfha asjdhf kjasd fasjkdfh kajsdfahsdfk ahsdfjasdh fkhkjhasdf",
+  "price": 1200,
   "size": "500",
-  "price": 1000,
-  "discount": 10,
-  "offer": true,
-  "category": "value1",
-  "imgPath": "/images/img-mi-nuevo-item-1654110845318.jpg",
-  "review": []
- },
- {
-  "id": 14,
-  "name": "asdfasdfasdf",
-  "description": "asdfasdf",
-  "size": "500",
-  "price": 5000,
-  "discount": 10,
-  "offer": true,
   "category": "value2",
-  "imgPath": "/images/img-asdfasdfasdf-1654111603233.jpg",
+  "discount": 10,
+  "offer": true,
+  "imgPath": "/images/img-mi-nuevo-producto-1654113108060.jpg",
   "review": []
  }
 ]

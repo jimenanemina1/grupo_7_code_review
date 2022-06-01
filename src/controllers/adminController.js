@@ -34,15 +34,15 @@ const adminController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/admin/create-congrats');
 	},
-  
+  createCongrats: (req, res) => {
+    res.render('createProductCongrats.ejs')
+  },
   editProduct: (req, res) => {
-    const product = data.find(items => items.id == req.params.idProduct)
+    const product = products.find(items => items.id == req.params.idProduct)
+    console.log("le producto a editar es" + JSON.stringify(product))
     res.render('editProduct.ejs', {
       items: product
     })
-  },
-  createCongrats: (req, res) => {
-    res.render('createProductCongrats.ejs')
   },
   editCongrats: (req, res) => {
     res.render('editProductCongrats.ejs')

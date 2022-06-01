@@ -29,6 +29,10 @@
                     <label>Descripción del tipo de café</label><input type="text" name="description"
                         placeholder="Mínimo 20 carateres."></input>
                 </div>
+                <div class="price">
+                    <label>Precio del producto</label><input type="number" name="price"
+                        placeholder="Mínimo 500 grms."></input>
+                </div>
                 <div>
                     <p>
                         Sube imagenes del producto(máximo 6):
@@ -39,27 +43,6 @@
                     <label>Tamaño del contenedor</label><input type="number" name="size"
                         placeholder="Mínimo 500 grms."></input>
                 </div>
-                <div class="price">
-                    <label>Precio del producto</label><input type="number" name="price"
-                        placeholder="Mínimo 500 grms."></input>
-                </div>
-                <div class="discount">
-                    <label>Agregue % de descuento del producto</label><input type="number" name="discount"
-                        placeholder="Máximo 99%."></input>
-                </div>
-
-                <div class="offer">
-                    <label>¿Está en oferta?</label>
-                    <div class="offerButtons">
-                        <input type="checkbox" name="offer" value=true>
-                        Yes 
-                        </input>
-
-                        <input type="checkbox" name="offer" value=false>
-                        No 
-                        </input>
-                    </div>
-                </div>
                 <div class="category">
                     <label>Elegir categoría</label>
                     <select name="category">
@@ -68,8 +51,24 @@
                         <option value="value3">Accesorios</option>
 
                     </select>
+                </div>  
+                <div class="discount">
+                    <label>Agregue % de descuento del producto</label><input type="number" name="discount"
+                        placeholder="Máximo 99%."></input>
                 </div>
 
+                <div class="offer">
+                    <label>¿Está en oferta?</label>
+                    <div class="offerButtons">
+                        <input type="radio" name="offer" value=true>
+                        Yes 
+                        </input>
+
+                        <input type="radio" name="offer" value=false>
+                        No 
+                        </input>
+                    </div>
+                </div>
                 <div class="buttonBox">
                     <div class="createButton">
                         <button type="submit"><strong>Publicar</strong></button>
