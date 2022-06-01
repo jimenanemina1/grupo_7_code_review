@@ -331,36 +331,14 @@
  },
  {
   "id": 13,
-  "name": "dsaaffsdf",
-  "description": "asdfasdf",
-  "size": "500",
-  "price": 2300,
-  "discount": 23232,
-  "affirmative": "yes",
-  "selectCategory": "value2",
-  "imgPath": "img-dsaaffsdf-1654103307711.jpeg"
- },
- {
-  "id": 14,
-  "name": "dsaaffsdf",
-  "description": "asdfasdf",
-  "size": "500",
-  "price": 2300,
-  "discount": 23232,
-  "affirmative": "yes",
-  "selectCategory": "value2",
-  "imgPath": "img-dsaaffsdf-1654103350023.jpeg"
- },
- {
-  "id": 15,
-  "name": "dfdfsdfasdf",
-  "description": "asdfasdf",
+  "name": "mi nuevo item",
+  "description": "desc mi nuevo item sdfgsdfgsdfgs sdfg sdfg sdfg sdfg sdfg sdfg sdfg sdfg sdfg dfg sdfg sdfg dfg dfgsdfg dfgs fdgdf gsdfg dfg sdfgsdfg sdfgdfg",
   "size": "500",
   "price": 1000,
-  "discount": 23,
+  "discount": 10,
   "offer": "true",
   "category": "value1",
-  "imgPath": "/images/img-dfdfsdfasdf-1654110395769.jpg",
+  "imgPath": "/images/img-mi-nuevo-item-1654110845318.jpg",
   "review": []
  }
 ]
