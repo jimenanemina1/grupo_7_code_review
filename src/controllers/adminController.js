@@ -14,7 +14,8 @@ const adminController = {
   },
   storeProduct:(req, res) => {
 		console.log(req.file)
-		let imgPath = '/images/default-image.png'
+    console.log("el body es" + JSON.stringify(req.body))
+     let imgPath = '/images/default-image.png'
 		if(req.file){
 			imgPath = `/images/${req.file.filename}`
 		}
