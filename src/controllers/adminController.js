@@ -37,7 +37,6 @@ const adminController = {
   },
   editProduct: (req, res) => {
     const product = products.find(items => items.id == req.params.idProduct)
-    console.log("le producto a editar es" + JSON.stringify(product))
     res.render('editProduct.ejs', {
       items: product
     })
@@ -46,6 +45,7 @@ const adminController = {
     res.render('/admin/edit-congrats')
   },
   storeEditedProduct: (req, res) => {
+    console.log("entre aca")
     const product = products.find(items => items.id == req.params.idProduct)
      let imgPath = '/images/default-image.png'
 		if(req.file){
