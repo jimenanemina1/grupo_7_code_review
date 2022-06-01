@@ -73,7 +73,7 @@ div.createProduct-box {
     margin-top: 150px;
 }
 
-.createButton a,
+
 .createButton a {
     display: inline;
     align-content: center;
@@ -82,18 +82,43 @@ div.createProduct-box {
 }
 
 
-.createButton a button,
+
 .createButton a button {
-    display: flex;
+    display: block;
     width: 100%;
-    align-content: center;
+    justify-content: center;
+}
+
+.createButton button {
+    border-radius: 5px;
+    display: block;
+    /* width: 100%; */
+    justify-content: center;
+    padding: 10px;
 }
 
 
 .buttonBox {
-    display: flex;
-    width: 100%;
-    align-content: center;
-    margin-block: 15px;
-
+  display: flex;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+.offer{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.offerButtons{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+  
+}
+
+

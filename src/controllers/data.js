@@ -1,3 +1,5 @@
+const Logger = require("nodemon/lib/utils/log");
+
 const products = [
   {
     id: 1,
@@ -7,7 +9,30 @@ const products = [
     price: 1.1,
     imgPath: "/images/bascula.png",
     size: 1000,
-    category: "Accesorios"
+    category: "Accesorios",
+    discount: 10,
+    review:[
+      {
+      id:1,
+      name:"Felipe Gomez",
+      point:3,imgPath:"/images/avatar1.png",
+      comment:"Anim nisi cillum magna cupidatat pariatur commodo ut ullamco reprehenderit. Et quis tempor ullamco aute est consectetur. Pariatur Lorem nisi duis id tempor eu esse consequat id. Dolore ex ipsum laborum mollit nostrud ex minim dolore Lorem do et esse sint cillum. Ullamco nisi sit do Lorem veniam mollit magna ea sit. Labore elit mollit ex sint labore eiusmod laborum enim esse eu officia ullamco veniam qui. Mollit officia magna occaecat consectetur sint tempor et amet cupidatat."
+      },
+      {
+      id:2,
+      name:"Carlos Restrepo",
+      point:5,
+      imgPath:"/images/avatar2.png",
+      comment:"Duis in cupidatat quis occaecat adipisicing ipsum commodo anim. Qui anim aliquip ut amet dolore nulla culpa exercitation reprehenderit aliquip dolor irure. Sit velit tempor proident velit irure ex eu sint ea sit est cupidatat incididunt. Nulla ad sint laboris ea adipisicing velit in voluptate cupidatat. Reprehenderit velit voluptate commodo irure. Eu ex aliquip ex dolor ullamco ad nulla magna fugiat quis. Culpa occaecat mollit esse ipsum velit excepteur nostrud consectetur proident occaecat."
+      },
+      {
+      id:3,
+      name:"Federico gutierrez",
+      point:2,
+      imgPath:"/images/avatar3.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 2,
@@ -17,7 +42,24 @@ const products = [
     price: 2.2,
     imgPath: "/images/dispensador-de-crema.png",
     size: 1000,
-    category: "Accesorios"
+    category: "Accesorios",
+    discount: 10,
+    review:[
+      {
+      id:7,
+      name:"Sandra Ramirez",
+      point:1,
+      imgPath:"/images/avatar7.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:5,
+      name:"Catalina Serna",
+      point:2,
+      imgPath:"/images/avatar5.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 3,
@@ -27,7 +69,24 @@ const products = [
     price: 3.3,
     imgPath: "/images/dosificador-de-azucar.png",
     size: 1000,
-    category: "Accesorios"
+    category: "Accesorios",
+    discount: 10,
+    review:[
+      {
+      id:4,
+      name:"Jorge Echavarria",
+      point:1,
+      imgPath:"/images/avatar4.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:8,
+      name:"Mauricio Patiño",
+      point:3,
+      imgPath:"/images/avatar8.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 4,
@@ -37,7 +96,24 @@ const products = [
     price: 4.4,
     imgPath: "/images/espumador-de-leche.png",
     size: 1000,
-    category: "Accesorios"
+    category: "Accesorios",
+    discount: 10,
+    review:[
+      {
+      id:4,
+      name:"Jorge Echavarria",
+      point:3,
+      imgPath:"/images/avatar4.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:8,
+      name:"Mauricio Patiño",
+      point:3,
+      imgPath:"/images/avatar8.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 5,
@@ -47,7 +123,24 @@ const products = [
     price: 5.5,
     imgPath: "/images/maletin_barista.png",
     size: 1000,
-    category: "Accesorios"
+    category: "Accesorios",
+    discount: 10,
+    review:[
+      {
+      id:4,
+      name:"Jorge Echavarria",
+      point:3,
+      imgPath:"/images/avatar4.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:8,
+      name:"Mauricio Patiño",
+      point:3,
+      imgPath:"/images/avatar8.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 6,
@@ -57,7 +150,24 @@ const products = [
     price: 6.6,
     imgPath: "/images/tamper.png",
     size: 1000,
-    category: "Accesorios"
+    category: "Accesorios",
+    discount: 10,
+    review:[
+      {
+      id:4,
+      name:"Jorge Echavarria",
+      point:3,
+      imgPath:"/images/avatar4.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:8,
+      name:"Mauricio Patiño",
+      point:3,
+      imgPath:"/images/avatar8.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 7,
@@ -67,7 +177,24 @@ const products = [
     price: 7.7,
     imgPath: "/images/tazas-espresso.png",
     size: 1000,
-    category: "Accesorios"
+    category: "Accesorios",
+    discount: 10,
+    review:[
+      {
+      id:4,
+      name:"Jorge Echavarria",
+      point:3,
+      imgPath:"/images/avatar4.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:8,
+      name:"Mauricio Patiño",
+      point:3,
+      imgPath:"/images/avatar8.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 8,
@@ -77,7 +204,24 @@ const products = [
     price: 8.8,
     imgPath: "/images/termometro.png",
     size: 1000,
-    category: "Accesorios"
+    category: "Accesorios",
+    discount: 10,
+    review:[
+      {
+      id:4,
+      name:"Jorge Echavarria",
+      point:3,
+      imgPath:"/images/avatar4.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:8,
+      name:"Mauricio Patiño",
+      point:3,
+      imgPath:"/images/avatar8.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 9,
@@ -87,7 +231,24 @@ const products = [
     price: 9.9,
     imgPath: "/images/vaso-medidor.png",
     size: 1000,
-    category: "Accesorios"
+    category: "Accesorios",
+    discount: 10,
+    review:[
+      {
+      id:4,
+      name:"Jorge Echavarria",
+      point:3,
+      imgPath:"/images/avatar4.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:8,
+      name:"Mauricio Patiño",
+      point:5,
+      imgPath:"/images/avatar8.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 10,
@@ -97,7 +258,24 @@ const products = [
     price: 10.1,
     imgPath: "/images/vasos-latte.png",
     size: 1000,
-    category: "Accesorios"
+    category: "Accesorios",
+    discount: 10,
+    review:[
+      {
+      id:4,
+      name:"Jorge Echavarria",
+      point:1,
+      imgPath:"/images/avatar4.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:8,
+      name:"Mauricio Patiño",
+      point:4,
+      imgPath:"/images/avatar8.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 11,
@@ -107,7 +285,24 @@ const products = [
     price: 10.1,
     imgPath: "/images/cafeFuerte.png",
     size: 500,
-    category: "Café"
+    category: "Café",
+    discount: 10,
+    review:[
+      {
+      id:4,
+      name:"Jorge Echavarria",
+      point:2,
+      imgPath:"/images/avatar4.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:8,
+      name:"Mauricio Patiño",
+      point:5,
+      imgPath:"/images/avatar8.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      }
+    ]
   },
   {
     id: 12,
@@ -117,7 +312,25 @@ const products = [
     price: 20.1,
     imgPath: "/images/cafeFuerte.png",
     size: 1000,
-    category: "Café"
+    category: "Café",
+    discount: 10,
+    review:[
+      {
+      id:4,
+      name:"Jorge Echavarria",
+      point:1,
+      imgPath:"/images/avatar4.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+      },
+      {
+      id:8,
+      name:"Mauricio Patiño",
+      point:4,
+      imgPath:"/images/avatar8.png",
+      comment:"Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+
+      }
+    ]
   }
 ];
 
