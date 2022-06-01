@@ -112,3 +112,38 @@ div.register-login-box button {
     margin-block: 15px;
 
 }
+
+
+
+.createButton a {
+    display: inline;
+    align-content: center;
+    width: 40%;
+    text-decoration: none;
+}
+
+
+
+.registerButton a button {
+    display: block;
+    width: 100%;
+    justify-content: center;
+}
+
+.registerButton button {
+    border-radius: 5px;
+    display: block;
+    /* width: 100%; */
+    justify-content: center;
+    padding: 10px;
+}
+
+
+.buttonBox {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
