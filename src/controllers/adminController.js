@@ -14,16 +14,17 @@ const adminController = {
   },
   storeProduct:(req, res) => {
 		console.log(req.file)
-		let imgPath = 'default-image.png'
+		let imgPath = '/images/default-image.png'
 		if(req.file){
-			imgPath = req.file.filename
+			imgPath = `/images/${req.file.filename}`
 		}
 		const newProduct = {
 			id: products[products.length - 1].id +1,
 			...req.body,
 			price: parseInt(req.body.price),
 			discount: parseInt(req.body.discount),
-			imgPath
+			imgPath,
+      review: []
 
 		}
     console.log(newProduct)
