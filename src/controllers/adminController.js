@@ -24,6 +24,7 @@ const adminController = {
 			...req.body,
 			price: parseInt(req.body.price),
 			discount: parseInt(req.body.discount),
+      offer: JSON.parse(req.body.offer),
 			imgPath,
       review: []
 
