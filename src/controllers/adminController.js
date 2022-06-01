@@ -13,8 +13,6 @@ const adminController = {
     res.render('createProduct.ejs')
   },
   storeProduct:(req, res) => {
-		console.log(req.file)
-    console.log("el body es" + JSON.stringify(req.body))
      let imgPath = '/images/default-image.png'
 		if(req.file){
 			imgPath = `/images/${req.file.filename}`
@@ -44,8 +42,33 @@ const adminController = {
       items: product
     })
   },
-  editCongrats: (req, res) => {
-    res.render('editProductCongrats.ejs')
+  editCongrats: (req, res) =>{
+    res.render('/admin/edit-congrats')
+  },
+  storeEditedProduct: (req, res) => {
+    const product = products.find(items => items.id == req.params.idProduct)
+     let imgPath = '/images/default-image.png'
+		if(req.file){
+			imgPath = `/images/${req.file.filename}`
+		}
+		const editedProduct = {
+			id: req.params.idProduct,
+			...req.body,
+			price: parseInt(req.body.price),
+			discount: parseInt(req.body.discount),
+      offer: JSON.parse(req.body.offer),
+			imgPath,
+      review: []
+
+		}
+    console.log(editedProduct)
+    const index = products.indexOf(product)
+    if(indexOf !== -1){
+      products[index] = editedProduct
+    }
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+    console.log("producti edurado" + JSON.stringify(products[req.params.idProduct]))
+    res.redirect('/admin/editProductCongrats.ejs')
   }
 };
 

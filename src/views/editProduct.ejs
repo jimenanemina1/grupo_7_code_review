@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <form action="/admin/edit-congrats" method="POST">
+        <form action="/admin/edit-product/<%=items.id%>?_method=PUT" method="POST">
 
             <div class="form-productCreation">
                 <div class="productNameField">
@@ -53,7 +53,7 @@
                             <label>¿Está en oferta?</label>
                             <div class="offerButtons">
                                 <input type="radio" name="offer" value=true>
-                                Yes 
+                                Si 
                                 </input>
         
                                 <input type="radio" name="offer" value=false>
