@@ -74,6 +74,13 @@ body {
 #header .barra-navegacion ul li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+}
+
+#header .barra-navegacion ul li a i{
+  display: block;
+  text-align: center;
+  font-size: 1rem;
 }
 
 /* *********Footer******** */

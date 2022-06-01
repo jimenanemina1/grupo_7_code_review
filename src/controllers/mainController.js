@@ -1,8 +1,11 @@
-const productController = require("./productsController");
+const fs = require("fs");
+const path = require("path");
+
+const productsFilePath = path.join(__dirname, "../data/products.json");
+const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const mainController = {
   home: (req, res) => {
-    let products = productController.list();
     let productosMostrados = [];
     while (productosMostrados.length < 4) {
       let randomProduct = products[Math.floor(Math.random() * products.length)];
