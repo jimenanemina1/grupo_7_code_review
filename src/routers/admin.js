@@ -27,9 +27,10 @@ const upload = multer({ storage });
 
 //************************* */
 
-router.get("/create-product", adminController.createProduct);
-router.get("/edit-product/:idProduct", adminController.editProduct);
-router.get("/edit-congrats", adminController.editCongrats);
-router.get("/create-congrats", adminController.createCongrats);
+router.get('/create-product', adminController.createProduct);
+router.post('/create-product', upload.single('imgPath'), adminController.storeProduct);
+router.get('/edit-product/:idProduct', adminController.editProduct);
+router.get('/edit-congrats', adminController.editCongrats);
+router.get('/create-congrats', adminController.createCongrats);
 
 module.exports = router;

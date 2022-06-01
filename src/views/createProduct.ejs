@@ -13,12 +13,12 @@
     <div class="createProduct-box">
         <div class="createProduct-banner">
             <div class="createProduct-button">
-                <a href="/product/create-product">Crear producto</a>
+                <a href="/admin/create-product-form">Crear producto</a>
             </div>
         </div>
 
 
-        <form action="/products/create-congrats" method="get">
+        <form action="" method="POST" enctype="multipart/form-data">
 
             <div class="form-productCreation">
                 <div class="productNameField">
@@ -32,7 +32,7 @@
                 <div>
                     <p>
                         Sube imagenes del producto(máximo 6):
-                        <input type="file" name="archivosubido">
+                        <input type="file" name="imgPath">
                     </p>
                 </div>
                 <div class="size">
