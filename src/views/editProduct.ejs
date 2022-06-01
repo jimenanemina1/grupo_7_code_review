@@ -17,47 +17,51 @@
             </div>
         </div>
 
-
-
-        <form action="/admin/edit-congrats" method="POST">
+        <form action="/admin/edit-product/<%=items.id%>?_method=PUT" method="POST">
 
             <div class="form-productCreation">
                 <div class="productNameField">
                     <label>Nombre del producto</label><input type="text" required name="name" value=<%=items.name%>
-                        </input> </div> <div class="Descripción del tipo de café">
-                    <label>Descripción del tipo de café</label><input type="text" name="description"
-                        value=<%=items.description%> </input> </div> <div class="size">
-                    <label>Tamaño del producto</label><input type="text" name="size" value=<%=items.size%> </input>
-                        </div> <div class="price">
-                    <label>Precio del producto</label><input type="text" name="price" value=<%=items.price%> </input>
+                        </input>
+                     </div> 
+                     <div class="Descripción del tipo de café">
+                    <label>Descripción del tipo de café</label><input type="text" name="description"value=<%=items.description%> </input>
+                    </div>
+                    <div class="price">
+                    <label>Precio del producto</label><input type="number" name="price" value=<%=items.price%> </input>
+                     </div> 
+                     <div>
+                         <p>
+                                Sube imagenes del producto(máximo 6):
+                             <input type="file" name="imgPath" multiple accept="image/png, .jpeg, .jpg, image/gif"
+                                      value=<%=items.imgPath%> </input> </p> </div>
+                    <div class="size">
+                    <label>Tamaño del producto</label><input type="number" name="size" value=<%=items.size%> </input>
                         </div> 
-                        <div class="discount">
+                        <div class="category">
+                            <label>Elegir categoría</label>
+                            <select name="category">
+                                <option value="value1">Café</option>
+                                <option value="value2">Cafeteras</option>
+                                <option value="value3">Accesorios</option>
+                            </select>
+                    </div>
+                    <div class="discount">
                             <label>Agregue % de descuento del producto</label><input type="discount" name="price" value=<%=items.discount%> </input>
-                                </div> 
-                        <div class="offer">
+                       </div> 
+                    <div class="offer">
                             <label>¿Está en oferta?</label>
                             <div class="offerButtons">
-                                <input type="radio" name="affirmative" value="yes">
-                                Yes 
+                                <input type="radio" name="offer" value=true>
+                                Si 
                                 </input>
         
-                                <input type="radio" name="negative" value="no">
+                                <input type="radio" name="offer" value=false>
                                 No 
                                 </input>
                             </div>
                         </div>
-                        <div>
-                    <p>
-                        Sube imagenes del producto(máximo 6):
-                        <input type="file" name="archivossubidos[]" multiple accept="image/png, .jpeg, .jpg, image/gif"
-                            value=<%=items.imgPath%> </input> </p> </div> <div class="category">
-                        <label>Elegir categoría</label>
-                        <select name="selectCategory">
-                            <option value="value1">Café</option>
-                            <option value="value2">Cafeteras</option>
-                            <option value="value3">Accesorios</option>
-                        </select>
-                </div>
+                    
                 <div class="buttonBox">
                     <div class="editButton">
                         <button type="submit"><strong>Editar</strong></button>

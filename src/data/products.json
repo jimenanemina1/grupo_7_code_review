@@ -8,7 +8,7 @@
   "size": 1000,
   "category": "Accesorios",
   "discount": 10,
-  "offer": false,
+  "offer": "false",
   "review": [
    {
     "id": 1,
@@ -42,7 +42,7 @@
   "size": 1000,
   "category": "Accesorios",
   "discount": 10,
-  "offer": false,
+  "offer": "false",
   "review": [
    {
     "id": 7,
@@ -69,7 +69,7 @@
   "size": 1000,
   "category": "Accesorios",
   "discount": 10,
-  "offer": false,
+  "offer": true,
   "review": [
    {
     "id": 4,
@@ -96,7 +96,7 @@
   "size": 1000,
   "category": "Accesorios",
   "discount": 10,
-  "offer": false,
+  "offer": "false",
   "review": [
    {
     "id": 4,
@@ -123,7 +123,7 @@
   "size": 1000,
   "category": "Accesorios",
   "discount": 10,
-  "offer": false,
+  "offer": true,
   "review": [
    {
     "id": 4,
@@ -150,7 +150,7 @@
   "size": 1000,
   "category": "Accesorios",
   "discount": 10,
-  "offer": false,
+  "offer": true,
   "review": [
    {
     "id": 4,
@@ -177,7 +177,7 @@
   "size": 1000,
   "category": "Accesorios",
   "discount": 10,
-  "offer": false,
+  "offer": true,
   "review": [
    {
     "id": 4,
@@ -204,7 +204,7 @@
   "size": 1000,
   "category": "Accesorios",
   "discount": 10,
-  "offer": false,
+  "offer": true,
   "review": [
    {
     "id": 4,
@@ -231,7 +231,7 @@
   "size": 1000,
   "category": "Accesorios",
   "discount": 10,
-  "offer": false,
+  "offer": true,
   "review": [
    {
     "id": 4,
@@ -258,7 +258,7 @@
   "size": 1000,
   "category": "Accesorios",
   "discount": 10,
-  "offer": false,
+  "offer": true,
   "review": [
    {
     "id": 4,
@@ -285,7 +285,7 @@
   "size": 500,
   "category": "Café",
   "discount": 10,
-  "offer": false,
+  "offer": true,
   "review": [
    {
     "id": 4,
@@ -312,6 +312,7 @@
   "size": 1000,
   "category": "Café",
   "discount": 10,
+  "offer": true,
   "review": [
    {
     "id": 4,
@@ -331,24 +332,14 @@
  },
  {
   "id": 13,
-  "name": "dsaaffsdf",
-  "description": "asdfasdf",
+  "name": "Mi Nuevo Producto",
+  "description": "easfdsdfnajsdbfafkjabsdf a asfhasdfhasdhfjkashdjfhasdjfha asjdhf kjasd fasjkdfh kajsdfahsdfk ahsdfjasdh fkhkjhasdf",
+  "price": 1200,
   "size": "500",
-  "price": 2300,
-  "discount": 23232,
-  "affirmative": "yes",
-  "selectCategory": "value2",
-  "imgPath": "img-dsaaffsdf-1654103307711.jpeg"
- },
- {
-  "id": 14,
-  "name": "dsaaffsdf",
-  "description": "asdfasdf",
-  "size": "500",
-  "price": 2300,
-  "discount": 23232,
-  "affirmative": "yes",
-  "selectCategory": "value2",
-  "imgPath": "img-dsaaffsdf-1654103350023.jpeg"
+  "category": "value2",
+  "discount": 10,
+  "offer": true,
+  "imgPath": "/images/img-mi-nuevo-producto-1654113108060.jpg",
+  "review": []
  }
 ]

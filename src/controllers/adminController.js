@@ -13,8 +13,7 @@ const adminController = {
     res.render('createProduct.ejs')
   },
   storeProduct:(req, res) => {
-		console.log(req.file)
-		let imgPath = '/images/default-image.png'
+     let imgPath = '/images/default-image.png'
 		if(req.file){
 			imgPath = `/images/${req.file.filename}`
 		}
@@ -23,6 +22,7 @@ const adminController = {
 			...req.body,
 			price: parseInt(req.body.price),
 			discount: parseInt(req.body.discount),
+      offer: JSON.parse(req.body.offer),
 			imgPath,
       review: []
 
@@ -32,18 +32,43 @@ const adminController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/admin/create-congrats');
 	},
-  
+  createCongrats: (req, res) => {
+    res.render('createProductCongrats.ejs')
+  },
   editProduct: (req, res) => {
-    const product = data.find(items => items.id == req.params.idProduct)
+    const product = products.find(items => items.id == req.params.idProduct)
     res.render('editProduct.ejs', {
       items: product
     })
   },
-  createCongrats: (req, res) => {
-    res.render('createProductCongrats.ejs')
+  editCongrats: (req, res) =>{
+    res.render('/admin/edit-congrats')
   },
-  editCongrats: (req, res) => {
-    res.render('editProductCongrats.ejs')
+  storeEditedProduct: (req, res) => {
+    console.log("entre aca")
+    const product = products.find(items => items.id == req.params.idProduct)
+     let imgPath = '/images/default-image.png'
+		if(req.file){
+			imgPath = `/images/${req.file.filename}`
+		}
+		const editedProduct = {
+			id: req.params.idProduct,
+			...req.body,
+			price: parseInt(req.body.price),
+			discount: parseInt(req.body.discount),
+      offer: JSON.parse(req.body.offer),
+			imgPath,
+      review: []
+
+		}
+    console.log(editedProduct)
+    const index = products.indexOf(product)
+    if(indexOf !== -1){
+      products[index] = editedProduct
+    }
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+    console.log("producti edurado" + JSON.stringify(products[req.params.idProduct]))
+    res.redirect('/admin/editProductCongrats.ejs')
   }
 };
 
