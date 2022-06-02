@@ -1,0 +1,47 @@
+[
+    {
+      "id": "1",
+      "user": "jimena01",
+      "email": "jimenanemina@gmail.com",
+      "password": "dreamteam1",
+      "admin" : false,
+      "imgPath": "/images/cafeFuerte.png",
+      "purchases" : [],
+      "orders": []
+    },
+    {
+      "id": "2",
+      "user": "gaston01",
+      "email": "gaston@gmail.com",
+      "password": "cristiano1",
+      "admin" : false,
+      "imgPath": "/images/avatar1.png",
+      "purchases" : [],
+      "orders": []
+    },
+    {
+        "id": "3",
+        "user": "lionel10",
+        "email": "liomessi1@gmail.com",
+        "password": "elnumberone",
+        "admin" : false,
+        "imgPath": "/images/avatar2.png",
+        "purchases" : [
+         { "id": "1",
+           "delivered": true,
+           "payment-method": "cc",
+           "product-id": "1",
+           "amount-payed": 2500
+         }
+        ],
+        "orders": [
+         { "id" : "1",
+           "status": "created",
+           "delivery-method": "door-to-door",
+           "payment-method": "cc",
+           "products-quantity":1
+         } 
+        ]
+    }
+
+]
