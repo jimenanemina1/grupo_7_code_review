@@ -305,41 +305,38 @@
  },
  {
   "id": 12,
-  "name": "Cafe Expresso Fuerte",
-  "description": "Ea duo autem sit sit iriure dolor at et ut erat accusam justo autem qui. Eleifend sadipscing commodo nulla nonummy duis magna est duo ea diam accusam accusam nonumy assum elitr sea. Dolor liber voluptua iusto et justo nisl elitr. Et stet dolores sea rebum tempor et invidunt vero consectetuer sit eu labore invidunt diam labore illum delenit magna. Aliquyam et eirmod vel stet ipsum ea sanctus diam eirmod dolore. ",
-  "price": 20.1,
+  "name": "Cafe editado MESSSI",
+  "description": "Ea messi campeon",
+  "price": 200,
   "imgPath": "/images/cafeFuerte.png",
-  "size": 1000,
-  "category": "Café",
-  "discount": 10,
+  "size": "20000",
+  "category": "value1",
+  "discount": null,
   "offer": true,
-  "review": [
-   {
-    "id": 4,
-    "name": "Jorge Echavarria",
-    "point": 1,
-    "imgPath": "/images/avatar4.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   },
-   {
-    "id": 8,
-    "name": "Mauricio Patiño",
-    "point": 4,
-    "imgPath": "/images/avatar8.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   }
-  ]
+  "review": []
  },
  {
   "id": 13,
-  "name": "Mi Nuevo Producto",
+  "name": "Mi Nuevo CHAU",
   "description": "easfdsdfnajsdbfafkjabsdf a asfhasdfhasdhfjkashdjfhasdjfha asjdhf kjasd fasjkdfh kajsdfahsdfk ahsdfjasdh fkhkjhasdf",
   "price": 1200,
   "size": "500",
-  "category": "value2",
+  "category": "value1",
+  "discount": null,
+  "offer": false,
+  "imgPath": "/images/img-mi-nuevo-producto-1654113108060.jpg",
+  "review": []
+ },
+ {
+  "id": 14,
+  "name": "asdfadsfasdfs",
+  "description": "asdfasdfasdf",
+  "price": 500,
+  "size": "500",
+  "category": "value1",
   "discount": 10,
   "offer": true,
-  "imgPath": "/images/img-mi-nuevo-producto-1654113108060.jpg",
+  "imgPath": "/images/img-asdfadsfasdfs-1654130750305.jpg",
   "review": []
  }
 ]

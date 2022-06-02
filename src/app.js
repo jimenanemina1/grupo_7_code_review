@@ -10,6 +10,7 @@ const methodOverride =  require('method-override');
 
 const app = express();
 const port = process.env.PORT || 3001;
+app.use(methodOverride('_method'))
 
 
 app.use('/', mainRouter)
