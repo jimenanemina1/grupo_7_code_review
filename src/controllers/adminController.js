@@ -42,33 +42,35 @@ const adminController = {
     })
   },
   editCongrats: (req, res) =>{
-    res.render('/admin/edit-congrats')
+    res.render('editProductCongrats')
   },
   storeEditedProduct: (req, res) => {
     console.log("entre aca")
     const product = products.find(items => items.id == req.params.idProduct)
-     let imgPath = '/images/default-image.png'
+     let imgPath = product.imgPath;
 		if(req.file){
 			imgPath = `/images/${req.file.filename}`
 		}
 		const editedProduct = {
 			id: req.params.idProduct,
+      ...product,
 			...req.body,
 			price: parseInt(req.body.price),
 			discount: parseInt(req.body.discount),
-      offer: JSON.parse(req.body.offer),
+      offer: req.body.offer === "true",
 			imgPath,
       review: []
 
 		}
     console.log(editedProduct)
-    const index = products.indexOf(product)
-    if(indexOf !== -1){
+    const index = products.findIndex(element => element.id == req.params.idProduct)
+    console.log(index)
+    if(index !== -1){
       products[index] = editedProduct
     }
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
     console.log("producti edurado" + JSON.stringify(products[req.params.idProduct]))
-    res.redirect('/admin/editProductCongrats.ejs')
+    res.redirect('/admin/edit-congrats')
   }
 };
 

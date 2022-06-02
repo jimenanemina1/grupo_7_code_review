@@ -13,30 +13,30 @@
     <div class="editProduct-box">
         <div class="editProduct-banner">
             <div class="editProduct-button">
-                <a href="/product/edit-product">Editar producto</a>
+                <a href="/admin/edit-product">Editar producto</a>
             </div>
         </div>
 
-        <form action="/admin/edit-product/<%=items.id%>?_method=PUT" method="POST">
+        <form action="/admin/edit-product/<%=items.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
 
             <div class="form-productCreation">
                 <div class="productNameField">
-                    <label>Nombre del producto</label><input type="text" required name="name" value=<%=items.name%>
+                    <label>Nombre del producto</label><input type="text" required name="name" value="<%=items.name%>"
                         </input>
                      </div> 
                      <div class="Descripción del tipo de café">
-                    <label>Descripción del tipo de café</label><input type="text" name="description"value=<%=items.description%> </input>
+                    <label>Descripción del tipo de café</label><input type="text" name="description"value="<%=items.description%>" </input>
                     </div>
                     <div class="price">
-                    <label>Precio del producto</label><input type="number" name="price" value=<%=items.price%> </input>
+                    <label>Precio del producto</label><input type="number" name="price" value="<%=items.price%>" </input>
                      </div> 
                      <div>
                          <p>
                                 Sube imagenes del producto(máximo 6):
                              <input type="file" name="imgPath" multiple accept="image/png, .jpeg, .jpg, image/gif"
-                                      value=<%=items.imgPath%> </input> </p> </div>
+                                      value="<%=items.imgPath%>" </input> </p> </div>
                     <div class="size">
-                    <label>Tamaño del producto</label><input type="number" name="size" value=<%=items.size%> </input>
+                    <label>Tamaño del producto</label><input type="number" name="size" value="<%=items.size%>" </input>
                         </div> 
                         <div class="category">
                             <label>Elegir categoría</label>
@@ -47,16 +47,16 @@
                             </select>
                     </div>
                     <div class="discount">
-                            <label>Agregue % de descuento del producto</label><input type="discount" name="price" value=<%=items.discount%> </input>
+                            <label>Agregue % de descuento del producto</label><input type="discount" name="price" value="<%=items.discount%>" </input>
                        </div> 
                     <div class="offer">
                             <label>¿Está en oferta?</label>
                             <div class="offerButtons">
-                                <input type="radio" name="offer" value=true>
+                                <input type="radio" name="offer" value="true">
                                 Si 
                                 </input>
         
-                                <input type="radio" name="offer" value=false>
+                                <input type="radio" name="offer" value="false">
                                 No 
                                 </input>
                             </div>
