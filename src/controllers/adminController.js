@@ -5,6 +5,8 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const findProduct = (id, allProducts) =>
+  allProducts.find((product) => product.id == id);
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -71,6 +73,17 @@ const adminController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
     console.log("producti edurado" + JSON.stringify(products[req.params.idProduct]))
     res.redirect('/admin/edit-congrats')
+  },
+  deleteProduct: (req,res) =>{
+    let productToEliminate = findProduct(req.params.idProduct, products);
+    let index = products.findIndex(product => product.id == productToEliminate.id);
+    products.splice(index,1);
+    fs.writeFileSync(
+      productsFilePath,
+      JSON.stringify(products, null, " ")
+    );
+    res.send(`Eliminaste: ${productToEliminate.name} <br> <a href="/"> Ir al inicio </a>`)
+
   }
 };
 

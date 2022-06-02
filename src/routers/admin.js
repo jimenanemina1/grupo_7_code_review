@@ -33,5 +33,7 @@ router.put('/edit-product/:idProduct', upload.single('imgPath'), adminController
 router.get('/edit-product/:idProduct', upload.single('imgPath'), adminController.editProduct);
 router.get('/edit-congrats', adminController.editCongrats);
 router.get('/create-congrats', adminController.createCongrats);
+router.delete("/delete/:idProduct", adminController.deleteProduct);
+
 
 module.exports = router;
