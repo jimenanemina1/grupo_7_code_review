@@ -1,7 +1,13 @@
+const data = require('./data');
+
 const shoppingCartController = {
     shoppingCart: (req, res) => {
-        res.render('shoppingCart.ejs')
+        const product = data.find(items => items.id == req.params.id)
+        res.render('shoppingCart', {
+            items: product
+        })
     }
 }
 
 module.exports = shoppingCartController;
+

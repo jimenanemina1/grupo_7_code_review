@@ -20,12 +20,11 @@
                 <article>
                 
                     <div class="img-product">
-                        <img src="/images/img-cafetera-moulinex.jpg" alt="Cafetera" class="product_img">
+                        <img src= <%= items.imgPath%> alt="Cafetera" class="product_img">
                     </div>
                     <hr>
-                    <H3 class="nombre-producto">Cafetera Moulinex</H3>
-                    
                     <div class="main-article">
+                        <H3 class="nombre-producto">Cafetera Moulinex</H3>
                         <!--<p class="Precio-total">$166.770</p>-->
                         <div>
                             <button class="quantity-decrease" onclick="cartPage.quantityHandler(event, false)">-</button>
@@ -35,26 +34,27 @@
                         <p class="Precio-unidad">$166.770</p>
                         <button type="reset" name="borrar"><i class="fas fa-times-circle"></i></button> 
                     </div> 
-                    <div class="pay-for-cart">
-                        <button class="pay">Pagar</button>
-                    </div>  
-                    <div class="buy">
-                        <div class="icon-arrow">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </div>
-                        <a href="/">Seguir comprando</a>
-                    </div>
-                    <div class="formulario">
-                        <form method="post">
-                            <label for="formulario">Notas adicionales</label>
-                            <div class="textarea">
-                                <textarea name="formuario-notas" id="notas-adicionales" cols="30" rows="10"></textarea>
-                            </div>
-                                
-                            
-                        </form>
-                    </div>
                 </article>
+                <div>
+                   <div class="pay-for-cart">
+                        <button class="pay">Pagar</button>
+                </div>  
+                <div class="buy">
+                    <div class="icon-arrow">
+                          <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <a href="/">Seguir comprando</a>
+                </div>
+                <div class="formulario">
+                    <form method="post">
+                          <label for="formulario">Notas adicionales</label>
+                          <div class="textarea">
+                                <textarea name="formuario-notas" id="notas-adicionales" cols="30" rows="10"></textarea>
+                          </div>
+                    </form>
+                </div> 
+            </div>
+                
             </div>   
         </section>
     </main>

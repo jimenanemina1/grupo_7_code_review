@@ -41,8 +41,7 @@ main section.product div article h3{
 
 main section.product div article div.main-article{
     display: flex;
-    margin: auto;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 7px;
     padding-top: 10px;
 }
@@ -51,23 +50,37 @@ main section.product div article div.main-article div{
     display: flex;
     width: 25%;
     justify-content: space-evenly;
+    margin-right: 15px;
 }
 
 main section.product div article div.main-article div button{
-    width: 15px;
+    font-size: 1.5rem;
+    color: #fff ; ;
+    background-color: #bc0909;
+    width: 40px;
+}
+
+
+main section.product div article div.main-article button{
+    font-size: 1.5rem;
+    color: #fff ;
+    background-color: #bc0909;
+    width: 40px;
 }
 
 main section.product div article div.main-article div input{
-    width: auto;
+    font-size: 1.5rem;
+    width: 40px;
+    text-align: center;
+
 }
 
-main section.product div article div.main-article button{
-    width: 18px;
-}
+
 
 main section.product div article div.main-article p{
     display: flex;
     align-items: center;
+    margin-right: 20px;
 }
 
 main section.product div article div.pay-for-cart{
@@ -131,4 +144,35 @@ main section.product article div.formulario{
 
 #footer{
     position:static
+}
+
+@media (min-width: 769px){
+    main section.product div article{
+        display: flex;
+    }
+    .img-product img{
+        width: 400px;
+    }
+    main .productDetails article .quantityMas{
+        font-size: 1.5rem;
+        color: #fff ; ;
+        background-color: #bc0909;
+        width: 40px;
+    }
+    
+    
+    main .productDetails article .quantityMenos{
+        font-size: 1.5rem;
+        color: #fff ;
+        background-color: #bc0909;
+        width: 40px;
+    }
+    
+    main .productDetails article .inputSpinner{
+        font-size: 1.5rem;
+        width: 40px;
+        text-align: center;
+    
+    }
+    
 }
