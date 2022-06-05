@@ -128,7 +128,28 @@ article .btncomprar{
     width: 150px;
 }
 
+article .btn-edit{
+    background: #4a6554;
+    color: #fff;
+    padding: 10px;
+    color: white;
+    border: 1px solid #4a6554;
+    border-radius: 4px;
+    height: auto;
+    width: 150px;
+}
 
+article .btn-delete{
+    background: #bc0909;
+    color: #fff;
+    padding: 10px;
+    color: white;
+    border: 1px solid#bc0909;
+    border-radius: 4px;
+    height: auto;
+    width: 150px;
+    padding-left: 10px;
+}
 
 main .productDetails article .quantityMas{
     font-size: 1.5rem;
