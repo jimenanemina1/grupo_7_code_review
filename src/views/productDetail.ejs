@@ -1,6 +1,8 @@
 <!-- Head -->
 <%- include("./partials/head.ejs") %>
 <link rel="stylesheet" href="/css/styles-productDetail.css">
+ <!-- Bootstrap Grid Stylesheet -->
+ <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
 
 
 <body>
@@ -42,6 +44,19 @@
                             </form>
 
                         </div>
+                        <br><br>
+                        <div class="MantenimientoProducto">
+                          
+                            <form action="/admin/edit-product/<%=items.id%>" method="GET" style="display: inline-flex">
+                                <button type="submit" class="btn-edit">EDITAR</button>
+                            </form>
+                            
+                            
+                            <form action="/admin/delete/<%=items.id%>?_method=delete" method="POST" enctype="multipart/form-data" style="display: inline-flex">
+                                <button type="submit" class="btn-delete">ELIMINAR</button>
+                            </form>
+                        </div>
+
                     </div>
 
                 </article>
