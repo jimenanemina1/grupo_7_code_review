@@ -33,6 +33,7 @@ const router = express.Router();
 
 
 router.get('/:idProduct', productsController.detail);
+router.get('/', productsController.list);
 
 
 

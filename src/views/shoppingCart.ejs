@@ -3,64 +3,72 @@
 
 <!-- Head -->
 <%- include("./partials/head.ejs") %>
-<link rel="stylesheet" href="/css/styles-shopping-cart.css">
+    <link rel="stylesheet" href="/css/styles-shopping-cart.css">
 
-</head>
-<!-- Header -->
-<%- include("./partials/header.ejs") %>
-    <main>
-        <section class="Cart">
-            <div class="title">
-                <h2>Tu carrito</h2>
-            </div>
-            
-        </section>
-        <section class="product">
-           <div>
-                <article>
-                
-                    <div class="img-product">
-                        <img src= <%= items.imgPath%> alt="Cafetera" class="product_img">
-                    </div>
-                    <hr>
-                    <div class="main-article">
-                        <H3 class="nombre-producto">Cafetera Moulinex</H3>
-                        <!--<p class="Precio-total">$166.770</p>-->
-                        <div>
-                            <button class="quantity-decrease" onclick="cartPage.quantityHandler(event, false)">-</button>
-                            <INPUT TYPE="NUMBER" MIN="0" MAX="15" STEP="1" VALUE="6" SIZE="6">
-                            <button class="quantity-increase" onclick="cartPage.quantityHandler(event, false)">+</button>
-                        </div>
-                        <p class="Precio-unidad">$166.770</p>
-                        <button type="reset" name="borrar"><i class="fas fa-times-circle"></i></button> 
-                    </div> 
-                </article>
-                <div>
-                   <div class="pay-for-cart">
-                        <button class="pay">Pagar</button>
-                </div>  
-                <div class="buy">
-                    <div class="icon-arrow">
-                          <i class="fa-solid fa-arrow-left"></i>
-                    </div>
-                    <a href="/">Seguir comprando</a>
+    </head>
+    <!-- Header -->
+    <%- include("./partials/header.ejs") %>
+        <main>
+            <section class="Cart">
+                <div class="title">
+                    <h2>Tu carrito</h2>
                 </div>
-                <div class="formulario">
-                    <form method="post">
-                          <label for="formulario">Notas adicionales</label>
-                          <div class="textarea">
-                                <textarea name="formuario-notas" id="notas-adicionales" cols="30" rows="10"></textarea>
-                          </div>
-                    </form>
-                </div> 
-            </div>
-                
-            </div>   
-        </section>
-    </main>
-<!-- Footer -->
-<%- include("./partials/footer.ejs") %>
-    
-</body>
+
+            </section>
+            <section class="product">
+                <div>
+                    <article>
+
+                        <div class="img-product">
+                            <img src=<%=items.imgPath%> alt="Cafetera" class="product_img">
+                        
+                        </div>
+                        <!-- <hr> -->
+                    </article>
+                    <div class="main-article">
+                        <H3 class="nombre-producto"><%=items.name%></H3>
+                        <!--<p class="Precio-total">$166.770</p>-->
+                    </div>    
+                    <div class="section">
+                       <div class="button-section">
+                            <button class="quantity-decrease"
+                                onclick="cartPage.quantityHandler(event, false)">-</button>
+                            <INPUT TYPE="NUMBER" MIN="0" MAX="15" STEP="1" VALUE="1" SIZE="6">
+                            <button class="quantity-increase"
+                                onclick="cartPage.quantityHandler(event, false)">+</button>
+                        </div>
+                        <p class="Precio-unidad"><%=items.price%></p>
+                        <button type="reset" name="borrar"><i class="fas fa-times-circle"></i></button> 
+                    
+                    </div>
+
+                    <div>
+                        <div class="pay-for-cart">
+                            <button class="pay">Pagar</button>
+                        </div>
+                        <div class="buy">
+                            <div class="icon-arrow">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </div>
+                            <a href="/">Seguir comprando</a>
+                        </div>
+                        <div class="formulario">
+                            <form method="post">
+                                <label for="formulario">Notas adicionales</label>
+                                <div class="textarea">
+                                    <textarea name="formuario-notas" id="notas-adicionales" cols="30"
+                                        rows="10"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <%- include("./partials/footer.ejs") %>
+
+            </body>
 
 </html>

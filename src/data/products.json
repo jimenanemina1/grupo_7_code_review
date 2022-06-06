@@ -118,28 +118,13 @@
   "id": 5,
   "name": "Maletín de Barista",
   "description": "Ea dolor esse dolores vero eirmod stet facilisis lorem. Et dolore amet sea dolor sed invidunt tempor mazim labore gubergren magna sed option vero kasd voluptua. Sit at dolores erat dolores elitr et eos rebum accumsan et velit et sadipscing. Gubergren stet sit sed ea dolores ut ut sit minim rebum vero no takimata nonumy voluptua stet stet. Tincidunt hendrerit clita ipsum ea lorem in erat diam dolor. Dolor dolor et eu et consectetuer sed illum gubergren sed no nulla odio. ",
-  "price": 5.5,
+  "price": 5,
   "imgPath": "/images/maletin_barista.png",
-  "size": 1000,
-  "category": "Accesorios",
-  "discount": 10,
-  "offer": true,
-  "review": [
-   {
-    "id": 4,
-    "name": "Jorge Echavarria",
-    "point": 3,
-    "imgPath": "/images/avatar4.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   },
-   {
-    "id": 8,
-    "name": "Mauricio Patiño",
-    "point": 3,
-    "imgPath": "/images/avatar8.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   }
-  ]
+  "size": "1000",
+  "category": "value1",
+  "discount": null,
+  "offer": false,
+  "review": []
  },
  {
   "id": 6,
@@ -223,33 +208,6 @@
   ]
  },
  {
-  "id": 9,
-  "name": "Vaso medidor",
-  "description": "Justo amet et vero velit sadipscing magna ea voluptua tation rebum labore sea labore dolore consequat stet nonumy. Kasd et lorem ut labore illum iusto lorem elitr diam et dolor dolor eos et diam erat volutpat clita. Minim erat sea stet dolor diam dolore lorem at ipsum velit. Et labore diam sed ea dolor nonumy clita stet. Nonumy vero zzril at dolores kasd sadipscing amet dolor et ut zzril ullamcorper dolore vulputate sed. ",
-  "price": 9.9,
-  "imgPath": "/images/vaso-medidor.png",
-  "size": 1000,
-  "category": "Accesorios",
-  "discount": 10,
-  "offer": true,
-  "review": [
-   {
-    "id": 4,
-    "name": "Jorge Echavarria",
-    "point": 3,
-    "imgPath": "/images/avatar4.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   },
-   {
-    "id": 8,
-    "name": "Mauricio Patiño",
-    "point": 5,
-    "imgPath": "/images/avatar8.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   }
-  ]
- },
- {
   "id": 10,
   "name": "Vasos para latte",
   "description": "Ea duo autem sit sit iriure dolor at et ut erat accusam justo autem qui. Eleifend sadipscing commodo nulla nonummy duis magna est duo ea diam accusam accusam nonumy assum elitr sea. Dolor liber voluptua iusto et justo nisl elitr. Et stet dolores sea rebum tempor et invidunt vero consectetuer sit eu labore invidunt diam labore illum delenit magna. Aliquyam et eirmod vel stet ipsum ea sanctus diam eirmod dolore. ",
@@ -313,18 +271,6 @@
   "category": "value1",
   "discount": null,
   "offer": true,
-  "review": []
- },
- {
-  "id": 13,
-  "name": "Mi Nuevo CHAU",
-  "description": "easfdsdfnajsdbfafkjabsdf a asfhasdfhasdhfjkashdjfhasdjfha asjdhf kjasd fasjkdfh kajsdfahsdfk ahsdfjasdh fkhkjhasdf",
-  "price": 1200,
-  "size": "500",
-  "category": "value1",
-  "discount": null,
-  "offer": false,
-  "imgPath": "/images/img-mi-nuevo-producto-1654113108060.jpg",
   "review": []
  },
  {

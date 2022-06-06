@@ -1,0 +1,41 @@
+<!-- Head -->
+<%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="css/styles-index_.css">
+
+</head>
+<!-- Header -->
+<%- include("./partials/header.ejs") %>
+
+<body>
+    <!-- Page content -->
+    <main id="main">
+        
+        </section>
+        <section class="recomendados">
+            <h2 class="titulo-recomendados">Recomendados por Barizta:</h2>
+            <div class="contenedor-articulos-recomendados">
+                <% for (let producto of productosMostrados) { %>
+                <a href="/products/<%= producto.id%>">
+                    <article class="articulo-recomendado">
+                        <div class="imagen-articulo-recomendado">
+                            <img src="<%=producto.imgPath%>" alt="producto recomendado">
+                        </div>
+                        <h5 class="nombre-producto-recomendado">NOMBRE: <%=producto.name%></h5>
+                        <br>
+                        <h5 class="precio-producto-recomendado">PRECIO: <%=producto.price%></h5>
+                        <br>
+                        <h4 class="descripcion-producto-recomendado"><%=producto.description%></h4>
+                        <br>
+                        <h5 class=""></h5>
+                    </article>
+                </a>
+                <% } %>
+            </div>
+
+        </section>
+    </main>
+    <!-- Footer -->
+    <%- include("./partials/footer.ejs") %>
+</body>
+
+</html>

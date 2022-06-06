@@ -34,26 +34,31 @@ main section.product div article hr{
     margin-bottom: 5px;
 }
 
+main section.product div div.section{
+    display: flex;
+    justify-content: space-around;
+}
+
 main section.product div article h3{
     text-align: center;
     margin-bottom: 7px;
 }
 
-main section.product div article div.main-article{
+main section.product div div.main-article{
     display: flex;
     justify-content: center;
     margin-bottom: 7px;
     padding-top: 10px;
+    height: 50px;
 }
 
-main section.product div article div.main-article div{
+main section.product div div div.button-section{
     display: flex;
     width: 25%;
     justify-content: space-evenly;
-    margin-right: 15px;
 }
 
-main section.product div article div.main-article div button{
+main section.product div div div button{
     font-size: 1.5rem;
     color: #fff ; ;
     background-color: #bc0909;
@@ -61,14 +66,14 @@ main section.product div article div.main-article div button{
 }
 
 
-main section.product div article div.main-article button{
+main section.product div div button{
     font-size: 1.5rem;
     color: #fff ;
     background-color: #bc0909;
     width: 40px;
 }
 
-main section.product div article div.main-article div input{
+main section.product div div div input{
     font-size: 1.5rem;
     width: 40px;
     text-align: center;
@@ -77,24 +82,26 @@ main section.product div article div.main-article div input{
 
 
 
-main section.product div article div.main-article p{
+main section.product div div p{
     display: flex;
     align-items: center;
     margin-right: 20px;
+    font-size: 20px;
 }
 
-main section.product div article div.pay-for-cart{
+main section.product div div.pay-for-cart{
     text-align-last:center ;
     padding: 10px;
 }
 
-main section.product div article div.pay-for-cart button.pay{
-    background-color: #3D8705;
+main section.product div div.pay-for-cart button.pay{
+    background-color: #4a6554;
     color:white;
-    border: 1px solid #3D8705;
+    border: 1px solid #4a6554;
     border-radius: 4px;
     width: 25%;
-    height: 25px;
+    height: 30px;
+    font-size: 1rem;
 }
 
 /*main section.Cart div.pay-for-cart a{
@@ -112,32 +119,24 @@ main section.Cart div a:hover{
     color: #000000;
 }*/
 
-main section.product div article div.buy{
+main section.product div div div.buy{
     display: flex;
+    align-items: center;
 }
-
-main section.product div article div.buy a{
+main section.product div div div.buy i{
+    margin: 5px;
+    padding-right: 5px ;
+}
+main section.product div div div.buy a{
     color:black;
     text-decoration: none;
 }
-
-main section.product div article div.buy div.icon-arrow{
-    padding-right: 5px;
-}
-
-main section.product article div.formulario{
+main section.product div div div.formulario{
     display: flex;
     width: 70%;
     padding-top: 5px;
     padding-left: 18px;
 }
-
-.formulario{
-    
-    display: inline;
-
-}
-
 #notas-adicionales{
     width: 100%;
 }
