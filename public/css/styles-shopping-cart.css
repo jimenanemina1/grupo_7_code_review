@@ -133,8 +133,9 @@ main section.product div div div.buy a{
 }
 
 main section.product div div a{
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
+    
 }
 
 main section.product div div div.formulario{
