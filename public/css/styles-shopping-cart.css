@@ -131,6 +131,12 @@ main section.product div div div.buy a{
     color:black;
     text-decoration: none;
 }
+
+main section.product div div a{
+    text-decoration: none;
+    color: inherit;
+}
+
 main section.product div div div.formulario{
     display: flex;
     width: 70%;
