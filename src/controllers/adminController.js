@@ -82,7 +82,14 @@ const adminController = {
       productsFilePath,
       JSON.stringify(products, null, " ")
     );
-    res.send(`Eliminaste: ${productToEliminate.name} <br> <a href="/"> Ir al inicio </a>`)
+    res.send(`<div style="width:100%;height:100vh; padding:0px; margin:0px; display:flex; justify-content:center; align-items:center">
+    <div style="width:300px;border-radius:5px;padding:20px; background-color:#900e1e; color:white; font-size:24px">
+        Eliminaste: ${productToEliminate.name} <br>
+        <div style="background-color:#4a6554; width:120px;padding:10px;text-align:center;border-radius:5px;margin:10px auto; cursor:pointer">
+            <a style="text-decoration:none; color:white" href="/"> Ir al inicio </a>
+        </div>
+    </div>
+</div>`)
 
   }
 };
