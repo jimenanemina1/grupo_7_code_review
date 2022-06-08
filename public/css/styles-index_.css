@@ -187,6 +187,13 @@
   font-size: 0.7rem;
   text-align: center;
 }
+#main
+  .recomendados
+  .contenedor-articulos-recomendados
+  .articulo-recomendado h5{
+  font-size: 0.7rem;
+  text-align: center;
+}
 #main .recomendados .contenedor-articulos-recomendados .articulo-recomendado i {
   display: block;
   text-align: center;

@@ -1,5 +1,6 @@
 // const data = require("./data")
 
+const res = require("express/lib/response");
 const fs = require("fs");
 const path = require("path");
 
@@ -13,7 +14,19 @@ const productsController = {
             items: product
         })
     },
-    list: () => data
+    list: (req, res) => {
+            // let productosMostrados = [];
+            // products.forEach(element => {
+            //     productosMostrados.push(element)
+            // });
+            //  while (productosMostrados.length < 4) {
+            //    let randomProduct = products[Math.floor(Math.random() * products.length)];
+            //    productosMostrados.indexOf(randomProduct) == -1
+            //      ? productosMostrados.push(randomProduct)
+            //      : "";
+            //  }
+             res.render("listProducts", { productosMostrados: products });
+         }
 }
 
 module.exports = productsController;
