@@ -30,8 +30,8 @@ const upload = multer({ storage });
 router.get('/create-product', adminController.createProduct);
 router.post('/create-product', upload.single('imgPath'), adminController.storeProduct);
 router.put('/edit-product/:idProduct', upload.single('imgPath'), adminController.storeEditedProduct);
-router.get('/edit-product/:idProduct', upload.single('imgPath'), adminController.editProduct);
-router.get('/edit-congrats', adminController.editCongrats);
+router.get('/edit-product', upload.single('imgPath'), adminController.editProduct);
+router.get('/edit-congrats/:idProduct', adminController.editCongrats);
 router.get('/create-congrats', adminController.createCongrats);
 router.delete("/delete/:idProduct", adminController.deleteProduct);
 

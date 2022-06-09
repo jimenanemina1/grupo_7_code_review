@@ -8,6 +8,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const findProduct = (id, allProducts) =>
   allProducts.find((product) => product.id == id);
 
+let productIdForCongrats = 0;
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const adminController = {
@@ -29,13 +31,17 @@ const adminController = {
       review: []
 
 		}
+    productIdForCongrats = newProduct.id;
     console.log(newProduct)
 		products.push(newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/admin/create-congrats');
 	},
   createCongrats: (req, res) => {
-    res.render('createProductCongrats.ejs')
+    const product = products.find(items => items.id == productIdForCongrats)
+    res.render('createProductCongrats.ejs', {
+      items: product
+    })
   },
   editProduct: (req, res) => {
     const product = products.find(items => items.id == req.params.idProduct)

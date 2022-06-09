@@ -16,3 +16,273 @@ main.congrats {
     width: 100%;
     align-content: center;
 }
+
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main .productDetails article img{
+    width: 100%;
+    padding-top: 10px;
+    height: auto;
+
+}
+
+main .productDetails .imagen-producto{
+    border-radius: 50%;
+
+
+}
+
+
+
+.review-box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 300ms;
+    margin: 20px 0;
+    
+  }
+
+
+  .review-box a {
+    display: block;
+  }
+  
+  .review-box_image {
+    border-bottom: 1px solid var(--light-gray);
+    display: flex;
+    justify-content: center;
+    
+
+
+  }
+  .review-box_image img{
+    border-radius: 50%;    
+  box-shadow: 3px 3px 3px black;
+  padding-top: 10px;
+  }
+  .review-box_data {
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  h2.products-title{
+    text-align: center;
+    padding-bottom: 60 px;
+  }
+
+
+main .productDetails .Nombre-Producto{
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+}
+
+main .calificaciones-positivas article img{
+    width: 60%;
+    padding:0 5px 5px 0; 
+    background-color: #0000002d;
+}
+
+main .calificaciones-positivas article reviews{
+    display: flex;
+}
+
+i.fas.fa-star {
+    color: #bc0909;
+    font-size: 1.5rem;
+
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+}
+
+section.review-box {
+    text-align: center;
+}
+
+main .productDetails article{
+    background-color: #fff; 
+    padding-top: 350;   
+    display: flex;
+    flex-direction:column;
+    
+}
+
+
+
+
+article div.main-articlepd {
+
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+.main-articlepd p {
+
+    text-align: justify;
+    
+}
+
+
+ul{
+    list-style: none;
+}
+article .btncomprar{
+    background: #4a6554;
+    color: #fff;
+    padding: 10px;
+    color: white;
+    border: 1px solid #4a6554;
+    border-radius: 4px;
+    height: auto;
+    width: 150px;
+}
+
+article .btn-edit{
+    background: #4a6554;
+    color: #fff;
+    padding: 10px;
+    color: white;
+    border: 1px solid #4a6554;
+    border-radius: 4px;
+    height: auto;
+    width: 150px;
+}
+
+article .btn-delete{
+    background: #bc0909;
+    color: #fff;
+    padding: 10px;
+    color: white;
+    border: 1px solid#bc0909;
+    border-radius: 4px;
+    height: auto;
+    width: 150px;
+    padding-left: 10px;
+}
+
+main .productDetails article .quantityMas{
+    font-size: 1.5rem;
+    color: #fff ; ;
+    background-color: #bc0909;
+    width: 40px;
+}
+
+
+main .productDetails article .quantityMenos{
+    font-size: 1.5rem;
+    color: #fff ;
+    background-color: #bc0909;
+    width: 40px;
+}
+
+main .productDetails article .inputSpinner{
+    font-size: 1.5rem;
+    width: 40px;
+    text-align: center;
+
+}
+
+
+main .calificaciones-positivas article{
+    background-color: #fff;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+
+main .calificaciones-positivas article i{
+    font-size: 2rem;
+}
+
+main .calificaciones-positivas {
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+main .calificaciones-positivas .calificaciones{
+width: 80%;
+text-decoration: none;
+color: inherit;
+display: block;
+margin: 0.8rem;
+}
+main .por-que-elegimos{
+    text-align: center;
+    margin: 50px;
+    margin-bottom: 250px;
+  
+}
+
+#footer {
+  position: unset;;
+}
+
+@media (min-width: 769px){
+
+    article div.main-articlepd {
+
+        padding-top: 10px;
+        margin-top: 15px;
+    }
+    
+    /* main .productDetails article{
+        background-color: #fff; 
+        padding-top: 350;   
+        
+        display: flex;
+        flex-direction:column-reverse;
+        
+    } */
+
+    main .productDetails article{
+        background-color: #fff; 
+        padding-top: 350;   
+        margin: 50px 0px;
+        display: flex;
+        flex-direction: row;
+        padding-left: 20%;
+                
+    }
+
+    main .productDetails article img{
+        width: 400px;
+        padding-top: 10px;
+    
+    }
+
+    .main-articlepd p {
+
+       
+        margin-right: 10 rem;
+    }
+
+    article div.main-articlepd {
+
+        padding-top: 10px;
+        text-align: right;
+    }
+
+    .row{
+        display: flex;
+        justify-content: center;
+    }
+
+ }
