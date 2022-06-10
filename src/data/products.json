@@ -209,30 +209,15 @@
  },
  {
   "id": 10,
-  "name": "Vasos para latte",
+  "name": "Vasos para latte edited",
   "description": "Ea duo autem sit sit iriure dolor at et ut erat accusam justo autem qui. Eleifend sadipscing commodo nulla nonummy duis magna est duo ea diam accusam accusam nonumy assum elitr sea. Dolor liber voluptua iusto et justo nisl elitr. Et stet dolores sea rebum tempor et invidunt vero consectetuer sit eu labore invidunt diam labore illum delenit magna. Aliquyam et eirmod vel stet ipsum ea sanctus diam eirmod dolore. ",
-  "price": 10.1,
+  "price": 10,
   "imgPath": "/images/vasos-latte.png",
-  "size": 1000,
-  "category": "Accesorios",
-  "discount": 10,
+  "size": "2000",
+  "category": "value1",
+  "discount": null,
   "offer": true,
-  "review": [
-   {
-    "id": 4,
-    "name": "Jorge Echavarria",
-    "point": 1,
-    "imgPath": "/images/avatar4.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   },
-   {
-    "id": 8,
-    "name": "Mauricio Patiño",
-    "point": 4,
-    "imgPath": "/images/avatar8.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   }
-  ]
+  "review": []
  },
  {
   "id": 11,
@@ -311,13 +296,13 @@
  },
  {
   "id": 17,
-  "name": "mi podcuto 4",
+  "name": "mi podcuto 5",
   "description": "aasfsdf",
   "price": 120,
   "size": "5000",
   "category": "value1",
-  "discount": 20,
-  "offer": true,
+  "discount": null,
+  "offer": false,
   "imgPath": "/images/img-mi-podcuto-4-1654788040289.jpg",
   "review": []
  },
@@ -460,7 +445,7 @@
   "price": 5000,
   "size": "5600",
   "category": "value1",
-  "discount": 25,
+  "discount": null,
   "offer": true,
   "imgPath": "/images/img-mack-book-pro-1654796079957.jpg",
   "review": []
@@ -559,6 +544,18 @@
   "discount": 20,
   "offer": true,
   "imgPath": "/images/img-sdfasdfasdf-1654796743992.jpg",
+  "review": []
+ },
+ {
+  "id": 38,
+  "name": "sdfasfasdfa",
+  "description": "asdfasdf",
+  "price": 400,
+  "size": "32434",
+  "category": "value1",
+  "discount": 23,
+  "offer": true,
+  "imgPath": "/images/img-sdfasfasdfa-1654826716604.jpg",
   "review": []
  }
 ]

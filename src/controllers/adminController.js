@@ -9,6 +9,7 @@ const findProduct = (id, allProducts) =>
   allProducts.find((product) => product.id == id);
 
 let productIdForCongrats = 0;
+let productIdForEditCongrats = 0;
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -50,10 +51,14 @@ const adminController = {
     })
   },
   editCongrats: (req, res) =>{
-    res.render('editProductCongrats')
+    const product = products.find(items => items.id == productIdForEditCongrats)
+    res.render('editProductCongrats', {
+      items: product
+    })
   },
   storeEditedProduct: (req, res) => {
     console.log("entre aca")
+    productIdForEditCongrats = req.params.idProduct;
     const product = products.find(items => items.id == req.params.idProduct)
      let imgPath = product.imgPath;
 		if(req.file){
