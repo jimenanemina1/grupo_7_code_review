@@ -209,30 +209,15 @@
  },
  {
   "id": 10,
-  "name": "Vasos para latte",
+  "name": "Vasos para latte edited",
   "description": "Ea duo autem sit sit iriure dolor at et ut erat accusam justo autem qui. Eleifend sadipscing commodo nulla nonummy duis magna est duo ea diam accusam accusam nonumy assum elitr sea. Dolor liber voluptua iusto et justo nisl elitr. Et stet dolores sea rebum tempor et invidunt vero consectetuer sit eu labore invidunt diam labore illum delenit magna. Aliquyam et eirmod vel stet ipsum ea sanctus diam eirmod dolore. ",
-  "price": 10.1,
+  "price": 10,
   "imgPath": "/images/vasos-latte.png",
-  "size": 1000,
-  "category": "Accesorios",
-  "discount": 10,
+  "size": "2000",
+  "category": "value1",
+  "discount": null,
   "offer": true,
-  "review": [
-   {
-    "id": 4,
-    "name": "Jorge Echavarria",
-    "point": 1,
-    "imgPath": "/images/avatar4.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   },
-   {
-    "id": 8,
-    "name": "Mauricio Patiño",
-    "point": 4,
-    "imgPath": "/images/avatar8.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   }
-  ]
+  "review": []
  },
  {
   "id": 11,
@@ -283,30 +268,6 @@
   "discount": 10,
   "offer": true,
   "imgPath": "/images/img-asdfadsfasdfs-1654130750305.jpg",
-  "review": []
- },
- {
-  "id": 15,
-  "name": "Prueba con imagen",
-  "description": "Esto es una prueba con imagen - Esto es una prueba de la edición",
-  "price": 13258,
-  "size": "53",
-  "category": "value2",
-  "discount": null,
-  "offer": false,
-  "imgPath": "/images/img-prueba-con-imagen-1654821838495.png",
-  "review": []
- },
- {
-  "id": 16,
-  "name": "Prueba sin imagen",
-  "description": "Esto es una prueba sin imagen",
-  "price": 123456,
-  "size": "12",
-  "category": "value3",
-  "discount": 12,
-  "offer": false,
-  "imgPath": "/images/default-image.png",
   "review": []
  }
 ]

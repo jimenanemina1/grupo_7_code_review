@@ -118,7 +118,7 @@ div.createProduct-box {
    display: flex;
    flex-direction: row;
    align-items: center;
-  
+   width: 90%;
 }
 
 
