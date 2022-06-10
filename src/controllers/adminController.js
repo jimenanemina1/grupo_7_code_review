@@ -6,11 +6,14 @@ const Product = require("../models/Product");
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
 const findProduct = (id, allProducts) =>
   allProducts.find((product) => product.id == id);
 
 let productIdForCongrats = 0;
 let productIdForEditCongrats = 0;
+
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
