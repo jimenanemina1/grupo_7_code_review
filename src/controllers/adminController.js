@@ -2,6 +2,7 @@ const data = require('../controllers/data');
 const fs = require('fs');
 const path = require('path');
 
+const Product = require("../models/Product");
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -86,13 +87,8 @@ const adminController = {
     res.redirect('/admin/edit-congrats')
   },
   deleteProduct: (req,res) =>{
-    let productToEliminate = findProduct(req.params.idProduct, products);
-    let index = products.findIndex(product => product.id == productToEliminate.id);
-    products.splice(index,1);
-    fs.writeFileSync(
-      productsFilePath,
-      JSON.stringify(products, null, " ")
-    );
+    let productToEliminate = Product.findById(req.params.idProduct)
+    Product.delete(productToEliminate.id)
     res.send(`<div style="width:100%;height:100vh; padding:0px; margin:0px; display:flex; justify-content:center; align-items:center">
     <div style="width:300px;border-radius:5px;padding:20px; background-color:#900e1e; color:white; font-size:24px">
         Eliminaste: ${productToEliminate.name} <br>
