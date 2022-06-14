@@ -19,31 +19,69 @@
             </div>
         </div>
 
-        <form action="/" method="get">
+        <form action="/user/register" method="post" enctype="multipart/form-data">
 
             <div class="form-login-register">
                 <div class="nameField">
-                    <label>Nombre</label><input type="text" required name="name"
-                        placeholder="Solo carateres abc"></input>
+                    <label>Nombre</label><input type="text" name="name" placeholder="Solo carateres abc"
+                        value="<%= locals.oldData ? oldData.name: null %>">
+                    <% if (locals.errors && errors.name) { %>
+                    <div class="data-error">
+                        <%= errors.name.msg %>
+                    </div>
+                    <% } %>
                 </div>
                 <div class="lastnameField">
-                    <label>Apellido</label><input type="text" name="lastname" placeholder="Solo carateres abc"></input>
+                    <label>Apellido</label><input type="text" name="lastname" placeholder="Solo carateres abc"
+                        value="<%= locals.oldData ? oldData.lastname: null %>">
+                    <% if (locals.errors && errors.lastname) { %>
+                    <div class="data-error">
+                        <%= errors.lastname.msg %>
+                    </div>
+                    <% } %>
                 </div>
                 <div class="emailField">
-                    <label>Correo electrónico</label><input type="email" name="email"
-                        placeholder="minombre@xxxx.com.xx"></input>
+                    <label>Correo electrónico</label><input type="email" name="email" placeholder="minombre@xxxx.com.xx"
+                        value="<%= locals.oldData ? oldData.email: null %>">
+                    <% if (locals.errors && errors.email) { %>
+                    <div class="data-error">
+                        <%= errors.email.msg %>
+                    </div>
+                    <% } %>
                 </div>
                 <div class="passwordField">
                     <label>Contraseña</label><input type="password" name="password"
-                        placeholder="Mínimo 6 carateres y una mayúscula"></input>
+                        placeholder="Mínimo 6 carateres y una mayúscula">
+                    <% if (locals.errors && errors.password) { %>
+                    <div class="data-error">
+                        <%= errors.password.msg %>
+                    </div>
+                    <% } %>
                 </div>
-                <div class="phoneField">
-                    <label>Teléfono celular</label><input type="phone" name="phone"
-                        placeholder="Mínimo 8 caracteres"></input>
+                <div class="adminField">
+                    <label>Administrador</label>
+                    <div class="admin-input">
+                        <div>
+                            <input type="radio" name="admin" value="true"
+                                <%= locals.oldData && locals.oldData.admin == "true" ? "checked": null %>
+                                class="radio-inputs">
+                            Si
+
+                        </div>
+                        <div>
+                            <input type="radio" name="admin" value="false"
+                                <%= locals.oldData && locals.oldData.admin == "false" ? "checked": null %>
+                                class="radio-inputs">
+                            No
+                        </div>
+                    </div>
+                </div>
+                <div class="avatarField">
+                    <label>Avatar</label><input type="file" name="avatar">
                 </div>
                 <div class="buttonBox">
                     <div class="registerButton">
-                            <button type="submit">Registrarse</button>
+                        <button type="submit">Registrarse</button>
                     </div>
                 </div>
             </div>
