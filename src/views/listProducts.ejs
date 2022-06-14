@@ -1,6 +1,6 @@
 <!-- Head -->
 <%- include("./partials/head.ejs") %>
-<link rel="stylesheet" href="css/styles-index_.css">
+<link rel="stylesheet" href="css/styles-listProducts.css">
 
 </head>
 <!-- Header -->
@@ -12,7 +12,7 @@
         
         </section>
         <section class="recomendados">
-            <h2 class="titulo-recomendados">Recomendados por Barizta:</h2>
+            <h2 class="titulo-recomendados">Lista De Productos</h2>
             <div class="contenedor-articulos-recomendados">
                 <% for (let producto of productosMostrados) { %>
                 <a href="/products/<%= producto.id%>">
