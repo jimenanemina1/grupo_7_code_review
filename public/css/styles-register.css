@@ -1,143 +1,127 @@
 header .registro {
-    display: flex;
-    direction: rows;
-    align-items: center;
-    margin-right: 10%;
-    margin-top: 10px;
-    font-size: 12px;
-    justify-content: right;
-
-
+  display: flex;
+  direction: rows;
+  align-items: center;
+  margin-right: 10%;
+  margin-top: 10px;
+  font-size: 12px;
+  justify-content: right;
 }
 
 body header .login i {
-    font-size: 2em;
-    color: #FFF;
-    margin-bottom: 10px;
-    padding-right: 30px;
-
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+  padding-right: 30px;
 }
 
-
-
 main.register {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: 5px;
-    padding: 5px;
-    justify-content: center;
-    margin-top: 150px;
-    margin-bottom: 200px
-
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 200px;
 }
 
 .register input {
-    display: flex;
-    width: 90%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #000000;
-    padding: 5px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: small;
-
+  display: flex;
+  width: 90%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: small;
 }
 
 .register ::placeholder {
-    color: #b2afaf;
-    font-family: 'MOMCAKE', sans-serif;
+  color: #b2afaf;
+  font-family: "MOMCAKE", sans-serif;
 }
 
 div.register-login-box {
-    display: inline-block;
-    width: 90%;
+  display: inline-block;
+  width: 90%;
 }
 
 div.register-login-box button {
-    display: flex;
-    margin-bottom: 5px;
-    padding: 5px;
+  display: flex;
+  margin-bottom: 5px;
+  padding: 5px;
 }
 
 .register-login-button {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
-
 .register-login-banner a {
-    text-decoration: none;
-    color: #090808;
-    transition: text-decoration 1000ms;
+  text-decoration: none;
+  color: #090808;
+  transition: text-decoration 1000ms;
 }
 
 .register-login-banner a:hover {
-    text-decoration: underline;
-    color: #900E1E
+  text-decoration: underline;
+  color: #900e1e;
 }
 
 .register-login-banner {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    width: 100%;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  width: 100%;
+  align-items: center;
 }
 
 .registerButton a,
 .registerButton a {
-    display: inline;
-    align-content: center;
-    width: 40%;
-    text-decoration: none;
+  display: inline;
+  align-content: center;
+  width: 40%;
+  text-decoration: none;
 }
-
 
 .registerButton a button,
 .registerButton a button {
-    display: flex;
-    width: 100%;
-    align-content: center;
+  display: flex;
+  width: 100%;
+  align-content: center;
 }
-
 
 .buttonBox {
-    display: flex;
-    width: 100%;
-    align-content: center;
-    margin-block: 15px;
-
+  display: flex;
+  width: 100%;
+  align-content: center;
+  margin-block: 15px;
 }
-
-
 
 .createButton a {
-    display: inline;
-    align-content: center;
-    width: 40%;
-    text-decoration: none;
+  display: inline;
+  align-content: center;
+  width: 40%;
+  text-decoration: none;
 }
 
-
-
 .registerButton a button {
-    display: block;
-    width: 100%;
-    justify-content: center;
+  display: block;
+  width: 100%;
+  justify-content: center;
 }
 
 .registerButton button {
-    border-radius: 5px;
-    display: block;
-    /* width: 100%; */
-    justify-content: center;
-    padding: 10px;
+  border-radius: 5px;
+  display: block;
+  /* width: 100%; */
+  justify-content: center;
+  padding: 10px;
 }
-
 
 .buttonBox {
   display: flex;
@@ -146,4 +130,35 @@ div.register-login-box button {
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.data-error {
+  color: rgb(255, 0, 0);
+  font-size: 0.8rem;
+  margin: 0.5rem;
+}
+
+.admin-input {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-input > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.admin-input > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+}
+
+.admin-input > div:nth-child(1) > input:nth-child(1) {
+  margin: 1rem;
+}
+
+.admin-input > div:nth-child(2) > input:nth-child(1) {
+  margin: 1rem;
 }

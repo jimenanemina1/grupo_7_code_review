@@ -1,47 +1,24 @@
-[
-    {
-      "id": "1",
-      "user": "jimena01",
-      "email": "jimenanemina@gmail.com",
-      "password": "dreamteam1",
-      "admin" : false,
-      "imgPath": "/images/cafeFuerte.png",
-      "purchases" : [],
-      "orders": []
+[{
+        "id": 1,
+        "name": "Jhon ",
+        "lastname": "Doe",
+        "email": "jhon@prueba.com",
+        "password": "$2a$10$29/VauYvNJWt3KbTEM/RaelfgUi6WKsBK7tMdRrqJrbsL..B599c2",
+        "admin": true,
+        "imgPath": "/images/avatars/default-avatar.png",
+        "purchases": [],
+        "orders": []
     },
     {
-      "id": "2",
-      "user": "gaston01",
-      "email": "gaston@gmail.com",
-      "password": "cristiano1",
-      "admin" : false,
-      "imgPath": "/images/avatar1.png",
-      "purchases" : [],
-      "orders": []
-    },
-    {
-        "id": "3",
-        "user": "lionel10",
-        "email": "liomessi1@gmail.com",
-        "password": "elnumberone",
-        "admin" : false,
-        "imgPath": "/images/avatar2.png",
-        "purchases" : [
-         { "id": "1",
-           "delivered": true,
-           "payment-method": "cc",
-           "product-id": "1",
-           "amount-payed": 2500
-         }
-        ],
-        "orders": [
-         { "id" : "1",
-           "status": "created",
-           "delivery-method": "door-to-door",
-           "payment-method": "cc",
-           "products-quantity":1
-         } 
-        ]
+        "id": 2,
+        "name": "Jane",
+        "lastname": "Doe",
+        "email": "jane@prueba.com",
+        "password": "$2a$10$ZhvzHBUcHv00IyqqvzHime9eX7zV890He0BgTtpQSZy7hNaedwYYS",
+        "admin": false,
+        "imgPath": "/images/avatars/avatar-1655226934424.png",
+        "purchases": [],
+        "orders": []
     }
 
 ]
