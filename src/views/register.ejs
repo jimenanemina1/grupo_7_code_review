@@ -41,7 +41,7 @@
                     <% } %>
                 </div>
                 <div class="emailField">
-                    <label>Correo electrónico</label><input type="email" name="email" placeholder="minombre@xxxx.com.xx"
+                    <label>Correo electrónico</label><input type="text" name="email" placeholder="minombre@xxxx.com.xx"
                         value="<%= locals.oldData ? oldData.email: null %>">
                     <% if (locals.errors && errors.email) { %>
                     <div class="data-error">
