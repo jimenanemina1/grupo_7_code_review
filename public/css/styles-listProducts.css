@@ -1,0 +1,61 @@
+#footer {
+    position: static;
+  }
+  #header{
+    position: sticky;
+  }
+  #main .recomendados .titulo-recomendados {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  #main .recomendados .contenedor-articulos-recomendados {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 5fr));
+    justify-items: center;
+    align-items: center;
+  }
+  #main .recomendados .contenedor-articulos-recomendados a,
+  #main .recomendados .contenedor-articulos-recomendados a:hover,
+  #main .recomendados .contenedor-articulos-recomendados a:focus,
+  #main .recomendados .contenedor-articulos-recomendados a:active {
+    width: 80%;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin: 0.8rem;
+  }
+  #main
+    .recomendados
+    .contenedor-articulos-recomendados
+    .articulo-recomendado
+    .nombre-producto-recomendado {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  #main
+    .recomendados
+    .contenedor-articulos-recomendados
+    .articulo-recomendado h5{
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  #main .recomendados .contenedor-articulos-recomendados .articulo-recomendado i {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    color: #3d8705;
+  }
+  
+  #main
+    .recomendados
+    .contenedor-articulos-recomendados
+    .articulo-recomendado
+    .imagen-articulo-recomendado
+    img {
+    width: 100%;
+    height: auto;
+  }
+  

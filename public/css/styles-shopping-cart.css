@@ -9,176 +9,142 @@
 #header{
     position: sticky;
 }
-
-main section.product div article div.img-product{
+div.img-product{
     display: flex;
     justify-content: center;
 }
-
-.img-product img{
+img.product_img{
     width: 70%;
 }
-
-main{
-    margin: 5px;
-}
-
-main section.Cart{
-    display: flex;
-    justify-content: center;
-}
-
-main section.product div article hr{
-    width: 75%;
+hr{
+    width: 70%;
     margin: auto;
-    margin-bottom: 5px;
+    margin-top: 2px;
 }
-
-main section.product div div.section{
+div.main-article h1{
+   text-align: center;
+   padding-top: 10px;
+}
+article{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
 }
-
-main section.product div article h3{
+article div.main-article{
     text-align: center;
-    margin-bottom: 7px;
 }
-
-main section.product div div.main-article{
+article div.main-article div.price{
     display: flex;
-    justify-content: center;
-    margin-bottom: 7px;
-    padding-top: 10px;
-    height: 50px;
-}
-
-main section.product div div div.button-section{
-    display: flex;
-    width: 25%;
     justify-content: space-evenly;
 }
-
-main section.product div div div button{
+article div.main-article div.price p.price{
+    margin-left: 5%;
+    align-self: center;
+    font-size: 18px;
+}
+div.spinner button.quantityMas{
     font-size: 1.5rem;
     color: #fff ; ;
     background-color: #bc0909;
     width: 40px;
 }
-
-
-main section.product div div button{
+div.spinner button.quantityMenos{
     font-size: 1.5rem;
-    color: #fff ;
+    color: #fff ; ;
     background-color: #bc0909;
     width: 40px;
 }
-
-main section.product div div div input{
+div.spinner input{
     font-size: 1.5rem;
     width: 40px;
     text-align: center;
-
 }
-
-
-
-main section.product div div p{
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    font-size: 20px;
-}
-
-main section.product div div.pay-for-cart{
-    text-align-last:center ;
-    padding: 10px;
-}
-
-main section.product div div.pay-for-cart button.pay{
+article div.main-article div.pay button{
     background-color: #4a6554;
-    color:white;
+    color: white;
     border: 1px solid #4a6554;
     border-radius: 4px;
-    width: 25%;
-    height: 30px;
+    height: 35px;
+    width: 150px;
     font-size: 1rem;
 }
-
-/*main section.Cart div.pay-for-cart a{
-    font-size: 13px;
+div.back-to-buy{
+    width: 210px;
+}
+div.back-to-buy a{
     text-decoration: none;
-    transition: color, text-decoration, 50ms;
+    color: black;
 }
-
-main section.Cart div.pay-for-cart a:hover{
-    color: #000000;
-    text-decoration: underline;
-}
-
-main section.Cart div a:hover{
-    color: #000000;
-}*/
-
-main section.product div div div.buy{
+div.form{
     display: flex;
-    align-items: center;
 }
-main section.product div div div.buy i{
-    margin: 5px;
-    padding-right: 5px ;
-}
-main section.product div div div.buy a{
-    color:black;
-    text-decoration: none;
-}
-
-main section.product div div a{
-    color: inherit;
-    text-decoration: none;
-    
-}
-
-main section.product div div div.formulario{
-    display: flex;
-    width: 70%;
-    padding-top: 5px;
-    padding-left: 18px;
-}
-#notas-adicionales{
+div.textarea textarea{
     width: 100%;
 }
-
 #footer{
-    position:static
+    position: static; 
+    
 }
-
-@media (min-width: 769px){
-    main section.product div article{
-        display: flex;
-    }
-    .img-product img{
-        width: 400px;
-    }
-    main .productDetails article .quantityMas{
-        font-size: 1.5rem;
+@media (max-width: 361px){
+    div.spinner button.quantityMas{
+        font-size: 1rem;
         color: #fff ; ;
         background-color: #bc0909;
-        width: 40px;
+        width: 30px;
     }
-    
-    
-    main .productDetails article .quantityMenos{
-        font-size: 1.5rem;
-        color: #fff ;
+    div.spinner button.quantityMenos{
+        font-size: 1rem;
+        color: #fff ; ;
         background-color: #bc0909;
-        width: 40px;
+        width: 30px;
     }
-    
-    main .productDetails article .inputSpinner{
-        font-size: 1.5rem;
-        width: 40px;
+    div.spinner input{
+        font-size: 1rem;
+        width: 30px;
         text-align: center;
-    
     }
-    
+    article div.main-article div.pay button{
+        background-color: #4a6554;
+        color: white;
+        border: 1px solid #4a6554;
+        border-radius: 4px;
+        height: 25px;
+        width: 100px;
+    }
+    article div.main-article div.price p.price{
+        margin-left: 5%;
+        align-self: center;
+        font-size: 15px;
+    }
+    div.back-to-buy{
+        width: 85%;
+    }
+}
+@media (min-width: 769px){
+    div.img-product{
+        background-color: #fff; 
+        /* padding-top: 350px;    */
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    article{
+        display: flex;
+        flex-direction: row;
+    }
+    article div.main-article{
+        width: 100%;
+        text-align: center;
+        margin: 50px 0px;
+        align-self: center;
+    }
+    img.product_img{
+        width: 350px;
+    }
+    div.main-article h1{
+        text-align: center;
+        padding-top: 10px;
+        font-size: 22px;
+     }
+    hr{
+        display: none;
+    }
 }
