@@ -45,15 +45,17 @@ const userController = {
       password: bcryptjs.hashSync(req.body.password, 10),
       admin: req.body.admin === "true",
       imgPath,
-      purchases:[],
-      orders:[],
+      purchases: [],
+      orders: [],
     };
+
+    delete dataUserToCreate.confirmPassword;
 
     let userCreated = User.createUser(dataUserToCreate);
 
-    return res.redirect("/user/login");
+    delete userCreated.password;
 
-    
+    return res.render("login", { userCreated });
   },
 
   profile: (req, res) => {

@@ -10,9 +10,15 @@
 <%- include("./partials/header.ejs") %>
 
 <main class="login">
+    <% if (locals.userCreated) { %>
+        <div >
+            <%= userCreated.name %>, Gracias por registrarte. 🎉🎉🎉
+        </div>
+        <br>
+        <% } %>
     <div class="register-login-box">
         <div class="register-login-banner">
-            <div class="register-login-button">
+            <div class="register-login-button <%= locals.userCreated ? "hidden" : "" %>">
                 <a href="/user/register">Registrarse</a>
             </div>
             <div class="register-login-button">
