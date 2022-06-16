@@ -19,13 +19,14 @@ body header .login i {
 
 main.login {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     margin: 5px;
     padding: 5px;
     justify-content: center;
     margin-top: 150px;
-    margin-bottom: 200px
+    margin-bottom: 200px;
+    align-items: center;
 }
 
 .login input {
@@ -74,6 +75,10 @@ div.register-login-box button {
 .register-login-banner a:hover {
     text-decoration: underline;
     color: #900E1E
+}
+
+.hidden{
+    display: none;
 }
 
 .register-login-banner {
