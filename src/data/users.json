@@ -1,24 +1,46 @@
-[{
-        "id": 1,
-        "name": "Jhon ",
-        "lastname": "Doe",
-        "email": "jhon@prueba.com",
-        "password": "$2a$10$29/VauYvNJWt3KbTEM/RaelfgUi6WKsBK7tMdRrqJrbsL..B599c2",
-        "admin": true,
-        "imgPath": "/images/avatars/default-avatar.png",
-        "purchases": [],
-        "orders": []
-    },
-    {
-        "id": 2,
-        "name": "Jane",
-        "lastname": "Doe",
-        "email": "jane@prueba.com",
-        "password": "$2a$10$ZhvzHBUcHv00IyqqvzHime9eX7zV890He0BgTtpQSZy7hNaedwYYS",
-        "admin": false,
-        "imgPath": "/images/avatars/avatar-1655226934424.png",
-        "purchases": [],
-        "orders": []
-    }
-
+[
+ {
+  "id": 1,
+  "name": "Jhon ",
+  "lastname": "Doe",
+  "email": "jhon@prueba.com",
+  "password": "$2a$10$29/VauYvNJWt3KbTEM/RaelfgUi6WKsBK7tMdRrqJrbsL..B599c2",
+  "admin": true,
+  "imgPath": "/images/avatars/default-avatar.png",
+  "purchases": [],
+  "orders": []
+ },
+ {
+  "id": 2,
+  "name": "Jane",
+  "lastname": "Doe",
+  "email": "jane@prueba.com",
+  "password": "$2a$10$ZhvzHBUcHv00IyqqvzHime9eX7zV890He0BgTtpQSZy7hNaedwYYS",
+  "admin": false,
+  "imgPath": "/images/avatars/avatar-1655226934424.png",
+  "purchases": [],
+  "orders": []
+ },
+ {
+  "id": 3,
+  "name": "jime",
+  "lastname": "nemiña",
+  "email": "jimenanemina@gmail.com",
+  "password": "$2a$10$iMZJITtXV9k/NHaaE7mBjOnwG36HBCbaHQfBtej6E07FqV5KxaG0m",
+  "admin": false,
+  "imgPath": "/images/avatars/default-avatar.png",
+  "purchases": [],
+  "orders": []
+ },
+ {
+  "id": 4,
+  "name": "sdfasdf",
+  "lastname": "sadfasdfsad",
+  "email": "sdfsadf@gmail.com",
+  "password": "$2a$10$GuoQhGSmTLXBxuLglL87/eyO2DV/K9MW0jUatWm0NOymTuf8vNV.S",
+  "admin": false,
+  "imgPath": "/images/avatars/avatar-1655253658033.jpg",
+  "purchases": [],
+  "orders": []
+ }
 ]
