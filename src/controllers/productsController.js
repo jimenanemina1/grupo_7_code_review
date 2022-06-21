@@ -27,7 +27,7 @@ const productsController = {
             //      ? productosMostrados.push(randomProduct)
             //      : "";
             //  }
-             res.render("listProducts", { productosMostrados: products });
+             res.render("listProducts", { productosMostrados: products }) ;
          }
 }
 
