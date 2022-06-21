@@ -21,7 +21,7 @@
                         <br>
                         <p class="price">Precio $ <%=items.price%></p>
                         <p class="descuento">Descuento % <%=items.discount%></p>
-                        <p class="total">Precio Total $ <%=items.price-items.discount%> </p>
+                        <p class="total">Precio Total $ <%=items.price-(items.price*items.discount/100)%> </p>
                         <br>
                         <p class="descripcion"><%=items.description%></p>
                         <br>

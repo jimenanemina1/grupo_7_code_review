@@ -58,4 +58,10 @@
     width: 100%;
     height: auto;
   }
+  article h5.precio-producto-recomendado-pequeño span{
+    text-decoration: line-through;
+  }
+  article h5.descuento-producto-recomendado{
+    color: green
+  }
   
