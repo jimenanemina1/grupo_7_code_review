@@ -15,6 +15,7 @@
             <h2 class="titulo-recomendados">Lista De Productos</h2>
             <div class="contenedor-articulos-recomendados">
                 <% for (let producto of productosMostrados) { %>
+                <% let wdiscount = producto.discount == 0 ? "hidden" : "" %>
                 <a href="/products/<%= producto.id%>">
                     <article class="articulo-recomendado">
                         <div class="imagen-articulo-recomendado">
@@ -22,11 +23,17 @@
                         </div>
                         <h5 class="nombre-producto-recomendado">NOMBRE: <%=producto.name%></h5>
                         <br>
-                        <h5 class="precio-producto-recomendado">PRECIO: <%=producto.price%></h5>
+                        <h5 class="precio-producto-recomendado-pequeño">
+                            <% if(producto.discount > 0){%>
+                            <span>$<%=(producto.price)%></span></h5>
+                            <% }%>
+                        <!-- <%=producto.price%> -->
                         <br>
-                        <h5 class="descuento-producto-recomendado">DESCUENTO: <%=producto.discount%></h5>
-                        
-                        
+                        <h5 class="precio-producto-recomendado">$<%=(producto.price-(producto.price*producto.discount/100)).toFixed()%></h5>
+                        <br>
+                        <% if (producto.discount > 0) {%>
+                        <h5 class="descuento-producto-recomendado">$<%=producto.discount%>% OFF</h5>
+                        <%}%>
                     </article>
                 </a>
                 <% } %>
