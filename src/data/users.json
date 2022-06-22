@@ -42,5 +42,16 @@
   "imgPath": "/images/avatars/avatar-1655253658033.jpg",
   "purchases": [],
   "orders": []
+ },
+ {
+  "id": 5,
+  "name": "kjhgbkj",
+  "lastname": "bnkjnb",
+  "email": "fantingar@gmail.com",
+  "password": "$2a$10$dY5lNlJyGY.rw1OX4Bh8aeTdW/L1ael1wYSzKRU5xeikclSbC83Bi",
+  "admin": true,
+  "imgPath": "/images/avatars/default-avatar.png",
+  "purchases": [],
+  "orders": []
  }
 ]

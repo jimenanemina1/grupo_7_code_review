@@ -269,5 +269,17 @@
   "offer": true,
   "imgPath": "/images/img-asdfadsfasdfs-1654130750305.jpg",
   "review": []
+ },
+ {
+  "id": 15,
+  "name": "cafe amargo ",
+  "description": "muy rico ",
+  "price": 500,
+  "size": "500",
+  "category": "value1",
+  "discount": 0,
+  "offer": false,
+  "imgPath": "/images/img-cafe-amargo--1655837372975.jfif",
+  "review": []
  }
 ]

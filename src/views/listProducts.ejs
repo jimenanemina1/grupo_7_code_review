@@ -21,14 +21,19 @@
                         <div class="imagen-articulo-recomendado">
                             <img src="<%=producto.imgPath%>" alt="producto recomendado">
                         </div>
-                        <!-- <h5 class="nombre-producto-recomendado">NOMBRE: <%=producto.name%></h5> -->
+                        <h5 class="nombre-producto-recomendado">NOMBRE: <%=producto.name%></h5>
                         <br>
-                        <h5 class="precio-producto-recomendado-pequeño"><span>$<%=(producto.price)%></span></h5>
+                        <h5 class="precio-producto-recomendado-pequeño">
+                            <% if(producto.discount > 0){%>
+                            <span>$<%=(producto.price)%></span></h5>
+                            <% }%>
                         <!-- <%=producto.price%> -->
                         <br>
-                        <h5 class="precio-producto-recomendado">$<%=producto.price-(producto.price*producto.discount/100)%></h5>
+                        <h5 class="precio-producto-recomendado">$<%=(producto.price-(producto.price*producto.discount/100)).toFixed()%></h5>
                         <br>
+                        <% if (producto.discount > 0) {%>
                         <h5 class="descuento-producto-recomendado">$<%=producto.discount%>% OFF</h5>
+                        <%}%>
                     </article>
                 </a>
                 <% } %>
