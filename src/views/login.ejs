@@ -35,16 +35,26 @@
 
 
 
-        <form action="/" method="get">
+        <form action="/user/login" method="post">
 
             <div class="form-login-register">
                 <div class="correoElectronicoField">
-                    <label>Correo electrónico</label><input type="text" required name="name"
-                        placeholder="Solo carateres abc"></input>
+                    <label>Correo electrónico</label><input type="text"  name="email"
+                        placeholder="minombre@xxxx.com.xx" value="<%= locals.oldData ? oldData.email: null %>"></input>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="data-error">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
                 </div>
                 <div class="passwordField">
                     <label>Contraseña</label><input type="password" name="password"
-                        placeholder="Mínimo 6 carateres y una mayúscula"></input>
+                        placeholder="Escribe tu contraseña"></input>
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="data-error">
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
                 </div>
                 <div class="forgotPassword">
                     <label>Olvide mi contraseña<a href="/forgot-password"></a></label>
