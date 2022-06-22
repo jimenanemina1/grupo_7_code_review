@@ -3,16 +3,18 @@ const router = express.Router();
 
 const userController = require("../controllers/userController");
 
-const validations = require("../middlewares/validateRegisterForm");
+const registerValidations = require("../middlewares/validateRegisterForm");
+const loginValidations = require("../middlewares/validateLoginForm")
 const upload = require("../middlewares/multer");
 const validateImageUpload = require("../middlewares/validateImageUpload");
 
 router.get("/login", userController.login);
+router.post("/login",loginValidations, userController.loginProcess)
 router.get("/register", userController.register);
 router.post(
   "/register",
   upload.single("avatar"),
-  validations,
+  registerValidations,
   validateImageUpload,
   userController.registerProcess
 );

@@ -29,6 +29,12 @@ main.login {
     align-items: center;
 }
 
+.data-error {
+    color: rgb(255, 0, 0);
+    font-size: 0.8rem;
+    margin: 0.5rem;
+  }
+
 .login input {
     display: flex;
     width: 90%;
