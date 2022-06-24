@@ -11,6 +11,11 @@ const validateImageUpload = require("../middlewares/validateImageUpload");
 router.get("/login", userController.login);
 router.post("/login",loginValidations, userController.loginProcess)
 router.get("/register", userController.register);
+
+router.get("/userProfile", userController.userProfile);
+router.get("/closeSesion", userController.closeSesion);
+
+
 router.post(
   "/register",
   upload.single("avatar"),
@@ -19,5 +24,6 @@ router.post(
   userController.registerProcess
 );
 router.get("/:id", userController.profile);
+
 
 module.exports = router;

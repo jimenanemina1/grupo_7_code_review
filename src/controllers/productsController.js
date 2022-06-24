@@ -16,18 +16,7 @@ const productsController = {
         })
     },
     list: (req, res) => {
-        const product = products.find(items => items.id == req.params.idProduct)
-            // let productosMostrados = [];
-            // products.forEach(element => {
-            //     productosMostrados.push(element)
-            // });
-            //  while (productosMostrados.length < 4) {
-            //    let randomProduct = products[Math.floor(Math.random() * products.length)];
-            //    productosMostrados.indexOf(randomProduct) == -1
-            //      ? productosMostrados.push(randomProduct)
-            //      : "";
-            //  }
-             res.render("listProducts", { productosMostrados: products }) ;
+         res.render("listProducts", { productosMostrados: products }) ;
          }
 }
 
