@@ -105,6 +105,16 @@ const userController = {
     // res.send(req.session.userLogged);
     res.redirect("/")
   },
+  userProfile: (req, res) => {
+   const profile = req.session.userLogged; 
+    
+  res.render("userProfile");
+  },
+  closeSesion: (req, res) => {
+    delete req.session.userLogged;
+    res.redirect("/")
+  }
+
 };
 
 module.exports = userController;
