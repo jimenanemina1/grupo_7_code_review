@@ -3,16 +3,19 @@ const express = require("express");
 const path = require("path");
 const methodOverride = require("method-override");
 const session = require("express-session");
-const userLogged = require("./middlewares/userLogged.js")
+var cookieParser = require('cookie-parser')
+
 
 // ************ express() ************
 const app = express();
 
+const userLogged = require("./middlewares/userLogged.js")
 //************ app() listen ************
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log(`Servidor funcionando, en el puerto ${port}`);
 });
+
 
 // ************ Middlewares ************
 app.use(
@@ -22,6 +25,9 @@ app.use(
     saveUninitialized: false,
   })
 );
+
+app.use(cookieParser());
+
 app.use(userLogged)
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
@@ -44,3 +50,4 @@ app.use("/user", userRouter);
 app.use("/admin", adminRouter);
 app.use("/products", productRouter);
 app.use("/shopping-cart", shoppingCartRouter);
+

@@ -167,3 +167,11 @@ div.register-login-box button {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+label.form-check-label {
+    display: flex;
+    align-items: center;
+    width: 170px;
+    padding: auto;
+}
+

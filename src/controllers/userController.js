@@ -28,6 +28,10 @@ const userController = {
       if (passWordValidation) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
+        if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+
         return res.redirect("/user/profile");
       }
       return res.render("login", {
@@ -111,6 +115,7 @@ const userController = {
   res.render("userProfile");
   },
   closeSesion: (req, res) => {
+    res.clearCookie('userEmail');
     delete req.session.userLogged;
     res.redirect("/")
   }
