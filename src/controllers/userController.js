@@ -8,6 +8,53 @@ const userController = {
     res.render("login.ejs");
   },
 
+  loginProcess: (req, res) => {
+    const resultsValidation = validationResult(req);
+
+    if (!resultsValidation.isEmpty()) {
+      return res.render("login", {
+        errors: resultsValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+
+    let userToLogin = User.findByField("email", req.body.email);
+
+    if (userToLogin) {
+      let passWordValidation = bcryptjs.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+      if (passWordValidation) {
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
+        if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+
+        return res.redirect("/user/profile");
+      }
+      return res.render("login", {
+        errors: {
+          password: {
+            msg: "Las credenciales son inválidas",
+          },
+          
+        },
+        oldData: req.body,
+      });
+    }
+    return res.render("login", {
+      errors: {
+        email: {
+          msg: "Aún no te has registrado con este correo electrónico",
+        },
+        
+      },
+      oldData: req.body,
+    });
+  },
+
   register: (req, res) => {
     res.render("register.ejs");
   },
@@ -59,8 +106,20 @@ const userController = {
   },
 
   profile: (req, res) => {
-    res.render("userProfile");
+    // res.send(req.session.userLogged);
+    res.redirect("/")
   },
+  userProfile: (req, res) => {
+   const profile = req.session.userLogged; 
+    
+  res.render("userProfile");
+  },
+  closeSesion: (req, res) => {
+    res.clearCookie('userEmail');
+    delete req.session.userLogged;
+    res.redirect("/")
+  }
+
 };
 
 module.exports = userController;

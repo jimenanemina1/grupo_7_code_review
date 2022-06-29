@@ -42,5 +42,60 @@
   "imgPath": "/images/avatars/avatar-1655253658033.jpg",
   "purchases": [],
   "orders": []
+ },
+ {
+  "id": 5,
+  "name": "admin",
+  "lastname": "admin",
+  "email": "admin@prueba.com",
+  "password": "$2a$10$tNRHrG9L4WuH8kUBpYQfw.Tywv1/YxasHKvc2eA9zieui4jshuhQa",
+  "admin": true,
+  "imgPath": "/images/avatars/default-avatar.png",
+  "purchases": [],
+  "orders": []
+ },
+ {
+  "id": 6,
+  "name": "no admin",
+  "lastname": "no admin",
+  "email": "noadmin@prueba.com",
+  "password": "$2a$10$JMogTTbnlciP6Nu3aaeHcuVcfcOePX/PPVu9oA7e5TgbiCNdnIL4C",
+  "admin": false,
+  "imgPath": "/images/avatars/default-avatar.png",
+  "purchases": [],
+  "orders": []
+ },
+ {
+  "id": 7,
+  "name": "victor",
+  "lastname": "roca",
+  "email": "victor.roca@prueba.com",
+  "password": "$2a$10$7qd66JMpLElL9lI7cQfgyOGeMlm96hYaVYR5oInxAo9VbjDXqniY2",
+  "admin": true,
+  "imgPath": "/images/avatars/default-avatar.png",
+  "purchases": [],
+  "orders": []
+ },
+ {
+  "id": 8,
+  "name": "Giovany Alexander",
+  "lastname": "L",
+  "email": "giolaver31@gmail.com",
+  "password": "$2a$10$qcOGLyFgAQKZh1y5Aq8CTuACSZupwL0cbkJa16utjx6ecKGGjD6y2",
+  "admin": false,
+  "imgPath": "/images/avatars/default-avatar.png",
+  "purchases": [],
+  "orders": []
+ },
+ {
+  "id": 9,
+  "name": "pepito",
+  "lastname": "rrr",
+  "email": "analistadesarrollo1@agaval.com.co",
+  "password": "$2a$10$VqSiVcSKupY9eZYWkYViu.QkF1QgSLm6z3RBtEACJVOo0w5M94oEi",
+  "admin": true,
+  "imgPath": "/images/avatars/default-avatar.png",
+  "purchases": [],
+  "orders": []
  }
 ]

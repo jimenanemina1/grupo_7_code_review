@@ -29,6 +29,12 @@ main.login {
     align-items: center;
 }
 
+.data-error {
+    color: rgb(255, 0, 0);
+    font-size: 0.8rem;
+    margin: 0.5rem;
+  }
+
 .login input {
     display: flex;
     width: 90%;
@@ -161,3 +167,11 @@ div.register-login-box button {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+label.form-check-label {
+    display: flex;
+    align-items: center;
+    width: 170px;
+    padding: auto;
+}
+

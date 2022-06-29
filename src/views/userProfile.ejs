@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<!-- Head -->
+<%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="/css/styles-userProfile.css">
+<!-- Google Fonts -->
+
 </head>
-<body>
+<!-- Header -->
+<%- include("./partials/header.ejs") %>
+
+    <main class="userProfile">
+               
+        <div class="container">
+            <div class="card">
+              <img src="<%= userLogged.imgPath%>" alt="Person" class="card__image">
+              <br>
+              <p class="card__name"><%= userLogged.name%></p>
+              <div class="grid-container">
+          
+                <div class="grid-child-posts">
+                    <%= userLogged.email%>
+                </div>
+                <br>
+          
+                <div class="grid-child-followers">
+                    <%if(userLogged.admin) { %>
+                        ADMINISTRADOR
+                    <% }else{ %>
+                        INVITADO
+                    <%} %>      
+                    
+                </div>
+          
+              </div>
+            
+              <form action="/user/closeSesion" method="GET" style="display: inline-flex">
+                <button type="submit" class="btn draw-border">Cerrar_Sesión</button>
+                                
+            </form>
+              
+          
+            </div>
+            
+    </main>
+   
+    
+    <!-- Footer -->
+    <%- include("./partials/footer.ejs") %> 
     
 </body>
+
 </html>

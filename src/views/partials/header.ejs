@@ -4,8 +4,13 @@
          <a href="/"><img src="/images/barizta-logo.png" alt="Logo Barizta"></a>
         </div>
         <div class="usuario-carrito">
-
-         <a href="/user/register"><div class="usuario"><i class="fa-solid fa-user"></i></div></a>
+            <% if(isLogged) {%> 
+                <div><%= userLogged.name%></div>
+                <a href="/user/userProfile"><div class="usuario"><i class="fa-solid fa-user"></i></div></a>
+             <% }else{ %>
+                <a href="/user/register"><div class="usuario"><i class="fa-solid fa-user"></i></div></a>
+            <%} %>    
+         
          <a href="/shopping-cart/1"><div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div></a>
         </div>
     </div>
@@ -14,7 +19,9 @@
             <li><a href="/products"><i class="fas fa-coffee"></i> Productos</a></li>
             <li><a href="#"><i class="fas fa-home"></i> Tiendas </a></li>
             <li><a href="#"><i class="fas fa-gift"></i> Regalos</a></li>
+            <% if(isLogged && userLogged.admin) {%> 
             <li><a href="/admin/create-product"><i class="fa-solid fa-square-plus"></i></i> Agregar</a></li>
+            <% } %> 
         </ul>
     </nav>
 </header>

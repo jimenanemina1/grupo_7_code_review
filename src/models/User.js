@@ -31,6 +31,7 @@ const User = {
       id: this.generateId(),
       ...userData,
     };
+    
     allUsers.push(newUser);
     fs.writeFileSync(this.dataPath, JSON.stringify(allUsers, null, " "));
     return newUser;

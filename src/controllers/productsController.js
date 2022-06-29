@@ -6,6 +6,7 @@ const path = require("path");
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
     detail: (req, res) => {
@@ -15,17 +16,7 @@ const productsController = {
         })
     },
     list: (req, res) => {
-            // let productosMostrados = [];
-            // products.forEach(element => {
-            //     productosMostrados.push(element)
-            // });
-            //  while (productosMostrados.length < 4) {
-            //    let randomProduct = products[Math.floor(Math.random() * products.length)];
-            //    productosMostrados.indexOf(randomProduct) == -1
-            //      ? productosMostrados.push(randomProduct)
-            //      : "";
-            //  }
-             res.render("listProducts", { productosMostrados: products });
+         res.render("listProducts", { productosMostrados: products }) ;
          }
 }
 

@@ -21,7 +21,7 @@
                         <br>
                         <p class="price">Precio $ <%=items.price%></p>
                         <p class="descuento">Descuento % <%=items.discount%></p>
-                        <p class="total">Precio Total $ <%=items.price-items.discount%> </p>
+                        <p class="total">Precio Total $ <%=items.price-(items.price*items.discount/100)%></p>
                         <br>
                         <p class="descripcion"><%=items.description%></p>
                         <br>
@@ -42,19 +42,22 @@
 
                         </div>
                         <br><br>
+
+                        <% if(isLogged && userLogged.admin) {%> 
+                           
                         <div class="MantenimientoProducto">
                           
                             <form action="/admin/edit-product/<%=items.id%>" method="GET" style="display: inline-flex">
                                 <button type="submit" class="btn-edit">EDITAR</button>
                                 
                             </form>
-                            
-                            
+                                                        
                             <form action="/admin/delete/<%=items.id%>?_method=delete" method="POST" enctype="multipart/form-data" style="display: inline-flex">
                                 <button type="submit" class="btn-delete">ELIMINAR</button>
                             </form>
-                        </div>
 
+                        </div>
+                        <% } %> 
                     </div>
 
                 </article>

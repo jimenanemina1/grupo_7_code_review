@@ -3,13 +3,27 @@ const router = express.Router();
 
 const userController = require("../controllers/userController");
 
-const validations = require("../middlewares/validateRegisterForm");
+const registerValidations = require("../middlewares/validateRegisterForm");
+const loginValidations = require("../middlewares/validateLoginForm")
 const upload = require("../middlewares/multer");
 const validateImageUpload = require("../middlewares/validateImageUpload");
 
 router.get("/login", userController.login);
+router.post("/login",loginValidations, userController.loginProcess)
 router.get("/register", userController.register);
-router.post("/register", upload.single("avatar"),validations,validateImageUpload,userController.registerProcess);
+
+router.get("/userProfile", userController.userProfile);
+router.get("/closeSesion", userController.closeSesion);
+
+
+router.post(
+  "/register",
+  upload.single("avatar"),
+  registerValidations,
+  validateImageUpload,
+  userController.registerProcess
+);
 router.get("/:id", userController.profile);
+
 
 module.exports = router;
