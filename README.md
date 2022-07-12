@@ -30,3 +30,11 @@ El mercado objetivo de Barizta se dividirá en dos grupos: Los adultos contempor
 - Express
 - Html
 - Css
+## Pasos para iniciar el proyecto
+0. git pull
+1. correr comando: npm -i
+2. crear base de datos en mysql llamada barizta_db
+3. copiar archivo .env-Example y renombrarlo por .env
+4. configurar las variables de entorno en el archivo.env (password- si lo tienen)
+5. correr migraciones, comando npx sequelize-cli db:migrate
+6. correr semillas, npx sequelize-cli db:seed:all
