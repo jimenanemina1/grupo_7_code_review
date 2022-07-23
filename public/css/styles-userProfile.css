@@ -135,7 +135,7 @@
 
 
 .grid-container {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr;
   grid-gap: 20px;
   font-size: 1.2em;
