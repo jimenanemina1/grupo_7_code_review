@@ -13,7 +13,8 @@ const findProduct = (id, allProducts) =>
 
 let productIdForCongrats = 0;
 let productIdForEditCongrats = 0;
-
+let db = require("../database/models");
+const { body } = require('express-validator');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -21,27 +22,45 @@ const adminController = {
   createProduct: (req, res) => {
     res.render('createProduct.ejs')
   },
+    ////////////create begin //////////////
   storeProduct:(req, res) => {
-     let imgPath = '/images/default-image.png'
-		if(req.file){
-			imgPath = `/images/${req.file.filename}`
-		}
-		const newProduct = {
-			id: products[products.length - 1].id +1,
-			...req.body,
-			price: parseInt(req.body.price),
-			discount: parseInt(req.body.discount),
-      offer: JSON.parse(req.body.offer),
-			imgPath,
-      review: []
+    db.Product.create({
+      name: req.body.name,
+      price:req.body.price,
+      discount: req.body.discount,
+      size: req.body.size,
+      description:req.body.description,
+    //  imgPath:,
+    //  create_date: r,
+    //  stock: req.body.stock,
+    //  categories_id:,
+      offer: req.body.offer
+    });
+   res.redirect('/admin/create-congrats');
 
-		}
-    productIdForCongrats = newProduct.id;
-    console.log(newProduct)
-		products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/admin/create-congrats');
-	},
+
+  },
+    //  let imgPath = '/images/default-image.png'
+		// if(req.file){
+		// 	imgPath = `/images/${req.file.filename}`
+		// }
+		// const newProduct = {
+		// 	id: products[products.length - 1].id +1,
+		// 	...req.body,
+		// 	price: parseInt(req.body.price),
+		// 	discount: parseInt(req.body.discount),
+    //   offer: JSON.parse(req.body.offer),
+		// 	imgPath,
+    //   review: []
+
+		// }
+    // productIdForCongrats = newProduct.id;
+    // console.log(newProduct)
+		// products.push(newProduct);
+		// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		// res.redirect('/admin/create-congrats');
+
+  ////////////create end //////////////
   createCongrats: (req, res) => {
     const product = products.find(items => items.id == productIdForCongrats)
     res.render('createProductCongrats.ejs', {
