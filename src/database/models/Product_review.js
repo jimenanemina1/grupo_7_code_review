@@ -27,8 +27,6 @@ module.exports = function(sequelize,dataTypes){
 
         let Product_review = sequelize.define(alias, cols, config);
 
-        Product_review.associate = function(models){
-           
-        }
+    
         return Product_review;
 }

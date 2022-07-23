@@ -32,10 +32,6 @@ module.exports = function(sequelize,dataTypes){
 
         let Order_detail = sequelize.define(alias, cols, config);
 
-        Order_detail.associate = function(models){
-            
     
-           
-        }
         return Order_detail;
 }

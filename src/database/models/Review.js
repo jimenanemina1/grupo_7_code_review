@@ -40,7 +40,9 @@ module.exports = function(sequelize,dataTypes){
             Review.belongsToMany(models.Product,{
                 as: "products",
                 through: "products_review",
-                foreignKey: "review_id"
+                foreignKey: "review_id",
+                otherKey: "products_id",
+                timestamps:false
             })
         }
         return Review;
