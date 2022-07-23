@@ -1,5 +1,3 @@
-const { singularize } = require("sequelize/types/utils");
-
 module.exports = function(sequelize,dataTypes){
     let alias = "Review";
 
@@ -33,7 +31,7 @@ module.exports = function(sequelize,dataTypes){
         let Review = sequelize.define(alias, cols, config);
 
         Review.associate = function(models){
-            Review.belognsTo(models.User,{
+            Review.belongsTo(models.User,{
                 as: "user",
                 foreignKey: "users_id"
             });

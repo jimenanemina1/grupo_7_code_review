@@ -1,5 +1,3 @@
-const { singularize } = require("sequelize/types/utils");
-
 module.exports = function(sequelize,dataTypes){
     let alias = "User";
 
@@ -46,7 +44,7 @@ module.exports = function(sequelize,dataTypes){
 
         let User = sequelize.define(alias, cols, config);
         User.associate = function(models){
-            User.hasMany(models.Orders, {
+            User.hasMany(models.Order, {
                 as: "orders",
                 foreignKey:"status_oders_id"
             });

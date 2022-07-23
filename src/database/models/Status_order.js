@@ -1,5 +1,3 @@
-const { singularize } = require("sequelize/types/utils");
-
 module.exports = function(sequelize,dataTypes){
     let alias = "Status_order";
 
@@ -23,7 +21,7 @@ module.exports = function(sequelize,dataTypes){
         let Status_order = sequelize.define(alias, cols, config);
 
         Status_order.associate = function(models){
-           Status_order.hasMany(models.Orders, {
+           Status_order.hasMany(models.Order, {
                as: "orders",
                foreignKey:"status_oders_id"
            })

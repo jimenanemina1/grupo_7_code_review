@@ -1,5 +1,3 @@
-const { singularize } = require("sequelize/types/utils");
-
 module.exports = function(sequelize,dataTypes){
     let alias = "Product_review";
 
