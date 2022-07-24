@@ -36,7 +36,8 @@ module.exports = function(sequelize,dataTypes){
             type: dataTypes.INTEGER
         },
         offer: {
-            type: dataTypes.TINYINT
+            type: dataTypes.BOOLEAN,
+            default: false
         }
         }
         
