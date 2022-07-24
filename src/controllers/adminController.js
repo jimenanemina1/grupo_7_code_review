@@ -77,22 +77,20 @@ const adminController = {
   },
   storeEditedProduct: async(req, res) => {
     try{
-    const productId = req.params.idProduct
-    product = await db.Product.findByPk(productId)
-    .then(function(product){
-      product = {
-        id: req.params.idProduct,
-        ...product,
-        ...req.body,
-        price: parseInt(req.body.price),
-        discount: parseInt(req.body.discount),
-        offer: req.body.offer === "true",
+    product = await db.Product.update({
+        id: editProductId,
+        name: req.body.id,
+        description: req.body.description,
+        price: req.body.price,
+        discount: req.body.discount,
+        offer: req.body.offer,
         imgPath: req.body.imgPath,
         review: []
-  
-      }
-        return product;
-    })
+      }, {
+        where: {
+          id: editProductId
+        }
+      })
     res.redirect('/admin/edit-congrats')
 
 } catch (error){
