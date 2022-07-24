@@ -73,12 +73,8 @@ const adminController = {
   }catch (error) {
       console.error(error);
   }
-
-   lastProduct = (lastProduct.toJSON())
-    let product = products.find(items => items.id = lastProduct.id);
-    console.log(JSON.stringify(product))
     res.render('createProductCongrats.ejs', {
-      items: product
+      items: lastProduct
     })
  
     

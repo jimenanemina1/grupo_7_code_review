@@ -12,6 +12,7 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productsController = {
     detail: (req, res) => {
         const product = products.find(items => items.id == req.params.idProduct)
+        console.log(JSON.stringify(product))
         res.render('productDetail', {
             items: product
         })
