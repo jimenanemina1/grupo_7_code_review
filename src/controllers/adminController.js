@@ -111,9 +111,18 @@ const adminController = {
       console.log(error)
   }
   },
-  deleteProduct: (req,res) =>{
-    let productToEliminate = Product.findById(req.params.idProduct)
-    Product.delete(productToEliminate.id)
+  deleteProduct: async (req,res) =>{
+    console.log(req.params)
+    try{
+      productToEliminate = await db.Product.destroy({
+        where: {
+          id: req.params.idProduct
+        }
+      })
+    } catch (error){
+      console.log(error)
+  }
+      
     res.send(`<div style="width:100%;height:100vh; padding:0px; margin:0px; display:flex; justify-content:center; align-items:center">
     <div style="width:300px;border-radius:5px;padding:20px; background-color:#900e1e; color:white; font-size:24px">
         Eliminaste: ${productToEliminate.name} <br>
