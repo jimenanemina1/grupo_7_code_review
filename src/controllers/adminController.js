@@ -20,9 +20,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const adminController = {
   createProduct: (req, res) => {
     res.render('createProduct.ejs')
-  },
-    ////////////create begin //////////////
-   
+  },   
   storeProduct: async (req, res) => {
     console.log("ESTO ES EL BODY" + req.body.name)
       try {
@@ -43,27 +41,7 @@ const adminController = {
     } 
     res.redirect('/admin/create-congrats');
   },
-  //    let imgPath = '/images/default-image.png'
-	// 	if(req.file){
-	// 		imgPath = `/images/${req.file.filename}`
-	// 	}
-	// 	const newProduct = {
-	// 		id: products[products.length - 1].id +1,
-	// 		...req.body,
-	// 		price: parseInt(req.body.price),
-	// 		discount: parseInt(req.body.discount),
-  //     offer: JSON.parse(req.body.offer),
-	// 		imgPath,
-  //     review: []
-
-	// 	}
-  //   productIdForCongrats = newProduct.id;
-  //   console.log(newProduct)
-	// 	products.push(newProduct);
-	// 	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-	// 	 res.redirect('/admin/create-congrats');
-  // },
-  ////////////create end //////////////
+  
   createCongrats: async (req, res) => {
     try{
       lastProduct = await db.Product.findAll()
@@ -79,11 +57,20 @@ const adminController = {
  
     
   },
-  editProduct: (req, res) => {
-    const product = products.find(items => items.id == req.params.idProduct)
-    res.render('editProduct.ejs', {
-      items: product
+  editProduct: async(req, res) => {
+    try{
+    const productId = req.params.idProduct
+    product = await db.Product.findByPk(productId)
+    .then(function(product){
+        return product;
     })
+    console.log(JSON.stringify(product))
+    res.render('editProduct', {
+        items: product
+    })
+} catch (error){
+    console.log(error)
+}
   },
   editCongrats: (req, res) =>{
     const product = products.find(items => items.id == productIdForEditCongrats)

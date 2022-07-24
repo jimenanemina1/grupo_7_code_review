@@ -28,7 +28,7 @@ const productsController = {
     },
     list: (req, res) => {
          res.render("listProducts", { productosMostrados: products }) ;
-         }  
+         }   
 }
 
 module.exports = productsController;
