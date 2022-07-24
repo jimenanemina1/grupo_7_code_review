@@ -16,7 +16,7 @@ const { body } = require('express-validator');
 const { clear } = require('console');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
+let editProductId;
 const adminController = {
   createProduct: (req, res) => {
     res.render('createProduct.ejs')
@@ -57,11 +57,14 @@ const adminController = {
  
     
   },
+
+
   editProduct: async(req, res) => {
     try{
     const productId = req.params.idProduct
     product = await db.Product.findByPk(productId)
     .then(function(product){
+      editProductId = product.id;
         return product;
     })
     console.log(JSON.stringify(product))
@@ -72,40 +75,43 @@ const adminController = {
     console.log(error)
 }
   },
-  editCongrats: (req, res) =>{
-    const product = products.find(items => items.id == productIdForEditCongrats)
+  storeEditedProduct: async(req, res) => {
+    try{
+    const productId = req.params.idProduct
+    product = await db.Product.findByPk(productId)
+    .then(function(product){
+      product = {
+        id: req.params.idProduct,
+        ...product,
+        ...req.body,
+        price: parseInt(req.body.price),
+        discount: parseInt(req.body.discount),
+        offer: req.body.offer === "true",
+        imgPath: req.body.imgPath,
+        review: []
+  
+      }
+        return product;
+    })
+    res.redirect('/admin/edit-congrats')
+
+} catch (error){
+    console.log(error)
+}
+  },
+  editCongrats: async(req, res) => {
+    try{
+    product = await db.Product.findByPk(editProductId)
+    .then(function(product){
+      console.log("producto encontrado " + JSON.stringify(product))
+        return product;
+    })
     res.render('editProductCongrats', {
       items: product
     })
-  },
-  storeEditedProduct: (req, res) => {
-    console.log("entre aca")
-    productIdForEditCongrats = req.params.idProduct;
-    const product = products.find(items => items.id == req.params.idProduct)
-     let imgPath = product.imgPath;
-		if(req.file){
-			imgPath = `/images/${req.file.filename}`
-		}
-		const editedProduct = {
-			id: req.params.idProduct,
-      ...product,
-			...req.body,
-			price: parseInt(req.body.price),
-			discount: parseInt(req.body.discount),
-      offer: req.body.offer === "true",
-			imgPath,
-      review: []
-
-		}
-    console.log(editedProduct)
-    const index = products.findIndex(element => element.id == req.params.idProduct)
-    console.log(index)
-    if(index !== -1){
-      products[index] = editedProduct
-    }
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-    console.log("producti edurado" + JSON.stringify(products[req.params.idProduct]))
-    res.redirect('/admin/edit-congrats')
+  } catch (error){
+      console.log(error)
+  }
   },
   deleteProduct: (req,res) =>{
     let productToEliminate = Product.findById(req.params.idProduct)
