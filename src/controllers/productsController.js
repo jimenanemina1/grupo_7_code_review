@@ -6,7 +6,7 @@ const path = require("path");
 const db = require("../database/models");
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+//const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
@@ -26,9 +26,16 @@ const productsController = {
         console.log(error)
     }
     },
-    list: (req, res) => {
-         res.render("listProducts", { productosMostrados: products }) ;
-         }   
+    list: async (req, res) => {
+        try{
+            db.Product.findAll()
+            .then(function(products){
+                return res.render("listProducts", { productosMostrados: products }) ;
+            })
+        }  catch (error){
+            console.log(error)
+        }
+        
+ }
 }
-
 module.exports = productsController;
