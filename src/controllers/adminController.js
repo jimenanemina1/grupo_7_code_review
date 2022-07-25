@@ -76,12 +76,13 @@ const adminController = {
 }
   },
   storeEditedProduct: async(req, res) => {
+    console.log("precio es "+ req.body.price)
     try{
     product = await db.Product.update({
         id: editProductId,
-        name: req.body.id,
+        name: req.body.name,
         description: req.body.description,
-        price: req.body.price.toString(),
+        price: req.body.price,
         discount: req.body.discount,
         offer: req.body.offer,
         imgPath: req.body.imgPath,
