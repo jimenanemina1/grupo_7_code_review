@@ -32,11 +32,9 @@ const productsController = {
         console.log("se ejecuta list")
 
         try{
-           product = await db.Product.findAll()
-            .then(function(product){
-                return  res.render('productDetail', {
-                    items: product
-                })
+           products = await db.Product.findAll()
+            .then(function(products){
+                return res.render("listProducts", { productosMostrados: products }) ;
             })
         }  catch (error){
             console.log(error)

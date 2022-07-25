@@ -25,16 +25,16 @@ module.exports = function(sequelize,dataTypes){
         },
         imgPath: {
             type: dataTypes.STRING
-        },
-        billiing_address: {
-            type: dataTypes.STRING
-        },
-        shopping_address: {
-            type: dataTypes.STRING
-        },
-        phone: {
-            type: dataTypes.STRING
-        }
+         }//,
+        // billing_address: {
+        //     type: dataTypes.STRING
+        // },
+        // shopping_address: {
+        //     type: dataTypes.STRING
+        // },
+        // phone: {
+        //     type: dataTypes.STRING
+        // }
         }
         
         let config = {

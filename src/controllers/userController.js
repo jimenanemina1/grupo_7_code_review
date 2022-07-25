@@ -2,7 +2,7 @@ const { validationResult } = require("express-validator");
 const bcryptjs = require("bcryptjs");
 
 const User = require("../models/User");
-
+let db = require("../database/models")
 const userController = {
   login: (req, res) => {
     res.render("login.ejs");
@@ -59,7 +59,7 @@ const userController = {
     res.render("register.ejs");
   },
 
-  registerProcess: (req, res) => {
+  registerProcess: async (req, res) => {
     const resultsValidation = validationResult(req);
 
     if (!resultsValidation.isEmpty()) {
@@ -69,8 +69,21 @@ const userController = {
       });
     }
 
-    let userInData = User.findByField("email", req.body.email);
+//    let userInData = User.findByField("email", req.body.email);
+try{
+ userInData = await db.User.findOne({
+  where: {
+    email: req.body.email
+  }
+})
+console.log("userIndata" +userInData)
+return userInData
 
+}  catch (error){
+  console.log(error)
+}
+
+console.log("hasta aca llego")
     if (userInData) {
       return res.render("register", {
         errors: {
@@ -86,23 +99,28 @@ const userController = {
     if (req.file) {
       imgPath = `/images/avatars/${req.file.filename}`;
     }
+console.log("abajo intento crear user")
+    try {
+      newUser = await db.User.create({
+        name: req.body.name,
+        lastName:req.body.lastName,
+        email: req.body.email,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        confirmPassword:req.body.confirmPassword,
+        admin: req.body.admin,
+        imgPath: `/images/${req.file.filename}`,
+        purchases: [],
+        orders: [],
+      });
+      return newUser;
+    } catch (error) {
+      console.error(error);
+  } 
+    delete newUser.confirmPassword;
 
-    let dataUserToCreate = {
-      ...req.body,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      admin: req.body.admin === "true",
-      imgPath,
-      purchases: [],
-      orders: [],
-    };
+    delete newUser.password;
 
-    delete dataUserToCreate.confirmPassword;
-
-    let userCreated = User.createUser(dataUserToCreate);
-
-    delete userCreated.password;
-
-    return res.render("login", { userCreated });
+    return res.render("login", { newUser });
   },
 
   profile: (req, res) => {

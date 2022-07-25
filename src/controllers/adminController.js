@@ -81,7 +81,7 @@ const adminController = {
         id: editProductId,
         name: req.body.id,
         description: req.body.description,
-        price: req.body.price,
+        price: req.body.price.toString(),
         discount: req.body.discount,
         offer: req.body.offer,
         imgPath: req.body.imgPath,
