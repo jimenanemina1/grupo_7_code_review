@@ -89,30 +89,15 @@
  },
  {
   "id": 4,
-  "name": "Espumador de Leche",
+  "name": "Espumador de Leche EDITADO",
   "description": "Sit delenit labore sit ut sit sit lorem at sea imperdiet duo vero dolores rebum tation ea sadipscing. Enim dolore justo ea clita odio consetetur hendrerit volutpat no hendrerit sed sed erat ipsum in. Rebum ut nonumy kasd sit rebum vero et sed stet ut lobortis hendrerit amet diam aliquyam eirmod erat rebum. Rebum et veniam sed accumsan ea amet eu lorem blandit. Doming mazim elitr sadipscing sed tempor et amet justo amet lorem. Sadipscing no dolore vulputate.",
-  "price": 4.4,
+  "price": 4,
   "imgPath": "/images/espumador-de-leche.png",
-  "size": 1000,
-  "category": "Accesorios",
-  "discount": 10,
-  "offer": "false",
-  "review": [
-   {
-    "id": 4,
-    "name": "Jorge Echavarria",
-    "point": 3,
-    "imgPath": "/images/avatar4.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   },
-   {
-    "id": 8,
-    "name": "Mauricio Patiño",
-    "point": 3,
-    "imgPath": "/images/avatar8.png",
-    "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
-   }
-  ]
+  "size": "1000",
+  "category": "value1",
+  "discount": null,
+  "offer": false,
+  "review": []
  },
  {
   "id": 5,
