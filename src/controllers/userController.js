@@ -150,6 +150,8 @@ const userController = {
   },
   userProfileUpdate: async (req, res) =>{
     try{ 
+     console.log("user logged tiene adentro" + req.session.userLogged)
+
       userToUpdate = await db.User.findOne({
         where: {
           email: req.body.email

@@ -13,7 +13,7 @@ router.post("/login",loginValidations, userController.loginProcess)
 router.get("/register", userController.register);
 
 router.get("/userProfile", userController.userProfile);
-router.post("/userProfile/update", userController.userProfileUpdate);
+router.post("/userProfileUpdate", userController.userProfileUpdate);
 router.get("/closeSesion", userController.closeSesion);
 
 
