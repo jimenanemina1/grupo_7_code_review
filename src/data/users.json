@@ -97,5 +97,16 @@
   "imgPath": "/images/avatars/default-avatar.png",
   "purchases": [],
   "orders": []
+ },
+ {
+  "id": 10,
+  "name": "jimenae",
+  "lastname": "nemina",
+  "email": "jimenae@hotmail.com",
+  "password": "$2a$10$/npoHPmd.Anc/ZEXzGLWleL.FxyraHmV7m0jY2OTEt800yJvPZZKO",
+  "admin": false,
+  "imgPath": "/images/avatars/default-avatar.png",
+  "purchases": [],
+  "orders": []
  }
 ]

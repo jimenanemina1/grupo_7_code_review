@@ -72,7 +72,7 @@
         <div class="container reviews-wrapper">
             <div class="row">
 
-              
+              <% if (items.review) { %>
                 <% items.review.forEach(item => { %>
     
                 <div class="col-12 col-sm-6 col-lg-3">
@@ -97,6 +97,9 @@
                     </section>
                 </div>
                 <% }) %>
+                <% } else { %>
+                    <p "No hay reviews"></p>
+               <% } %>
             </div>
         </div>
 
