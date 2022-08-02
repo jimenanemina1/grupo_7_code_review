@@ -8,8 +8,8 @@ const userController = {
     res.render("login.ejs");
   },
 
-  loginProcess: (req, res) => {
-    const resultsValidation = validationResult(req);
+  loginProcess: async (req, res) => {
+   try{ const resultsValidation = validationResult(req);
 
     if (!resultsValidation.isEmpty()) {
       return res.render("login", {
@@ -18,8 +18,12 @@ const userController = {
       });
     }
 
-    let userToLogin = User.findByField("email", req.body.email);
-
+  //  let userToLogin = User.findByField("email", req.body.email);
+    userToLogin = await db.User.findOne({
+      where: {
+        email : req.body.email
+      }
+    })
     if (userToLogin) {
       let passWordValidation = bcryptjs.compareSync(
         req.body.password,
@@ -53,6 +57,11 @@ const userController = {
       },
       oldData: req.body,
     });
+
+
+  } catch (error){
+    console.log(error)
+  }
   },
 
   register: (req, res) => {
