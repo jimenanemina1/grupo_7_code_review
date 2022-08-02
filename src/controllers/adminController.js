@@ -22,7 +22,7 @@ const adminController = {
     res.render('createProduct.ejs')
   },   
   storeProduct: async (req, res) => {
-    console.log("ESTO ES EL BODY" + req.body.name)
+//    console.log("ESTO ES EL BODY" + req.body.name)
       try {
         product = await db.Product.create({
           name: req.body.name,
@@ -30,8 +30,8 @@ const adminController = {
           discount: req.body.discount,
           size: req.body.size,
           description:req.body.description,
-          imgPath: '/images/${req.file.filename}',
-          create_date: "2022-07-20 00:48:03",
+          imgPath: req.body.imgPath,
+          create_date: new Date(),
           stock: 1,
           categories_id: 2,
           offer: req.body.offer
@@ -82,7 +82,7 @@ const adminController = {
         id: editProductId,
         name: req.body.name,
         description: req.body.description,
-        price: req.body.price,
+        price: parseFloat(req.body.price),
         discount: req.body.discount,
         offer: req.body.offer,
         imgPath: req.body.imgPath,
