@@ -113,26 +113,35 @@ const adminController = {
   }
   },
   deleteProduct: async (req,res) =>{
-    console.log(req.params)
+    console.log("en req llega como id de prodcuto" + req.params.idProduct)
     try{
+      productToFind = await db.Product.findByPk(req.params.idProduct)
+    .then(function(product){
+      console.log("producto encontrado " + JSON.stringify(product))
+      productToEliminateName = product.name
+      console.log("product to eliminate " + productToEliminateName)
+    })
+  
       productToEliminate = await db.Product.destroy({
         where: {
           id: req.params.idProduct
         }
       })
+
+      res.send(`<div style="width:100%;height:100vh; padding:0px; margin:0px; display:flex; justify-content:center; align-items:center">
+      <div style="width:300px;border-radius:5px;padding:20px; background-color:#900e1e; color:white; font-size:24px">
+          Eliminaste: ${productToEliminateName} <br>
+          <div style="background-color:#4a6554; width:120px;padding:10px;text-align:center;border-radius:5px;margin:10px auto; cursor:pointer">
+              <a style="text-decoration:none; color:white" href="/"> Ir al inicio </a>
+          </div>
+      </div>
+  </div>`)
+  
     } catch (error){
       console.log(error)
   }
       
-    res.send(`<div style="width:100%;height:100vh; padding:0px; margin:0px; display:flex; justify-content:center; align-items:center">
-    <div style="width:300px;border-radius:5px;padding:20px; background-color:#900e1e; color:white; font-size:24px">
-        Eliminaste: ${productToEliminate.name} <br>
-        <div style="background-color:#4a6554; width:120px;padding:10px;text-align:center;border-radius:5px;margin:10px auto; cursor:pointer">
-            <a style="text-decoration:none; color:white" href="/"> Ir al inicio </a>
-        </div>
-    </div>
-</div>`)
-
+ 
   }
 };
 
