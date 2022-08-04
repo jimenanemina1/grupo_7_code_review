@@ -120,7 +120,7 @@ const userController = {
         email: req.body.email,
         password: bcryptjs.hashSync(req.body.password, 10),
         admin: req.body.admin === "true"?1:0,
-        imgPath: req.body.imgPath,
+        imgPath: imgPath,//req.body.imgPath,
         billing_address: "calle falsa 1775",
         phone: "1156062209",
         shipping_address: "calle 13"
