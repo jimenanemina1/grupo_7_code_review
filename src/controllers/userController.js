@@ -147,8 +147,12 @@ const userController = {
   userProfile: (req, res) => {
    // console.log("primero se jecuta user profile despues" + JSON.stringify(req.session.userLogged))
    const profile = req.session.userLogged; 
-    console.log("hola")
-  res.render("userProfile");
+    console.log("userProfileRenderizado")
+    res.render("userProfile" ,{ profile});
+  },
+  editUserForm: async (req,res) => {
+    const profile = req.session.userLogged;
+    res.render("editUserForm" ,{ profile});
   },
   updateUserProfile: async (req, res) =>{
     console.log("llegas aca?" + JSON.stringify(req))
