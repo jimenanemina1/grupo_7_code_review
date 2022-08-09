@@ -30,7 +30,7 @@ const adminController = {
           discount: req.body.discount,
           size: req.body.size,
           description:req.body.description,
-          imgPath: req.body.imgPath,
+          imgPath: "/images/" + req.file.filename,
           create_date: new Date(),
           stock: 1,
           categories_id: 2,

@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const db = 
 const userLogged = (req,res,next) =>{
     res.locals.isLogged = false;
 
@@ -6,7 +7,7 @@ const userLogged = (req,res,next) =>{
     // let emailInCookie = req.cookies.userEmail2;
 
     let emailInCookie = req.cookies.userEmail;
-	let userFromCookie = User.findByField('email', emailInCookie);
+	let userFromCookie = await db.User.findByField('email', emailInCookie);
 
 	if (userFromCookie) {
 		req.session.userLogged = userFromCookie;

@@ -36,7 +36,7 @@ const userController = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-        return res.redirect("/user/profile");
+        return res.redirect("/user/userProfile");
       }
       return res.render("login", {
         errors: {
@@ -120,7 +120,7 @@ const userController = {
         email: req.body.email,
         password: bcryptjs.hashSync(req.body.password, 10),
         admin: req.body.admin === "true"?1:0,
-        imgPath: req.body.imgPath,
+        imgPath: imgPath,
         billing_address: "calle falsa 1775",
         phone: "1156062209",
         shipping_address: "calle 13"
@@ -141,30 +141,20 @@ const userController = {
 
   profile: (req, res) => {
     // res.send(req.session.userLogged);
+    console.log("se ejecuta el profile primero")
     res.redirect("/")
   },
   userProfile: (req, res) => {
+   // console.log("primero se jecuta user profile despues" + JSON.stringify(req.session.userLogged))
    const profile = req.session.userLogged; 
-    
+    console.log("hola")
   res.render("userProfile");
   },
-  userProfileUpdate: async (req, res) =>{
-    try{ 
-     console.log("user logged tiene adentro" + req.session.userLogged)
-
-      userToUpdate = await db.User.findOne({
-        where: {
-          email: req.body.email
-        }
-        
-      })
-      return userToUpdate;
-
-    }catch (error){
-      console.log(error)
-    }
+  updateUserProfile: async (req, res) =>{
+    console.log("llegas aca?" + JSON.stringify(req))
 try{
-    updatedUser = await db.User.update({
+  
+    userLogged = await db.User.update({
       name: req.body.name,
       lastName:req.body.lastName,
       email: req.body.email,
@@ -175,11 +165,13 @@ try{
       purchases: [],
       orders: [],
     })
+    console.log("user logged tiene " + userLogged)
+    return res.render("userProfile" ,{ userLogged}); 
     } catch (error){
       console.log(error)
     }
-    return res.render("userProfile"); 
-
+    
+    
   },
   closeSesion: (req, res) => {
     res.clearCookie('userEmail');
