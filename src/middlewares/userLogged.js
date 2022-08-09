@@ -1,5 +1,5 @@
 const User = require("../models/User");
-const db = 
+const db = require("../database/models")
 const userLogged = (req,res,next) =>{
     res.locals.isLogged = false;
 
