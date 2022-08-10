@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
 const bcryptjs = require("bcryptjs");
 
+
 const User = require("../models/User");
 let db = require("../database/models")
 const userController = {
@@ -36,7 +37,7 @@ const userController = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-        return res.redirect("/user/profile");
+        return res.redirect("/user/userProfile");
       }
       return res.render("login", {
         errors: {
@@ -141,45 +142,65 @@ const userController = {
 
   profile: (req, res) => {
     // res.send(req.session.userLogged);
+    console.log("se ejecuta el profile primero")
     res.redirect("/")
   },
   userProfile: (req, res) => {
+   // console.log("primero se jecuta user profile despues" + JSON.stringify(req.session.userLogged))
    const profile = req.session.userLogged; 
-    
-  res.render("userProfile");
+    console.log("userProfileRenderizado")
+    res.render("userProfile" ,{ profile});
   },
-  userProfileUpdate: async (req, res) =>{
-    try{ 
-     console.log("user logged tiene adentro" + req.session.userLogged)
-
-      userToUpdate = await db.User.findOne({
-        where: {
-          email: req.body.email
-        }
-        
+  editUserForm: async (req,res) => {
+    const profile = req.session.userLogged;
+    console.log(profile)
+    res.render("editUserForm" ,{ profile});
+  },
+  updateUserProfile: async (req, res) =>{
+    try{
+      userLogged = req.session.userLogged;
+      let imgPath = "/images/avatars/default-avatar.png";
+      if (req.file) {
+        imgPath = `/images/avatars/${req.file.filename}`;
+      }
+      console.log( userLogged)
+          userToEdit = await db.User.update({
+            name: req.body.name,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            admin: req.body.admin === "true"?1:0,
+            imgPath: imgPath,
+            billing_address: "calle falsa 1775",
+            phone: "1156062209",
+            shipping_address: "calle 13"
+    
+          },
+          {
+            where:{
+            id: userLogged.id
+          }
+          })
+          .then(() => {
+          req.session.user = {
+            id:  userLogged.id,
+            name: req.body.name,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            password:  bcryptjs.hashSync(req.body.password, 10),
+            admin: 1,
+            imgPath: imgPath,
+            billing_address: 'calle falsa 1775',
+            shipping_address: 'calle 13',
+            phone: req.body.phone
+        } 
+        userToShow = req.session.user
+       
       })
-      return userToUpdate;
-
-    }catch (error){
-      console.log(error)
-    }
-try{
-    updatedUser = await db.User.update({
-      name: req.body.name,
-      lastName:req.body.lastName,
-      email: req.body.email,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      confirmPassword:req.body.confirmPassword,
-      admin: req.body.admin,
-      imgPath: `/images/${req.file.filename}`,
-      purchases: [],
-      orders: [],
-    })
-    } catch (error){
-      console.log(error)
-    }
-    return res.render("userProfile"); 
-
+      return res.render("userProfile" ,{ userToShow}); 
+} catch (error){
+    console.log(error)
+}
   },
   closeSesion: (req, res) => {
     res.clearCookie('userEmail');

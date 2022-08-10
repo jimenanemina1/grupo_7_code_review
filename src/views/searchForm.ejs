@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="/css/styles-register.css">
+
+</head>
+<!-- Header -->
+<%- include("./partials/header.ejs") %>
+<main class="register">
+    <div class="register-login-box">
+        <div class="register-login-banner">
+            <div class="register-login-button">
+                <strong>Buscar producto</strong>
+            </div>
+        </div>
+
+        <form action="/products/search/:searchWord" method="post" enctype="multipart/form-data">
+
+            <div class="form-login-register">
+                <div class="nameField">
+                    <label>Nombre</label><input type="text" name="name" placeholder="Que estas buscando?">
+                </div>
+                
+                <div class="buttonBox">
+                    <div class="registerButton">
+                        <button type="submit">Buscar</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    </form>
+</main>
+
+<!-- Footer -->
+<%- include("./partials/footer.ejs") %>
+
+</body>
+
+</html>
