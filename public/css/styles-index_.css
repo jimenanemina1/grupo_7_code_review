@@ -211,3 +211,19 @@
   width: 100%;
   height: auto;
 }
+
+.form-search-bar {
+  background-color: #FFF;
+  border: 1px solid #ebebeb;
+  outline: none;
+  color: #666;
+  padding: 2px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.nameField input{
+  width: 90%;
+  border:none;
+  padding: 5px;
+}

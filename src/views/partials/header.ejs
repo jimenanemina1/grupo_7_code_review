@@ -3,6 +3,12 @@
         <div class="logo">
          <a href="/"><img src="/images/barizta-logo.png" alt="Logo Barizta"></a>
         </div>
+        <div class="form-search-bar" action="#" method="GET">
+            <form action="/" method="POST">
+                <div class="nameField">
+                <input type="text" name="name" placeholder="Buscar productos, marcas y más">
+            </div>
+           </div> 
         <div class="usuario-carrito">
             <% if(isLogged) {%> 
                 <div><%= userLogged.name%></div>
