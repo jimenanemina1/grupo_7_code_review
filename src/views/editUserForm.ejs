@@ -16,12 +16,12 @@
             </div>
         </div>
 
-        <form action="/user/updateUserProfile?_method=PUT" method="post" enctype="multipart/form-data">
+        <form action="/user/updateUserProfile?_method=PUT" method="post" >
 
             <div class="form-login-register">
                 <div class="nameField">
                     <label>Nombre</label><input type="text" name="name" placeholder="Solo caracteres abc"
-                        value="<%= locals.oldData ? oldData.name: null %>">
+                    value="<%=profile.name%>">
                     <% if (locals.errors && errors.name) { %>
                     <div class="data-error">
                         <%= errors.name.msg %>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="lastnameField">
                     <label>Apellido</label><input type="text" name="lastname" placeholder="Solo caracteres abc"
-                        value="<%= locals.oldData ? oldData.lastname: null %>">
+                    value="<%=profile.lastname%>">
                     <% if (locals.errors && errors.lastname) { %>
                     <div class="data-error">
                         <%= errors.lastname.msg %>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="emailField">
                     <label>Correo electrónico</label><input type="text" name="email" placeholder="minombre@xxxx.com.xx"
-                        value="<%= locals.oldData ? oldData.email: null %>">
+                    value="<%=profile.email%>">
                     <% if (locals.errors && errors.email) { %>
                     <div class="data-error">
                         <%= errors.email.msg %>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="passwordField">
                     <label>Contraseña</label><input type="password" name="password"
-                        placeholder="Mínimo 6 carateres, una letra en mayúscula, un número y un caracter especial">
+                        placeholder="Mínimo 6 carateres, una letra en mayúscula, un número y un caracter especial" value="******">
                     <% if (locals.errors && errors.password) { %>
                     <div class="data-error">
                         <%= errors.password.msg %>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="confirmPasswordField">
                     <label>Confirmar contraseña</label><input type="password" name="confirmPassword"
-                        placeholder="Repite tu contraseña">
+                        placeholder="Repite tu contraseña" value="******">
                     <% if (locals.errors && errors.confirmPassword) { %>
                     <div class="data-error">
                         <%= errors.confirmPassword.msg %>

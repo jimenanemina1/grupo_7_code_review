@@ -17,7 +17,7 @@ router.get("/register", userController.register);
 router.get("/userProfile", userController.userProfile);
 
 
-router.post("/updateUserProfile", userController.updateUserProfile);
+router.put("/updateUserProfile", userController.updateUserProfile);
 router.get("/editUserForm", userController.editUserForm);
 router.get("/closeSesion", userController.closeSesion);
 

@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
 const bcryptjs = require("bcryptjs");
 
+
 const User = require("../models/User");
 let db = require("../database/models")
 const userController = {
@@ -152,30 +153,32 @@ const userController = {
   },
   editUserForm: async (req,res) => {
     const profile = req.session.userLogged;
+    console.log(profile)
     res.render("editUserForm" ,{ profile});
   },
   updateUserProfile: async (req, res) =>{
-    console.log("llegas aca?" + JSON.stringify(req))
-try{
-  
-    userLogged = await db.User.update({
-      name: req.body.name,
-      lastName:req.body.lastName,
-      email: req.body.email,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      confirmPassword:req.body.confirmPassword,
-      admin: req.body.admin,
-      imgPath: `/images/${req.file.filename}`,
-      purchases: [],
-      orders: [],
-    })
-    console.log("user logged tiene " + userLogged)
-    return res.render("userProfile" ,{ userLogged}); 
-    } catch (error){
-      console.log(error)
-    }
-    
-    
+    try{
+      userLogged = req.session.userLogged;
+      // let imgPath = "/images/avatars/default-avatar.png";
+      // if (req.file) {
+      //   imgPath = `/images/avatars/${req.file.filename}`;
+      // }
+      console.log( req)
+          userToEdit = await db.User.update({
+          name: req.body.name,
+          lastname: req.body.lastname
+          },
+          {
+            where:{
+            id: userLogged.id
+          }
+          })  
+        // console.log(userToEdit)
+        // console.log("user logged tiene " + JSON.stringify(userLogged))
+        return res.render("userProfile" ,{ userToEdit}); 
+} catch (error){
+    console.log(error)
+}
   },
   closeSesion: (req, res) => {
     res.clearCookie('userEmail');
