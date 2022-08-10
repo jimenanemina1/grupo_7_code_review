@@ -20,14 +20,7 @@ module.exports = {
         products_id: 2,
         review_id: 3
       },
-      {
-        products_id: 3,
-        review_id: 4
-      },
-      {
-        products_id: 4,
-        review_id: 5
-      }
+
 
    ],{});
  
