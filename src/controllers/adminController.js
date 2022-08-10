@@ -8,6 +8,8 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
+
+
 const findProduct = (id, allProducts) =>
   allProducts.find((product) => product.id == id);
 
@@ -23,6 +25,12 @@ const adminController = {
   },   
   storeProduct: async (req, res) => {
 //    console.log("ESTO ES EL BODY" + req.body.name)
+
+let imgPath = "/images/default-image.png";
+if (req.file) {
+  imgPath = `/images/${req.file.filename}`;
+}
+
       try {
         product = await db.Product.create({
           name: req.body.name,
@@ -30,7 +38,7 @@ const adminController = {
           discount: req.body.discount,
           size: req.body.size,
           description:req.body.description,
-          imgPath: "/images/" + req.file.filename,
+          imgPath: imgPath,//req.file.imgPath,
           create_date: new Date(),
           stock: 1,
           categories_id: 2,
