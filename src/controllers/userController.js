@@ -159,23 +159,45 @@ const userController = {
   updateUserProfile: async (req, res) =>{
     try{
       userLogged = req.session.userLogged;
-      // let imgPath = "/images/avatars/default-avatar.png";
-      // if (req.file) {
-      //   imgPath = `/images/avatars/${req.file.filename}`;
-      // }
-      console.log( req)
+      let imgPath = "/images/avatars/default-avatar.png";
+      if (req.file) {
+        imgPath = `/images/avatars/${req.file.filename}`;
+      }
+      console.log( userLogged)
           userToEdit = await db.User.update({
-          name: req.body.name,
-          lastname: req.body.lastname
+            name: req.body.name,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            admin: req.body.admin === "true"?1:0,
+            imgPath: imgPath,
+            billing_address: "calle falsa 1775",
+            phone: "1156062209",
+            shipping_address: "calle 13"
+    
           },
           {
             where:{
             id: userLogged.id
           }
-          })  
-        // console.log(userToEdit)
-        // console.log("user logged tiene " + JSON.stringify(userLogged))
-        return res.render("userProfile" ,{ userToEdit}); 
+          })
+          .then(() => {
+          req.session.user = {
+            id:  userLogged.id,
+            name: req.body.name,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            password:  bcryptjs.hashSync(req.body.password, 10),
+            admin: 1,
+            imgPath: imgPath,
+            billing_address: 'calle falsa 1775',
+            shipping_address: 'calle 13',
+            phone: req.body.phone
+        } 
+        userToShow = req.session.user
+       
+      })
+      return res.render("userProfile" ,{ userToShow}); 
 } catch (error){
     console.log(error)
 }
