@@ -34,6 +34,7 @@ const router = express.Router();
 
 router.get('/:idProduct', productsController.detail);
 router.get('/', productsController.list);
+router.get('/searchForm', productsController.searchForm)
 router.get('/search/:searchWord',productsController.find)
 
 

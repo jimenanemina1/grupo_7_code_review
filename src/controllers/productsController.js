@@ -41,6 +41,10 @@ const productsController = {
         }
         
  },
+ searchForm: async (req, res) => {
+     console.log("se ejecuta search from")
+    res.render("searchForm.ejs")
+ },
  find: async (req, res) => {
      console.log("me ejecuto")
      let searchWord = req.params.searchWord;
