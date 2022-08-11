@@ -42,8 +42,13 @@ const productsController = {
         
  },
  searchForm: async (req, res) => {
+    try{
+
      console.log("se ejecuta search from")
     res.render("searchForm.ejs")
+} catch(error){
+    console.log(error)
+}
  },
  find: async (req, res) => {
      console.log("me ejecuto")

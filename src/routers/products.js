@@ -31,10 +31,9 @@ const productsController = require('../controllers/productsController');
 
 const router = express.Router();
 
-
+router.get('/searchForm', productsController.searchForm)
 router.get('/:idProduct', productsController.detail);
 router.get('/', productsController.list);
-router.get('/searchForm', productsController.searchForm)
 router.get('/search/:searchWord',productsController.find)
 
 
