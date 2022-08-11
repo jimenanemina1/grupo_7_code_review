@@ -51,8 +51,8 @@ const productsController = {
 }
  },
  find: async (req, res) => {
-     console.log("me ejecuto")
-     let searchWord = req.params.searchWord;
+     console.log("se ejecuta el find")
+     let searchWord = req.body.name;
      console.log(searchWord)
     try{
         product = await db.Product.findOne({
