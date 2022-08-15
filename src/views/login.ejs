@@ -4,6 +4,7 @@
 <!-- Head -->
 <%- include("./partials/head.ejs") %>
 <link rel="stylesheet" href="/css/styles-login.css">
+<script type="module" src="/js/login/login.js" defer async></script>
 
 </head>
 <!-- Header -->
@@ -28,12 +29,15 @@
 
         
 
-        <form action="/user/login" method="post">
+        <form action="/user/login" method="post" id="login-form">
+            <div class="errors">
+                <ul></ul>
+            </div>
 
             <div class="form-login-register">
                 <div class="correoElectronicoField">
                     <label>Correo electrónico</label><input type="text"  name="email"
-                        placeholder="minombre@xxxx.com.xx" value="<%= locals.oldData ? oldData.email: null %>"></input>
+                        placeholder="minombre@xxxx.com.xx" value="<%= locals.oldData ? oldData.email: null %>" id="email-input"></input>
                         <% if (locals.errors && errors.email) { %>
                             <div class="data-error">
                                 <%= errors.email.msg %>
@@ -42,7 +46,7 @@
                 </div>
                 <div class="passwordField">
                     <label>Contraseña</label><input type="password" name="password"
-                        placeholder="Escribe tu contraseña"></input>
+                        placeholder="Escribe tu contraseña" id="password-input"></input>
                         <% if (locals.errors && errors.password) { %>
                             <div class="data-error">
                                 <%= errors.password.msg %>
