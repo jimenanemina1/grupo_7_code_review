@@ -33,6 +33,7 @@ main.login {
     color: rgb(255, 0, 0);
     font-size: 0.8rem;
     margin: 0.5rem;
+    list-style: none;
   }
 
 .login input {
