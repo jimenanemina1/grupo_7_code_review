@@ -9,14 +9,23 @@ let form = document.getElementById("registration-form");
 
 
     ///// primero validaciones de vacio
-
-
-    ////luego validaciones de expresiones regulares
+    const regexAlpha = /^[a-zA-Z ]{3,}$/
     const userEmail = event.target.email.value
-   // console.log(userEmail)
-   if(!userEmail){
-    errors.push("Debes escribir un email válido REGISTER")
-   }
+    const userName = event.target.name.value
+    const userLastName = event.target.lastname.value
+    const userPassword = event.target.password.value
+    const userConfirmPassword = event.target.userConfirmPassword.value
+    const userAdmin = event.target.userAdmin.value
+    
+    if(!userName || !userLastName || !userEmail || !userPassword || !userConfirmPassword || !userAdmin ){
+     errors.push("Debes llenar todos los campos")
+    }
+    console.log(userName)
+    if(userName && !regexAlpha.test(userName)){
+        errors.push("El nombre debe tener minimo 3 caractéres y solo contener letras")
+        
+    }
+
 
    if(errors.length > 0){
     event.preventDefault();
@@ -27,9 +36,34 @@ let form = document.getElementById("registration-form");
 }
 
 })
+    // if (userName.value == '' || userName.value.length < 4) {
+    //      errors.push('El campo nombre no puede estar vacío');
+    //      userName.classList.add('is-invalid');
+    //      } else {
+    //      userName.classList.add('is-valid');
+    //      userName.classList.remove('is-invalid');
+    //      userLastName.focus();
+    // };
+
+//     if (userLastName.value == '' || userLastName.value.length < 4) {
+//         errors.push('El campo apellido no puede estar vacío');
+//         userLastName.classList.add('is-invalid');
+//         } else {
+//         userLastName.classList.add('is-valid');
+//         userLastName.classList.remove('is-invalid');
+//         userEmail.focus();
+//    };
+
+
 
 
     
+// const userPassword = event.target.password.value
+// const userConfirmPassword = event.target.confirmPassword.value
+// const userAdmin = event.target.admin.value
+// const userAvatar = event.target.avatar.value
+// const userName = event.target.name.value
+// const userLastName = event.target.lastname.value
 
 //     const userEmail = event.target.email.value
 
