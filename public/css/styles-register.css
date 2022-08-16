@@ -24,6 +24,7 @@ main.register {
   justify-content: center;
   margin-top: 150px;
   margin-bottom: 200px;
+  list-style: none;
 }
 
 .register input {
@@ -136,6 +137,7 @@ div.register-login-box button {
   color: rgb(255, 0, 0);
   font-size: 0.8rem;
   margin: 0.5rem;
+  list-style: none;
 }
 
 .admin-input {
@@ -174,4 +176,8 @@ div.register-login-box button {
 
 .admin-input > div:nth-child(2) > input:nth-child(1) {
   width: 2rem;
+}
+
+.errores{
+  color: #900E1E;
 }

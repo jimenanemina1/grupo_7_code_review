@@ -13,7 +13,7 @@ form.addEventListener("submit", (event) => {
     }
 
     if(email && !regexEmail.test(email)){
-        errors.push("Debes escribir un email válido")
+        errors.push("Debes escribir un email válido LOGIN")
         
     }
 

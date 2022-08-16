@@ -4,6 +4,8 @@
 <!-- Head -->
 <%- include("./partials/head.ejs") %>
 <link rel="stylesheet" href="/css/styles-register.css">
+<script type="module" src="/js/register/register.js" defer async></script>
+
 
 </head>
 <!-- Header -->
@@ -17,13 +19,14 @@
             <div class="register-login-button">
                 <a href="/user/login">Inciar sesión</a>
             </div>
-        </div>
 
-        <form action="/user/register" method="post" enctype="multipart/form-data">
-
+        <form action="/user/register" class="form-login-register" id="registration-form" method="post" enctype="multipart/form-data">
+            <div class="errors">
+                <ul></ul>
+            </div>
             <div class="form-login-register">
                 <div class="nameField">
-                    <label>Nombre</label><input type="text" name="name" placeholder="Solo caracteres abc"
+                    <label>Nombre</label><input type="text" name="name" placeholder="Solo caracteres abc" id="userName"
                         value="<%= locals.oldData ? oldData.name: null %>">
                     <% if (locals.errors && errors.name) { %>
                     <div class="data-error">
@@ -32,7 +35,7 @@
                     <% } %>
                 </div>
                 <div class="lastnameField">
-                    <label>Apellido</label><input type="text" name="lastname" placeholder="Solo caracteres abc"
+                    <label>Apellido</label><input type="text" name="lastname" placeholder="Solo caracteres abc" id="userLastName"
                         value="<%= locals.oldData ? oldData.lastname: null %>">
                     <% if (locals.errors && errors.lastname) { %>
                     <div class="data-error">
@@ -41,7 +44,7 @@
                     <% } %>
                 </div>
                 <div class="emailField">
-                    <label>Correo electrónico</label><input type="text" name="email" placeholder="minombre@xxxx.com.xx"
+                    <label>Correo electrónico</label><input type="text" name="email" placeholder="minombre@xxxx.com.xx" id="userEmail"
                         value="<%= locals.oldData ? oldData.email: null %>">
                     <% if (locals.errors && errors.email) { %>
                     <div class="data-error">
@@ -50,7 +53,7 @@
                     <% } %>
                 </div>
                 <div class="passwordField">
-                    <label>Contraseña</label><input type="password" name="password"
+                    <label>Contraseña</label><input type="password" name="password" id="userPassword"
                         placeholder="Mínimo 6 carateres, una letra en mayúscula, un número y un caracter especial">
                     <% if (locals.errors && errors.password) { %>
                     <div class="data-error">
@@ -59,7 +62,7 @@
                     <% } %>
                 </div>
                 <div class="confirmPasswordField">
-                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword"
+                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword" id="userConfirmPassword"
                         placeholder="Repite tu contraseña">
                     <% if (locals.errors && errors.confirmPassword) { %>
                     <div class="data-error">
@@ -71,21 +74,21 @@
                     <label>Administrador</label>
                     <div class="admin-input">
                         <div>
-                            <input type="radio" name="admin" value="true"
+                            <input type="radio" name="admin" value="true" id="userAdmin"
                                 <%= locals.oldData && locals.oldData.admin == "true" ? "checked": null %>
                                 class="radio-inputs">
                             Si
 
                         </div>
                         <div>
-                            <input type="radio" name="admin" value="false"
+                            <input type="radio" name="admin" value="false" id="userAdmin"
                                 <%= locals.oldData && locals.oldData.admin == "false" ? "checked": null %>
                                 class="radio-inputs">
                             No
                         </div>
                     </div>
                 </div>
-                <div class="avatarField">
+                <div class="avatarField" id="userAvatar">
                     <label>Avatar</label><input type="file" name="avatar">
                     <% if (locals.errors && errors.avatar) { %>
                         <div class="data-error">

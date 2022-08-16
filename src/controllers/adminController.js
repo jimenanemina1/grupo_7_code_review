@@ -2,22 +2,22 @@ const data = require('../controllers/data');
 const fs = require('fs');
 const path = require('path');
 
-const Product = require("../models/Product");
+//const Product = require("../models/Product");
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 
 
-const findProduct = (id, allProducts) =>
-  allProducts.find((product) => product.id == id);
+//const findProduct = (id, allProducts) =>
+//  allProducts.find((product) => product.id == id);
 
 let db = require("../database/models");
-const { body } = require('express-validator');
-const { clear } = require('console');
+//const { body } = require('express-validator');
+//const { clear } = require('console');
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 let editProductId;
 const adminController = {
   createProduct: (req, res) => {
