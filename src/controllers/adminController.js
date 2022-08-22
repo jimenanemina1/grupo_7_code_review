@@ -8,6 +8,8 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
+
+
 const findProduct = (id, allProducts) =>
   allProducts.find((product) => product.id == id);
 
@@ -22,7 +24,13 @@ const adminController = {
     res.render('createProduct.ejs')
   },   
   storeProduct: async (req, res) => {
-    console.log("ESTO ES EL BODY" + req.body.name)
+//    console.log("ESTO ES EL BODY" + req.body.name)
+
+let imgPath = "/images/default-image.png";
+if (req.file) {
+  imgPath = `/images/${req.file.filename}`;
+}
+
       try {
         product = await db.Product.create({
           name: req.body.name,
@@ -30,8 +38,8 @@ const adminController = {
           discount: req.body.discount,
           size: req.body.size,
           description:req.body.description,
-          imgPath: '/images/${req.file.filename}',
-          create_date: "2022-07-20 00:48:03",
+          imgPath: imgPath,//req.file.imgPath,
+          create_date: new Date(),
           stock: 1,
           categories_id: 2,
           offer: req.body.offer
@@ -82,7 +90,7 @@ const adminController = {
         id: editProductId,
         name: req.body.name,
         description: req.body.description,
-        price: req.body.price,
+        price: parseFloat(req.body.price),
         discount: req.body.discount,
         offer: req.body.offer,
         imgPath: req.body.imgPath,
@@ -113,26 +121,35 @@ const adminController = {
   }
   },
   deleteProduct: async (req,res) =>{
-    console.log(req.params)
+    console.log("en req llega como id de prodcuto" + req.params.idProduct)
     try{
+      productToFind = await db.Product.findByPk(req.params.idProduct)
+    .then(function(product){
+      console.log("producto encontrado " + JSON.stringify(product))
+      productToEliminateName = product.name
+      console.log("product to eliminate " + productToEliminateName)
+    })
+  
       productToEliminate = await db.Product.destroy({
         where: {
           id: req.params.idProduct
         }
       })
+
+      res.send(`<div style="width:100%;height:100vh; padding:0px; margin:0px; display:flex; justify-content:center; align-items:center">
+      <div style="width:300px;border-radius:5px;padding:20px; background-color:#900e1e; color:white; font-size:24px">
+          Eliminaste: ${productToEliminateName} <br>
+          <div style="background-color:#4a6554; width:120px;padding:10px;text-align:center;border-radius:5px;margin:10px auto; cursor:pointer">
+              <a style="text-decoration:none; color:white" href="/"> Ir al inicio </a>
+          </div>
+      </div>
+  </div>`)
+  
     } catch (error){
       console.log(error)
   }
       
-    res.send(`<div style="width:100%;height:100vh; padding:0px; margin:0px; display:flex; justify-content:center; align-items:center">
-    <div style="width:300px;border-radius:5px;padding:20px; background-color:#900e1e; color:white; font-size:24px">
-        Eliminaste: ${productToEliminate.name} <br>
-        <div style="background-color:#4a6554; width:120px;padding:10px;text-align:center;border-radius:5px;margin:10px auto; cursor:pointer">
-            <a style="text-decoration:none; color:white" href="/"> Ir al inicio </a>
-        </div>
-    </div>
-</div>`)
-
+ 
   }
 };
 

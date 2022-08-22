@@ -1,4 +1,4 @@
-# Resultado retrospectiva - Sprint 3: 
+# Resultado retrospectiva - Sprint 4: 
 
 
 
