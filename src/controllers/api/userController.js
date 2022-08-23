@@ -7,7 +7,7 @@ let db = require("../../database/models")
 
 module.exports = {
     
-    list : async(req, res)  => {
+    listAll : async(req, res)  => {
 
         const limit = 10;
         const offset = req.query.page && req.query.page > 0 ? req.query.page : 0;
@@ -27,13 +27,29 @@ module.exports = {
          console.log(error)
      }
  },
-    detail : (req, res) => {
+    detail : async(req, res) => {
         
-    },
-    update : (req, res) => {
-        
-    },
-    
+        const userId = req.params.id;
+        try{
+            user = await db.User.findByPk(userId)
+            .then((user) => {
+                
+                res.status(200).json({
+               // user: user
+               id : user.id,
+               name: user.name,
+               lastname : user.lastname,
+               email: user.email,
+               imgPath: user.imgPath,
+               billing_addres: user.billing_addres,
+               shipping_address: user.shipping_address,
+               phone: user.phone
+                })
+  })
+      } catch (error){
+         console.log(error)
+     }  
+    }
 }
 
 
