@@ -43,6 +43,7 @@ const mainRouter = require("./routers/main");
 const userRouter = require("./routers/user");
 ////codigo nuevo apis /////////
 const userApiRouter = require("./routers/api/user");
+const productApiRouter = require("./routers/api/product");
 const adminRouter = require("./routers/user");
 const productRouter = require("./routers/products");
 const shoppingCartRouter = require("./routers/shoppingCart");
@@ -54,3 +55,4 @@ app.use("/products", productRouter);
 app.use("/shopping-cart", shoppingCartRouter);
 ////codigo nuevo apis /////////
 app.use("/api/users", userApiRouter)
+app.use("/api/products", productApiRouter)

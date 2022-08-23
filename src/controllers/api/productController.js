@@ -7,7 +7,7 @@ module.exports = {
         const limit = 10;
         const offset = req.query.page && req.query.page > 0 ? req.query.page : 0;
         try{
-            totalUsers = await db.User.findAndCountAll({
+            totalUsers = await db.Product.findAndCountAll({
                 limit: limit,
                 offset: offset *limit,
                 attributes: ["id","name","email"],
@@ -25,9 +25,8 @@ module.exports = {
     detail : async(req, res) => {
         
         const userId = req.params.id;
-        const filePath = "localhost:3001"
         try{
-            user = await db.User.findByPk(userId)
+            user = await db.Product.findByPk(userId)
             .then((user) => {
                 
                 res.status(200).json({
@@ -36,7 +35,7 @@ module.exports = {
                name: user.name,
                lastname : user.lastname,
                email: user.email,
-               imgPath: filePath + user.imgPath,
+               imgPath: user.imgPath,
                billing_addres: user.billing_addres,
                shipping_address: user.shipping_address,
                phone: user.phone
