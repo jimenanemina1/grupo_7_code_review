@@ -141,14 +141,10 @@ const userController = {
   },
 
   profile: (req, res) => {
-    // res.send(req.session.userLogged);
-    console.log("se ejecuta el profile primero")
     res.redirect("/")
   },
   userProfile: (req, res) => {
-   // console.log("primero se jecuta user profile despues" + JSON.stringify(req.session.userLogged))
    const profile = req.session.userLogged; 
-    console.log("userProfileRenderizado")
     res.render("userProfile" ,{ profile});
   },
   editUserForm: async (req,res) => {
