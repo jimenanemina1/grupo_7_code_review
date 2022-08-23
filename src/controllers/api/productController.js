@@ -23,9 +23,26 @@ module.exports = {
  },
     detail : async(req, res) => {
         
-        const userId = req.params.id;
+        const productId = req.params.id;
+        const filePath = "localhost:3001"
         try{
-            res.send ("soy el detalle de productos")
+            product = await db.Product.findByPk(productId)
+            .then((product) => {
+                
+                res.status(200).json({
+               // user: user
+               id : product.id,
+               name: product.name,
+               price: product.price,
+               discount: product.discount,
+               size: product.size,
+               description: product.description,
+               imgPath: filePath + product.imgPath,
+               stock: product.stock,
+               categories_id: product.categories_id,
+               offer: product.offer
+            })
+  })
 
       } catch (error){
          console.log(error)
