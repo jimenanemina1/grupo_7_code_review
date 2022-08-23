@@ -1,23 +1,22 @@
+const { send } = require("express/lib/response");
 let db = require("../../database/models")
 
 module.exports = {
     
     listAll : async(req, res)  => {
-
         const limit = 10;
         const offset = req.query.page && req.query.page > 0 ? req.query.page : 0;
         try{
-            totalUsers = await db.Product.findAndCountAll({
+            totalProducts = await db.Product.findAndCountAll({
                 limit: limit,
                 offset: offset *limit,
-                attributes: ["id","name","email"],
+                attributes: ["id","name","description"],
             }).then(({rows,count}) => {
                 res.status(200).json({
                 count: count,
-                users: rows
+                products: rows
             })
         })
-
       } catch (error){
          console.log(error)
      }
@@ -26,21 +25,8 @@ module.exports = {
         
         const userId = req.params.id;
         try{
-            user = await db.Product.findByPk(userId)
-            .then((user) => {
-                
-                res.status(200).json({
-               // user: user
-               id : user.id,
-               name: user.name,
-               lastname : user.lastname,
-               email: user.email,
-               imgPath: user.imgPath,
-               billing_addres: user.billing_addres,
-               shipping_address: user.shipping_address,
-               phone: user.phone
-                })
-  })
+            res.send ("soy el detalle de productos")
+
       } catch (error){
          console.log(error)
      }  
