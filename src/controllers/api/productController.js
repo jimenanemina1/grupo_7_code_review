@@ -17,63 +17,65 @@ module.exports = {
             totalProducts = await db.Product.findAndCountAll({
                 limit: limit,
                 offset: offset *limit,
-                attributes: ["id","name","description"],
+                attributes: ["id","name","description"]
+        //        include: [{association: 'reviews'}]
                 }).then(({rows,count}) => {
-                    rows.forEach(async product => {
-                              try{
-                                productReviewObject = await db.Product_review.findOne({
-                                    where:{
-                                        products_id : product.id
-                                    }
-                                })
-                                    if(!productReviewObject){
-                                        console.log("product no existe en tabla product_reviews")
-                                        product = { 
-                                            id : product.id,
-                                            name: product.name,
-                                            description: product.description,
-                                            urlDetail: url + product.id,
-                                            reviews: "Este producto aun no tiene reviews"
-                                            } 
-                                            productsWithReviewsArray.push(product)
+              //      rows.forEach(async product => {
+         //               console.log(product)
+//                               try{
+//                                 productReviewObject = await db.Product_review.findOne({
+//                                     where:{
+//                                         products_id : product.id
+//                                     }
+//                                 })
+//                                     if(!productReviewObject){
+//                                         console.log("product no existe en tabla product_reviews")
+//                                         product = { 
+//                                             id : product.id,
+//                                             name: product.name,
+//                                             description: product.description,
+//                                             urlDetail: url + product.id,
+//                                             reviews: "Este producto aun no tiene reviews"
+//                                             } 
+//                                             productsWithReviewsArray.push(product)
 
-                                    } else {
-                                        review = productReviewObject.review_id; 
+//                                     } else {
+//                                         review = productReviewObject.review_id; 
                                         
-                                    try{
-                                            productsReviews = await db.Review.findByPk(review)
-                                            .then((productReview) => {
-                                            reviewsArray.push(productReview.comment)
-                                                     })
-                                                    product = { 
-                                                        id : product.id,
-                                                        name: product.name,
-                                                        description: product.description,
-                                                        urlDetail: url + product.id,
-                                                        reviews: reviewsArray
-                                                        } 
-                                                 productsWithNoReviewsArray.push(product)
+//                                     try{
+//                                             productsReviews = await db.Review.findByPk(review)
+//                                             .then((productReview) => {
+//                                             reviewsArray.push(productReview.comment)
+//                                                      })
+//                                                     product = { 
+//                                                         id : product.id,
+//                                                         name: product.name,
+//                                                         description: product.description,
+//                                                         urlDetail: url + product.id,
+//                                                         reviews: reviewsArray
+//                                                         } 
+//                                                  productsWithNoReviewsArray.push(product)
 
-                                    } catch (error){
-                                        console.log(error)
-                                    }
-                                }
-                                console.log("el array es")
-console.log(productsWithReviewsArray)
-                              } catch(error){
-                                  console.log(error)
-                              }
+//                                     } catch (error){
+//                                         console.log(error)
+//                                     }
+//                                 }
+//                                 console.log("el array es")
+// console.log(productsWithReviewsArray)
+//                               } catch(error){
+//                                   console.log(error)
+//                               }
                         
-                });
-                res.status(200).json({
+
+           
+            res.status(200).json({
                 count: count,
-                products: productsArray
+                products: rows
                  })
-                 
-           })
-            } catch (error){
-                console.log(error)
-            }
+         })
+        }catch(error){
+            console.log(error)
+        }
     },
     detail : async(req, res) => {
         
