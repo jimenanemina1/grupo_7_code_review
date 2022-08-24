@@ -9,7 +9,7 @@
   "category": "Accesorios",
   "discount": 10,
   "offer": "false",
-  "review": [
+  "productReviews": [
    {
     "id": 1,
     "name": "Felipe Gomez",
@@ -43,7 +43,7 @@
   "category": "Accesorios",
   "discount": 10,
   "offer": "false",
-  "review": [
+  "productReviews": [
    {
     "id": 7,
     "name": "Sandra Ramirez",
@@ -70,7 +70,7 @@
   "category": "Accesorios",
   "discount": 10,
   "offer": true,
-  "review": [
+  "productReviews": [
    {
     "id": 4,
     "name": "Jorge Echavarria",
@@ -97,7 +97,15 @@
   "category": "value1",
   "discount": null,
   "offer": false,
-  "review": []
+  "productReviews": [
+    {
+     "id": 4,
+     "name": "Jorge Echavarria",
+     "point": 2,
+     "imgPath": "/images/avatar4.png",
+     "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+    }
+]
  },
  {
   "id": 5,
@@ -109,8 +117,16 @@
   "category": "value1",
   "discount": null,
   "offer": false,
-  "review": []
- },
+  "productReviews": [
+    {
+     "id": 4,
+     "name": "Jorge Echavarria",
+     "point": 2,
+     "imgPath": "/images/avatar4.png",
+     "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+    }
+   ]
+ }, 
  {
   "id": 6,
   "name": "Tamper",
@@ -121,7 +137,7 @@
   "category": "Accesorios",
   "discount": 10,
   "offer": true,
-  "review": [
+  "productReviews": [
    {
     "id": 4,
     "name": "Jorge Echavarria",
@@ -148,7 +164,7 @@
   "category": "Accesorios",
   "discount": 10,
   "offer": true,
-  "review": [
+  "productReviews": [
    {
     "id": 4,
     "name": "Jorge Echavarria",
@@ -175,7 +191,7 @@
   "category": "Accesorios",
   "discount": 10,
   "offer": true,
-  "review": [
+  "productReviews": [
    {
     "id": 4,
     "name": "Jorge Echavarria",
@@ -202,7 +218,15 @@
   "category": "value1",
   "discount": null,
   "offer": true,
-  "review": []
+  "productReviews": [
+    {
+     "id": 4,
+     "name": "Jorge Echavarria",
+     "point": 2,
+     "imgPath": "/images/avatar4.png",
+     "comment": "Excepteur pariatur in culpa adipisicing exercitation irure nulla deserunt non ipsum fugiat tempor velit. Aliqua ad culpa qui nulla nulla mollit nulla occaecat. Commodo anim ea nostrud aliquip eiusmod deserunt quis dolor non id. Occaecat velit ullamco cupidatat irure ad amet aliqua."
+    }
+   ]
  },
  {
   "id": 11,
@@ -214,7 +238,7 @@
   "category": "Café",
   "discount": 10,
   "offer": true,
-  "review": [
+  "productReviews": [
    {
     "id": 4,
     "name": "Jorge Echavarria",
@@ -241,7 +265,7 @@
   "category": "value1",
   "discount": null,
   "offer": true,
-  "review": []
+  "productReviews": []
  },
  {
   "id": 14,
@@ -253,7 +277,7 @@
   "discount": 10,
   "offer": true,
   "imgPath": "/images/img-asdfadsfasdfs-1654130750305.jpg",
-  "review": []
+  "productReviews": []
  },
  {
   "id": 15,
@@ -265,6 +289,6 @@
   "discount": 0,
   "offer": false,
   "imgPath": "/images/img-cafe-amargo--1655837372975.jfif",
-  "review": []
+  "productReviews": []
  }
 ]
