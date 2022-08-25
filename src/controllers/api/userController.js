@@ -47,7 +47,7 @@ module.exports = {
                lastname : user.lastname,
                email: user.email,
                imgPath: filePath + user.imgPath,
-               billing_addres: user.billing_addres,
+               billing_address: user.billing_address,
                shipping_address: user.shipping_address,
                phone: user.phone
                 })
