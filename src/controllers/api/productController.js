@@ -41,9 +41,8 @@ module.exports = {
         const productId = req.params.id;
         const filePath = "localhost:3001"
         try{
-            product = await db.Product.findByPk(productId)
-            .then((product) => {
-                
+            product = await db.Product.findByPk(productId,{include: [{association: 'reviews'}]})
+            .then((product) => {          
             res.status(200).json({
                id : product.id,
                name: product.name,
@@ -55,7 +54,7 @@ module.exports = {
                stock: product.stock,
                categories_id: product.categories_id,
                offer: product.offer,
-               reviews: "aca van las reviews de este producto"
+               reviews: product.reviews
             })
   })
 
