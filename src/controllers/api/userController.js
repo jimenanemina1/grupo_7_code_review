@@ -5,7 +5,7 @@ module.exports = {
     listAll : async(req, res)  => {
         const url = "localhost:3001/api/users/";
         const limit = 10;
-        let usersArray = [0];
+        let usersArray = [];
         const offset = req.query.page && req.query.page > 0 ? req.query.page : 0;
         try{
             totalUsers = await db.User.findAndCountAll({

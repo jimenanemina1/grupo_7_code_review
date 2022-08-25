@@ -6,13 +6,9 @@ module.exports = {
     
     listAll : async(req, res)  => {
         const limit = 10;
-        let productsWithReviewsArray = [];
-        let productsWithNoReviewsArray = [];
-
-        const url = "localhost:3001/api/products/";
         const offset = req.query.page && req.query.page > 0 ? req.query.page : 0;
-        let reviewsArray = [];
-        let review;
+        const url = 'localhost:3001/api/products/'
+        let productsArray = [];
         try{
             totalProducts = await db.Product.findAndCountAll({
                 limit: limit,
@@ -20,13 +16,21 @@ module.exports = {
                 attributes: ["id","name","description"],
                 include: [{association: 'reviews'}]
                 }).then(({rows,count}) => {
-                        rows.forEach(async product => {
-
-                        }) 
-                        res.status(200).json({
-                            count: count,
-                            products: rows
-                             })               
+                    rows.forEach(element => {
+                        element = { 
+                           id : element.id,
+                           name: element.name,
+                           description: element.description,
+                           reviews: element.reviews,
+                           urlDetail: url + element.id
+                          } 
+                          productsArray.push(element)
+                       });
+                       
+                             res.status(200).json({
+                                count: count,
+                                products: productsArray
+                                 })             
                 })
           } catch (error) {
               console.log(error)

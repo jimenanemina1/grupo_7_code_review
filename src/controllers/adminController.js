@@ -21,6 +21,7 @@ let db = require("../database/models");
 let editProductId;
 const adminController = {
   createProduct: (req, res) => {
+    console.log("aca deberia mostrarse la creacion de producto")
     res.render('createProduct.ejs')
   },   
   storeProduct: async (req, res) => {
