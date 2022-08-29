@@ -37,13 +37,14 @@ module.exports = {
           }
    },
     detail : async(req, res) => {
-        
+        console.log("Se ejecuta el metodo en api")
         const productId = req.params.id;
-        const filePath = "localhost:3001"
+        const filePath = "localhost:3001";
+
         try{
             product = await db.Product.findByPk(productId,{include: [{association: 'reviews'}]})
             .then((product) => {          
-            res.status(200).json({
+           let newProduct = {
                id : product.id,
                name: product.name,
                price: product.price,
@@ -55,11 +56,32 @@ module.exports = {
                categories_id: product.categories_id,
                offer: product.offer,
                reviews: product.reviews
-            })
+            }
+            console.log(newProduct)
   })
 
       } catch (error){
          console.log(error)
-     }  
+     } 
+     try{
+        productOrders = await db.Product.findByPk(productId,{include: [{association: 'orders'}]})
+        .then((product) => {
+        res.status(200).json({
+        id : product.id,
+        name: product.name,
+        price: product.price,
+        discount: product.discount,
+        size: product.size,
+        description: product.description,
+        imgPath: filePath + product.imgPath,
+        stock: product.stock,
+        categories_id: product.categories_id,
+        offer: product.offer,
+        orders: product.orders
+        })
+    })
+        } catch (error){
+            console.log(error)
+        } 
     }
 }
