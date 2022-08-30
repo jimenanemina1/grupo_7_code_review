@@ -1,6 +1,4 @@
-# Resultado retrospectiva - Sprint 4: 
-
-
+# Resultado retrospectiva - Sprint 5: 
 
 ## Stop:
 Pasamos muchas semana sin juntarnos por temas laborales.

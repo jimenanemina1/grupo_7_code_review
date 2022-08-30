@@ -41,34 +41,22 @@ module.exports = {
         const productId = req.params.id;
         const filePath = "localhost:3001";
 
-        try{
-            product = await db.Product.findByPk(productId,{include: [{association: 'reviews'}]})
-            .then((product) => {          
-               newProduct = {
-               id : product.id,
-               name: product.name,
-               price: product.price,
-               discount: product.discount,
-               size: product.size,
-               description: product.description,
-               imgPath: filePath + product.imgPath,
-               stock: product.stock,
-               categories_id: product.categories_id,
-               offer: product.offer,
-               reviews: product.reviews
-            }
-            console.log("new product con reviews")
-            console.log(newProduct)
-  })
+//         try{
+//             product = await db.Product.findByPk(productId,{include: [{association: 'reviews'}]})
+//             .then((product) => {          
+//                newProduct = {
+//                reviews: product.reviews
+//             }
+//             console.log("new product con reviews")
+//             console.log(newProduct)
+//   })
 
-      } catch (error){
-         console.log(error)
-     } 
+//       } catch (error){
+//          console.log(error)
+//      } 
      try{
-        productOrders = await db.Product.findByPk(productId,{include: [{association: 'category'}]})
+        productOrders = await db.Product.findByPk(productId, {include: [{association: 'reviews'},{association: 'orders'}]})
         .then((product) => {
-            console.log("products con categories")
-            console.log(product)
         res.status(200).json({
             
                 id : product.id,
@@ -81,7 +69,8 @@ module.exports = {
                 stock: product.stock,
                 category: product.category,
                 offer: product.offer,
-                reviews: product.reviews
+                reviews: product.reviews,
+                orders: product.orders
              
         })
     })
