@@ -8,8 +8,6 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-
-
 //const findProduct = (id, allProducts) =>
 //  allProducts.find((product) => product.id == id);
 
@@ -25,7 +23,6 @@ const adminController = {
     res.render('createProduct.ejs')
   },   
   storeProduct: async (req, res) => {
-//    console.log("ESTO ES EL BODY" + req.body.name)
 
 let imgPath = "/images/default-image.png";
 if (req.file) {
@@ -39,7 +36,7 @@ if (req.file) {
           discount: req.body.discount,
           size: req.body.size,
           description:req.body.description,
-          imgPath: imgPath,//req.file.imgPath,
+          imgPath: imgPath,
           create_date: new Date(),
           stock: 1,
           categories_id: 2,
@@ -85,7 +82,6 @@ if (req.file) {
 }
   },
   storeEditedProduct: async(req, res) => {
-    console.log("precio es "+ req.body.price)
     try{
     product = await db.Product.update({
         id: editProductId,
@@ -126,9 +122,7 @@ if (req.file) {
     try{
       productToFind = await db.Product.findByPk(req.params.idProduct)
     .then(function(product){
-      console.log("producto encontrado " + JSON.stringify(product))
       productToEliminateName = product.name
-      console.log("product to eliminate " + productToEliminateName)
     })
   
       productToEliminate = await db.Product.destroy({

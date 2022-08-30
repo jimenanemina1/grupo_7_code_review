@@ -44,7 +44,7 @@ module.exports = {
         try{
             product = await db.Product.findByPk(productId,{include: [{association: 'reviews'}]})
             .then((product) => {          
-           let newProduct = {
+               newProduct = {
                id : product.id,
                name: product.name,
                price: product.price,
@@ -57,6 +57,7 @@ module.exports = {
                offer: product.offer,
                reviews: product.reviews
             }
+            console.log("new product con reviews")
             console.log(newProduct)
   })
 
@@ -64,20 +65,24 @@ module.exports = {
          console.log(error)
      } 
      try{
-        productOrders = await db.Product.findByPk(productId,{include: [{association: 'orders'}]})
+        productOrders = await db.Product.findByPk(productId,{include: [{association: 'category'}]})
         .then((product) => {
+            console.log("products con categories")
+            console.log(product)
         res.status(200).json({
-        id : product.id,
-        name: product.name,
-        price: product.price,
-        discount: product.discount,
-        size: product.size,
-        description: product.description,
-        imgPath: filePath + product.imgPath,
-        stock: product.stock,
-        categories_id: product.categories_id,
-        offer: product.offer,
-        orders: product.orders
+            
+                id : product.id,
+                name: product.name,
+                price: product.price,
+                discount: product.discount,
+                size: product.size,
+                description: product.description,
+                imgPath: filePath + product.imgPath,
+                stock: product.stock,
+                category: product.category,
+                offer: product.offer,
+                reviews: product.reviews
+             
         })
     })
         } catch (error){
