@@ -10,28 +10,38 @@
     text-align: center;
   }
   #main .recomendados .contenedor-articulos-recomendados {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 5fr));
-    justify-items: center;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
   }
   #main .recomendados .contenedor-articulos-recomendados a,
   #main .recomendados .contenedor-articulos-recomendados a:hover,
   #main .recomendados .contenedor-articulos-recomendados a:focus,
   #main .recomendados .contenedor-articulos-recomendados a:active {
-    width: 80%;
+    width: 20%;
     text-decoration: none;
     color: inherit;
     display: block;
     margin: 0.8rem;
   }
   #main
+  .recomendados
+  .contenedor-articulos-recomendados
+  .articulo-recomendado .imagen-articulo-recomendado{
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 5px;
+  }
+
+  #main
     .recomendados
     .contenedor-articulos-recomendados
     .articulo-recomendado
     .nombre-producto-recomendado {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     text-align: center;
   }
   #main
@@ -41,6 +51,15 @@
     font-size: 0.7rem;
     text-align: center;
   }
+
+  #main
+    .recomendados
+    .contenedor-articulos-recomendados
+    .articulo-recomendado .descuento-producto-recomendado{
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    }
   #main .recomendados .contenedor-articulos-recomendados .articulo-recomendado i {
     display: block;
     text-align: center;
@@ -64,4 +83,12 @@
   article h5.descuento-producto-recomendado{
     color: green;
   }
+
+@media(min-width: 320px){
+  
+  #main .recomendados .contenedor-articulos-recomendados a{
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+  }
+}
+   
   
