@@ -19,7 +19,6 @@ let db = require("../database/models");
 let editProductId;
 const adminController = {
   createProduct: (req, res) => {
-    console.log("aca deberia mostrarse la creacion de producto")
     res.render('createProduct.ejs')
   },   
   storeProduct: async (req, res) => {
@@ -73,7 +72,6 @@ if (req.file) {
       editProductId = product.id;
         return product;
     })
-    console.log(JSON.stringify(product))
     res.render('editProduct', {
         items: product
     })
@@ -107,7 +105,6 @@ if (req.file) {
     try{
     product = await db.Product.findByPk(editProductId)
     .then(function(product){
-      console.log("producto encontrado " + JSON.stringify(product))
         return product;
     })
     res.render('editProductCongrats', {
@@ -118,7 +115,6 @@ if (req.file) {
   }
   },
   deleteProduct: async (req,res) =>{
-    console.log("en req llega como id de prodcuto" + req.params.idProduct)
     try{
       productToFind = await db.Product.findByPk(req.params.idProduct)
     .then(function(product){
