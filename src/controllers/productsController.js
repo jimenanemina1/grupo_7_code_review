@@ -47,7 +47,6 @@ const productsController = {
  },
  find: async (req, res) => {
      let searchWord = req.body.name;
-     console.log(searchWord)
     try{
         product = await db.Product.findOne({
             where:{
