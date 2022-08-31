@@ -12,7 +12,7 @@ module.exports = function(sequelize,dataTypes){
             foreignKey: true
             
         },
-        amount: {
+        ammount: {
             type: dataTypes.DECIMAL
         },
         billing_address: {
@@ -42,7 +42,9 @@ module.exports = function(sequelize,dataTypes){
 
         Order.associate = function(models){
            Order.belongsTo(models.Status_order,{
-               as: "status_order"
+               as: "status_order",
+               foreignKey:"status_orders_id",
+
            });
            Order.belongsTo(models.User,{
                as: "user",
