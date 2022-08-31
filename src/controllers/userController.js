@@ -149,7 +149,6 @@ const userController = {
   },
   editUserForm: async (req,res) => {
     const profile = req.session.userLogged;
-    console.log(profile)
     res.render("editUserForm" ,{ profile});
   },
   updateUserProfile: async (req, res) =>{
@@ -159,7 +158,6 @@ const userController = {
       if (req.file) {
         imgPath = `/images/avatars/${req.file.filename}`;
       }
-      console.log( userLogged)
           userToEdit = await db.User.update({
             name: req.body.name,
             lastname: req.body.lastname,

@@ -13,14 +13,12 @@ const {Op} = require("../../node_modules/sequelize");
 
 const productsController = {
     detail: async(req, res) => {
-        console.log("se ejecuta detail")
         try{
         const productId = req.params.idProduct
         product = await db.Product.findByPk(productId)
         .then(function(product){
             return product;
         })
-        console.log(JSON.stringify(product))
         res.render('productDetail', {
             items: product
         })
@@ -29,7 +27,6 @@ const productsController = {
     }
     },
     list: async (req, res) => {
-        console.log("se ejecuta list")
 
         try{
            products = await db.Product.findAll()
@@ -49,7 +46,6 @@ const productsController = {
 }
  },
  find: async (req, res) => {
-     console.log("se ejecuta el find")
      let searchWord = req.body.name;
      console.log(searchWord)
     try{
