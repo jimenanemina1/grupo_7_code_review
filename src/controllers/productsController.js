@@ -43,8 +43,6 @@ const productsController = {
  },
  searchForm: async (req, res) => {
     try{
-
-     console.log("se ejecuta search from")
     res.render("searchForm.ejs")
 } catch(error){
     console.log(error)
@@ -64,6 +62,9 @@ const productsController = {
             }
             
         })
+        if(!product){
+            return res.render('searchNotFound')
+        }
         return  res.render('productDetail', {
             items: product
         })
