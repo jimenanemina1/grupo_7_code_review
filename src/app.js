@@ -8,6 +8,8 @@ var cookieParser = require('cookie-parser')
 
 // ************ express() ************
 const app = express();
+const cors = require('cors');
+app.use(cors({ origin: '*' }));
 
 const userLogged = require("./middlewares/userLogged.js")
 //************ app() listen ************
