@@ -6,7 +6,7 @@ const session = require("express-session");
 var cookieParser = require('cookie-parser')
 
 
-// ************ express() ************
+// ************ express() cords************
 const app = express();
 const cors = require('cors');
 app.use(cors({ origin: '*' }));
