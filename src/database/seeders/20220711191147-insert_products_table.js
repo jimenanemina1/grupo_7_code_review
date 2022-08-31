@@ -109,7 +109,7 @@ module.exports = {
         offer: 1,
        },
        {
-        name: 'Vasos para latte edited',
+        name: 'Vasos para latte',
         price: 10, 
         discount: 0,
         size: '2000',	
