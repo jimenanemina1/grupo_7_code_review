@@ -6,6 +6,7 @@ module.exports = {
         const url = "localhost:3001/api/orders/";
         const limit = 10;
         let ordersArray = [];
+        let totalRevenue = 0;
         const offset = req.query.page && req.query.page > 0 ? req.query.page : 0;
         try{
             totalOrders = await db.Order.findAndCountAll({
@@ -14,10 +15,11 @@ module.exports = {
                 attributes: ["id","users_id", "ammount","billing_address","shipping_address","order_email","order_date","status_orders_id"],
             }).then(({rows,count}) => {
               rows.forEach(element => {
+                totalRevenue = totalRevenue + parseFloat(element.ammount);
                  element = { 
                     id : element.id,
                     users_id: element.name,
-                    ammount: element.email,
+                    ammount: parseFloat(element.ammount),
                     billing_address: url + element.id,
                     shipping_address: element.shipping_address,
                     order_email: element.order_email,
@@ -28,6 +30,7 @@ module.exports = {
                 });
                 res.status(200).json({
                 count: count,
+                totalRevenue: totalRevenue,
                 orders: ordersArray
             })
         })
