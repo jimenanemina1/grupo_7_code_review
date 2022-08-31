@@ -39,12 +39,11 @@ module.exports = {
     detail : async(req, res) => {
         
         const orderId = req.params.id;
-        const filePath = "localhost:3001"
         try{
-            user = await db.Order.findByPk(userId)
+            user = await db.Order.findByPk(orderId)
             .then((order) => {
             res.status(200).json({
-               id : order.id,
+               id : orderId,
                users_id: order.users_id,
                ammount : order.ammount,
                billing_address: order.billing_address,
