@@ -40,23 +40,14 @@ module.exports = {
          status_orders_id: 3
         },
         {
-        users_id: 4,
-        ammount: 800,
-        billing_address: 'Olaguer y feliu , 3984',
-        shipping_address: 'Villate , 3984',	
-        order_email:'cambialounonuevo@gmail.com',
-        order_date: new Date(),
-        status_orders_id: 4
-        },
-        {
-        users_id: 5,
-        ammount: 9000,
-        billing_address: 'Ayacucho , 3984',
-        shipping_address: 'Malaver , 3984',	
-        order_email:'diferenteunonuevo@gmail.com',
-        order_date: new Date(),
-        status_orders_id: 5
-        }
+            users_id: 1,
+            ammount: 1000,
+            billing_address: 'España , 3984',
+            shipping_address: 'Malaver, 3984',	
+            order_email:'pensauno2nuevo@gmail.com',
+            order_date: new Date(),
+            status_orders_id: 3
+           }
    ],{});
  
   },
