@@ -94,7 +94,8 @@
                     </div>
                 </div>
                 <div class="avatarField">
-                    <label>Avatar</label><input type="file" name="avatar">
+                   
+                    <label>Avatar</label><input type="file" name="avatar"  value="<%=profile.imgPath%>">
                     <% if (locals.errors && errors.avatar) { %>
                         <div class="data-error">
                             <%= errors.avatar.msg %>
