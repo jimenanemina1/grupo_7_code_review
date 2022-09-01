@@ -33,7 +33,19 @@
   .contenedor-articulos-recomendados
   .articulo-recomendado .imagen-articulo-recomendado{
     border-bottom: 1px solid #ebebeb;
-    margin-bottom: 5px;
+    
+  }
+  #main
+  .recomendados
+  .contenedor-articulos-recomendados
+  .articulo-recomendado
+  .descripcion-producto-recomendado{
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
   }
 
   #main
@@ -58,6 +70,9 @@
     font-size: 0.8rem;
     text-align: center;
     margin-bottom: 10px;
+    position: absolute;
+    right: 9px;
+    bottom: 5px;
     }
   #main .recomendados .contenedor-articulos-recomendados .articulo-recomendado i {
     display: block;
@@ -79,6 +94,10 @@
   article h5.precio-producto-recomendado-pequeño span{
     text-decoration: line-through;
   }
+  article h5.precio-producto-recomendado{
+    position: absolute;
+    bottom: 15px;
+  }
   article h5.descuento-producto-recomendado{
     color: green;
   }
@@ -87,6 +106,13 @@
   
   #main .recomendados .contenedor-articulos-recomendados a{
     box-shadow: 0px 0px 10px rgb(100 100 100);
+  }
+
+  #main
+  .recomendados
+  .contenedor-articulos-recomendados
+  .articulo-recomendado .precio-producto-recomendado-pequeño{
+  display: none;
   }
 }
    
