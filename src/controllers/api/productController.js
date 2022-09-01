@@ -7,7 +7,7 @@ module.exports = {
     listAll : async(req, res)  => {
         const limit = 10;
         const offset = req.query.page && req.query.page > 0 ? req.query.page : 0;
-        const url = 'localhost:3001/api/products/'
+        const url = 'localhost:3001/api/product/'
         let productsArray = [];
         try{
             totalProducts = await db.Product.findAndCountAll({

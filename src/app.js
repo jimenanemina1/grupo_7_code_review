@@ -47,6 +47,7 @@ app.set("views", path.resolve(__dirname, "./views"));
 const mainRouter = require("./routers/main");
 const userRouter = require("./routers/user");
 ////codigo nuevo apis /////////
+const categoryApiRouter = require("./routers/api/category");
 const userApiRouter = require("./routers/api/user");
 const productApiRouter = require("./routers/api/product");
 const orderApiRouter = require("./routers/api/order");
@@ -60,6 +61,7 @@ app.use("/admin", adminRouter);
 app.use("/products", productRouter);
 app.use("/shopping-cart", shoppingCartRouter);
 ////codigo nuevo apis /////////
-app.use("/api/users", userApiRouter)
-app.use("/api/products", productApiRouter)
-app.use("/api/orders", orderApiRouter)
+app.use("/api/user", userApiRouter)
+app.use("/api/product", productApiRouter)
+app.use("/api/order", orderApiRouter)
+app.use("/api/category", categoryApiRouter)

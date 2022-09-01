@@ -3,7 +3,7 @@ let db = require("../../database/models")
 module.exports = {
     
     listAll : async(req, res)  => {
-        const url = "localhost:3001/api/order/";
+        const url = "localhost:3001/api/category/";
         const limit = 10;
         let ordersArray = [];
         let totalRevenue = 0;
