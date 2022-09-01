@@ -11,14 +11,16 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     await queryInterface.bulkInsert('categories', [
-      {
-      name: 'Accesorios'
-      },
-      {
-      name: "Cafe"
-      }
-
+     await queryInterface.bulkInsert('status_orders', [
+        {
+         name: "approved"
+        },
+        {
+         name: "reproved"
+        },
+        {
+         name: "suspended"
+        }
    ],{});
  
   },
@@ -30,7 +32,7 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-     await queryInterface.bulkDelete('categories', null, {});
+     await queryInterface.bulkDelete('status_orders', null, {});
 
   }
 };

@@ -8,8 +8,6 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-
-
 //const findProduct = (id, allProducts) =>
 //  allProducts.find((product) => product.id == id);
 
@@ -24,7 +22,6 @@ const adminController = {
     res.render('createProduct.ejs')
   },   
   storeProduct: async (req, res) => {
-//    console.log("ESTO ES EL BODY" + req.body.name)
 
 let imgPath = "/images/default-image.png";
 if (req.file) {
@@ -38,7 +35,7 @@ if (req.file) {
           discount: req.body.discount,
           size: req.body.size,
           description:req.body.description,
-          imgPath: imgPath,//req.file.imgPath,
+          imgPath: imgPath,
           create_date: new Date(),
           stock: 1,
           categories_id: 2,
@@ -75,7 +72,6 @@ if (req.file) {
       editProductId = product.id;
         return product;
     })
-    console.log(JSON.stringify(product))
     res.render('editProduct', {
         items: product
     })
@@ -84,7 +80,6 @@ if (req.file) {
 }
   },
   storeEditedProduct: async(req, res) => {
-    console.log("precio es "+ req.body.price)
     try{
     product = await db.Product.update({
         id: editProductId,
@@ -110,7 +105,6 @@ if (req.file) {
     try{
     product = await db.Product.findByPk(editProductId)
     .then(function(product){
-      console.log("producto encontrado " + JSON.stringify(product))
         return product;
     })
     res.render('editProductCongrats', {
@@ -121,13 +115,10 @@ if (req.file) {
   }
   },
   deleteProduct: async (req,res) =>{
-    console.log("en req llega como id de prodcuto" + req.params.idProduct)
     try{
       productToFind = await db.Product.findByPk(req.params.idProduct)
     .then(function(product){
-      console.log("producto encontrado " + JSON.stringify(product))
       productToEliminateName = product.name
-      console.log("product to eliminate " + productToEliminateName)
     })
   
       productToEliminate = await db.Product.destroy({
