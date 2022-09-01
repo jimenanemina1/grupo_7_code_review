@@ -6,9 +6,12 @@ const session = require("express-session");
 var cookieParser = require('cookie-parser')
 
 
+
 // ************ express() cords************
-const app = express();
 const cors = require('cors');
+// ************ express() ************
+const app = express();
+
 app.use(cors({ origin: '*' }));
 
 const userLogged = require("./middlewares/userLogged.js")
