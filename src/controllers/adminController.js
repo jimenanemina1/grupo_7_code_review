@@ -70,9 +70,11 @@ if (req.file) {
     product = await db.Product.findByPk(productId)
     .then(function(product){
       editProductId = product.id;
+      console.log(product)
         return product;
     })
     res.render('editProduct', {
+  
         items: product
     })
 } catch (error){
