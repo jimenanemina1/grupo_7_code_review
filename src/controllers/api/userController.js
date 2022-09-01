@@ -3,7 +3,7 @@ let db = require("../../database/models")
 module.exports = {
     
     listAll : async(req, res)  => {
-        const url = "localhost:3001/api/users/";
+        const url = "localhost:3001/api/user/";
         const limit = 10;
         let usersArray = [];
         const offset = req.query.page && req.query.page > 0 ? req.query.page : 0;

@@ -149,6 +149,7 @@ const userController = {
   },
   editUserForm: async (req,res) => {
     const profile = req.session.userLogged;
+    console.log(profile)
     res.render("editUserForm" ,{ profile});
   },
   updateUserProfile: async (req, res) =>{

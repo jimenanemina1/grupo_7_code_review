@@ -13,12 +13,26 @@ module.exports = {
     */
      await queryInterface.bulkInsert('categories', [
       {
-      name: 'Accesorios'
+      name: "Accesorios"
       },
       {
       name: "Cafe"
-      }
-
+      },
+      {
+        name: "Coladores"
+      },
+      {
+      name: "Capsulas"
+      },
+      {
+      name: "Regalos"
+      },
+      {
+      name: "Cafetera Industrial"
+      },
+      {
+      name: "Cafe de Exportación"
+      },
    ],{});
  
   },
