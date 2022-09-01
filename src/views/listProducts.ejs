@@ -12,7 +12,7 @@
         
         </section>
         <section class="recomendados">
-            <h2 class="titulo-recomendados">Lista De Productos</h2>
+            
             <div class="contenedor-articulos-recomendados">
                 <% for (let producto of productosMostrados) { %>
                 <% let wdiscount = producto.discount == 0 ? "hidden" : "" %>
@@ -28,6 +28,7 @@
                             <span>$<%=(producto.price)%></span></h5>
                             <% }%>
                             <!-- <%=producto.price%> -->
+
                             <h5 class="precio-producto-recomendado">$<%=(producto.price-(producto.price*producto.discount/100)).toFixed()%></h5>
                             <br>
                             <% if (producto.discount > 0) {%>
