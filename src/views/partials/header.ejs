@@ -1,17 +1,35 @@
 <header id="header">
     <div class="primera-barra">
         <div class="logo">
-         <a href="/"><img src="/images/barizta-logo.png" alt="Logo Barizta"></a>
+            <a href="/"><img src="/images/barizta-logo.png" alt="Logo Barizta"></a>
         </div>
         <div class="usuario-carrito">
-            <% if(isLogged) {%> 
-                <div><%= userLogged.name%></div>
-                <a href="/user/userProfile"><div class="usuario"><i class="fa-solid fa-user"></i></div></a>
-             <% }else{ %>
-                <a href="/user/register"><div class="usuario"><i class="fa-solid fa-user"></i></div></a>
-            <%} %>    
-         
-         <a href="/shopping-cart/1"><div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div></a>
+            <% if(isLogged) {%>
+            <div><%= userLogged.name%></div>
+            <!-- <a href="/user/userProfile">
+                <div class="usuario"><i class="fa-solid fa-user"></i></div>
+            </a> -->
+            <div class="contenedor-desplegable">
+                <div class="usuario"><i class="fa-solid fa-user" id="user"></i></div>
+                <div id="desplegable" class="contenido-desplegable">
+                    <a class="opciones-despleglable" href="/user/userProfile">Ver Perfil</a>
+                    <a class="opciones-despleglable" href="/user/closeSesion">Cerrar sesión</a>
+                </div>
+            </div>
+            <% }else{ %>
+            <!-- <a href="/user/register"><div class="usuario"><i class="fa-solid fa-user" id="user"></i></div></a> -->
+            <div class="contenedor-desplegable">
+                <div class="usuario"><i class="fa-solid fa-user" id="user"></i></div>
+                <div id="desplegable" class="contenido-desplegable">
+                    <a class="opciones-despleglable" href="/user/login">Iniciar sesión</a>
+                    <a class="opciones-despleglable" href="/user/register">Registrarse</a>
+                </div>
+            </div>
+            <%} %>
+
+            <a href="/shopping-cart/1">
+                <div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div>
+            </a>
         </div>
     </div>
     <nav class="barra-navegacion">
@@ -20,9 +38,9 @@
             <li><a href="/products/searchForm"><i class="fa-brands fa-searchengin"></i></i>Buscar</a></li>
             <li><a href="#"><i class="fas fa-home"></i> Tiendas </a></li>
             <li><a href="#"><i class="fas fa-gift"></i> Regalos</a></li>
-            <% if(isLogged && userLogged.admin) {%> 
+            <% if(isLogged && userLogged.admin) {%>
             <li><a href="/admin/create-product"><i class="fa-solid fa-square-plus"></i></i> Agregar</a></li>
-            <% } %> 
+            <% } %>
         </ul>
     </nav>
 </header>
