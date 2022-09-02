@@ -12,13 +12,8 @@
             <div class="contenedor-desplegable">
                 <div class="usuario"><i class="fa-solid fa-user" id="user"></i></div>
                 <div id="desplegable" class="contenido-desplegable">
-                    <p><%if(userLogged.admin) { %>
-                        ADMINISTRADOR
-                    <% }else{ %>
-                        INVITADO
-                    <%} %>  </p>
-                    <a href="/user/editUserForm">Editar</a>
-                    <a href="/user/closeSesion">Cerrar sesión</a>
+                    <a class="opciones-despleglable" href="/user/userProfile">Ver Perfil</a>
+                    <a class="opciones-despleglable" href="/user/closeSesion">Cerrar sesión</a>
                 </div>
             </div>
             <% }else{ %>
@@ -26,8 +21,8 @@
             <div class="contenedor-desplegable">
                 <div class="usuario"><i class="fa-solid fa-user" id="user"></i></div>
                 <div id="desplegable" class="contenido-desplegable">
-                    <a href="/user/login">Iniciar sesión</a>
-                    <a href="/user/register">Registrarse</a>
+                    <a class="opciones-despleglable" href="/user/login">Iniciar sesión</a>
+                    <a class="opciones-despleglable" href="/user/register">Registrarse</a>
                 </div>
             </div>
             <%} %>
