@@ -11,8 +11,37 @@
 <%- include("./partials/header.ejs") %>
 
     <main class="userProfile">
+
+        <div class="card">
+            <div class="img">
+              <img src=<%= userLogged.imgPath%>>
+            </div>
+            <div class="infos">
+              <div class="name">
+                <h2><%= userLogged.name%> <%= userLogged.lastname%></h2>
+                <h4><%= userLogged.email%></h4>
+              </div>
+        
+              <ul class="stats">
+                <li>
+                  <h3>Rol:</h3>
+                  <%if(userLogged.admin) { %>
+                    <h4>Administrador</h4>
+                <% }else{ %>
+                    <h4>Invitado</h4>
+                <%} %> 
+                  
+                </li>
                
-        <div class="container">
+              </ul>
+              <div class="links">
+                <a href="/user/editUserForm"><button class="follow">Editar Usuario</button></a>
+                <a href="/user/closeSesion"><button class="view">Cerrar sesión</button></a>
+              </div>
+            </div>
+          </div>
+               
+        <!-- <div class="container">
             <div class="card">
               <img src="<%= userLogged.imgPath%>" alt="Person" class="card__image">
               <br>
@@ -41,7 +70,8 @@
             </form>
               
           
-            </div>
+            </div> -->
+            
             
     </main>
    
