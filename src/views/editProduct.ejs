@@ -32,7 +32,7 @@
                      </div> 
                      <div>
                          <p>
-                                Sube imagenes del producto(máximo 6):
+                                Sube una imágen del producto:
                              <input type="file" name="imgPath" multiple accept="image/png, .jpeg, .jpg, image/gif"
                                       value="<%=items.imgPath%>" </input> </p> </div>
                     <div class="size">
@@ -51,15 +51,27 @@
                        </div> 
                     <div class="offer">
                             <label>¿Está en oferta?</label>
+                            <% if(items.offer == false) { %>
                             <div class="offerButtons">
-                                <input type="radio" name="offer" value="true">
+                                <input type="radio" name="offer" value="true" checked="false">
                                 Si 
                                 </input>
         
-                                <input type="radio" name="offer" value="false">
+                                <input type="radio" name="offer" value="flase" checked="true">
                                 No 
                                 </input>
                             </div>
+                            <% } else { %>
+                                <div class="offerButtons">
+                                    <input type="radio" name="offer" value="true" checked="true">
+                                    Si 
+                                    </input>
+            
+                                    <input type="radio" name="offer" value="false" checked="false">
+                                    No 
+                                    </input>
+                                </div>
+                                <%} %> 
                         </div>
                     
                 <div class="buttonBox">

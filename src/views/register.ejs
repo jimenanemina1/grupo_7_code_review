@@ -4,6 +4,8 @@
 <!-- Head -->
 <%- include("./partials/head.ejs") %>
 <link rel="stylesheet" href="/css/styles-register.css">
+<script type="module" src="/js/register/register.js" defer async></script>
+
 
 </head>
 <!-- Header -->
@@ -19,87 +21,92 @@
             </div>
         </div>
 
-        <form action="/user/register" method="post" enctype="multipart/form-data">
-
-            <div class="form-login-register">
-                <div class="nameField">
-                    <label>Nombre</label><input type="text" name="name" placeholder="Solo caracteres abc"
-                        value="<%= locals.oldData ? oldData.name: null %>">
-                    <% if (locals.errors && errors.name) { %>
-                    <div class="data-error">
-                        <%= errors.name.msg %>
-                    </div>
-                    <% } %>
+            <form action="/user/register" class="form-login-register" id="registration-form" method="post"
+                enctype="multipart/form-data">
+                <div class="errors">
+                    <ul></ul>
                 </div>
-                <div class="lastnameField">
-                    <label>Apellido</label><input type="text" name="lastname" placeholder="Solo caracteres abc"
-                        value="<%= locals.oldData ? oldData.lastname: null %>">
-                    <% if (locals.errors && errors.lastname) { %>
-                    <div class="data-error">
-                        <%= errors.lastname.msg %>
-                    </div>
-                    <% } %>
-                </div>
-                <div class="emailField">
-                    <label>Correo electrónico</label><input type="text" name="email" placeholder="minombre@xxxx.com.xx"
-                        value="<%= locals.oldData ? oldData.email: null %>">
-                    <% if (locals.errors && errors.email) { %>
-                    <div class="data-error">
-                        <%= errors.email.msg %>
-                    </div>
-                    <% } %>
-                </div>
-                <div class="passwordField">
-                    <label>Contraseña</label><input type="password" name="password"
-                        placeholder="Mínimo 6 carateres, una letra en mayúscula, un número y un caracter especial">
-                    <% if (locals.errors && errors.password) { %>
-                    <div class="data-error">
-                        <%= errors.password.msg %>
-                    </div>
-                    <% } %>
-                </div>
-                <div class="confirmPasswordField">
-                    <label>Confirmar contraseña</label><input type="password" name="confirmPassword"
-                        placeholder="Repite tu contraseña">
-                    <% if (locals.errors && errors.confirmPassword) { %>
-                    <div class="data-error">
-                        <%= errors.confirmPassword.msg %>
-                    </div>
-                    <% } %>
-                </div>
-                <div class="adminField">
-                    <label>Administrador</label>
-                    <div class="admin-input">
-                        <div>
-                            <input type="radio" name="admin" value="true"
-                                <%= locals.oldData && locals.oldData.admin == "true" ? "checked": null %>
-                                class="radio-inputs">
-                            Si
-
+                <div class="form-login-register">
+                    <div class="nameField">
+                        <label>Nombre</label><input type="text" name="name" placeholder="Solo caracteres abc"
+                            id="userName" value="<%= locals.oldData ? oldData.name: null %>">
+                        <% if (locals.errors && errors.name) { %>
+                        <div class="data-error">
+                            <%= errors.name.msg %>
                         </div>
-                        <div>
-                            <input type="radio" name="admin" value="false"
-                                <%= locals.oldData && locals.oldData.admin == "false" ? "checked": null %>
-                                class="radio-inputs">
-                            No
+                        <% } %>
+                    </div>
+                    <div class="lastnameField">
+                        <label>Apellido</label><input type="text" name="lastname" placeholder="Solo caracteres abc"
+                            id="userLastName" value="<%= locals.oldData ? oldData.lastname: null %>">
+                        <% if (locals.errors && errors.lastname) { %>
+                        <div class="data-error">
+                            <%= errors.lastname.msg %>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="emailField">
+                        <label>Correo electrónico</label><input type="text" name="email"
+                            placeholder="minombre@xxxx.com.xx" id="userEmail"
+                            value="<%= locals.oldData ? oldData.email: null %>">
+                        <% if (locals.errors && errors.email) { %>
+                        <div class="data-error">
+                            <%= errors.email.msg %>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="passwordField">
+                        <label>Contraseña</label><input type="password" name="password" id="userPassword"
+                            placeholder="Mínimo 6 carateres, una letra en mayúscula, un número y un caracter especial">
+                        <% if (locals.errors && errors.password) { %>
+                        <div class="data-error">
+                            <%= errors.password.msg %>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="confirmPasswordField">
+                        <label>Confirmar contraseña</label><input type="password" name="confirmPassword"
+                            id="userConfirmPassword" placeholder="Repite tu contraseña">
+                        <% if (locals.errors && errors.confirmPassword) { %>
+                        <div class="data-error">
+                            <%= errors.confirmPassword.msg %>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="adminField">
+                        <label>Administrador</label>
+                        <div class="admin-input">
+                            <div>
+                                <input type="radio" name="admin" value="true" id="userAdmin"
+                                    <%= locals.oldData && locals.oldData.admin == "true" ? "checked": null %>
+                                    class="radio-inputs">
+                                Si
+
+                            </div>
+                            <div>
+                                <input type="radio" name="admin" value="false" id="userAdmin"
+                                    <%= locals.oldData && locals.oldData.admin == "false" ? "checked": null %>
+                                    class="radio-inputs">
+                                No
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="avatarField">
-                    <label>Avatar</label><input type="file" name="avatar">
-                    <% if (locals.errors && errors.avatar) { %>
+                    <div class="avatarField" id="userAvatar">
+                        <label>Avatar</label><input type="file" name="avatar">
+                        <% if (locals.errors && errors.avatar) { %>
                         <div class="data-error">
                             <%= errors.avatar.msg %>
                         </div>
                         <% } %>
-                </div>
-                <div class="buttonBox">
-                    <div class="registerButton">
-                        <button type="submit">Registrarse</button>
+                    </div>
+                    <div class="buttonBox">
+                        <div class="registerButton">
+                            <button type="submit">Registrarse</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-    </div>
+        </div>
+  
 
 
     </form>

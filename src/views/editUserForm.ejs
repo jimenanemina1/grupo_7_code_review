@@ -67,23 +67,35 @@
                 <div class="adminField">
                     <label>Administrador</label>
                     <div class="admin-input">
+                    <%if(profile.admin = 1) { %>
                         <div>
-                            <input type="radio" name="admin" value="true"
-                                <%= locals.oldData && locals.oldData.admin == "true" ? "checked": null %>
+                            <input type="radio" name="admin" value="true" checked="true"
                                 class="radio-inputs">
-                            Si
-
+                            Si 
                         </div>
                         <div>
                             <input type="radio" name="admin" value="false"
-                                <%= locals.oldData && locals.oldData.admin == "false" ? "checked": null %>
                                 class="radio-inputs">
                             No
                         </div>
+                    <% }else{ %>
+                        <div>
+                            <input type="radio" name="admin" value="true" 
+                                class="radio-inputs">
+                            Si 
+                        </div>
+                        <div>
+                            <input type="radio" name="admin" value="false" checked="true"
+                                class="radio-inputs">
+                            No
+                        </div>
+                    <%} %> 
+
                     </div>
                 </div>
                 <div class="avatarField">
-                    <label>Avatar</label><input type="file" name="avatar">
+                   
+                    <label>Avatar</label><input type="file" name="avatar"  value="<%=profile.imgPath%>">
                     <% if (locals.errors && errors.avatar) { %>
                         <div class="data-error">
                             <%= errors.avatar.msg %>

@@ -6,8 +6,13 @@ const session = require("express-session");
 var cookieParser = require('cookie-parser')
 
 
+
+// ************ express() cords************
+const cors = require('cors');
 // ************ express() ************
 const app = express();
+
+app.use(cors({ origin: '*' }));
 
 const userLogged = require("./middlewares/userLogged.js")
 //************ app() listen ************
@@ -41,6 +46,11 @@ app.set("views", path.resolve(__dirname, "./views"));
 // ************ Route System require and use() ************
 const mainRouter = require("./routers/main");
 const userRouter = require("./routers/user");
+////codigo nuevo apis /////////
+const categoryApiRouter = require("./routers/api/category");
+const userApiRouter = require("./routers/api/user");
+const productApiRouter = require("./routers/api/product");
+const orderApiRouter = require("./routers/api/order");
 const adminRouter = require("./routers/admin");
 const productRouter = require("./routers/products");
 const shoppingCartRouter = require("./routers/shoppingCart");
@@ -50,4 +60,8 @@ app.use("/user", userRouter);
 app.use("/admin", adminRouter);
 app.use("/products", productRouter);
 app.use("/shopping-cart", shoppingCartRouter);
-
+////codigo nuevo apis /////////
+app.use("/api/user", userApiRouter)
+app.use("/api/product", productApiRouter)
+app.use("/api/order", orderApiRouter)
+app.use("/api/category", categoryApiRouter)
