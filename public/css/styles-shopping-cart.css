@@ -14,10 +14,10 @@ div.img-product{
     justify-content: center;
 }
 img.product_img{
-    width: 70%;
+    width: 50%;
 }
 hr{
-    width: 70%;
+    width: 50%;
     margin: auto;
     margin-top: 2px;
 }
@@ -33,7 +33,7 @@ article div.main-article{
     text-align: center;
 }
 article div.main-article div.price{
-    display: flex;
+    /*display: flex;*/
     justify-content: space-evenly;
 }
 article div.main-article div.price p.price{
@@ -69,16 +69,23 @@ article div.main-article div.pay button{
 }
 div.back-to-buy{
     width: 210px;
+    align-self: center;
 }
 div.back-to-buy a{
     text-decoration: none;
     color: black;
 }
+div.another-container{
+display: flex;
+margin-left: 8%;
+justify-content: space-between;
+}
 div.form{
     display: flex;
 }
 div.textarea textarea{
-    width: 100%;
+    width: 80%;
+    height: 80px;
 }
 #footer{
     position: static; 
@@ -122,13 +129,14 @@ div.textarea textarea{
 @media (min-width: 769px){
     div.img-product{
         background-color: #fff; 
-        /* padding-top: 350px;    */
         display: flex;
         flex-direction: row-reverse;
     }
     article{
         display: flex;
         flex-direction: row;
+        width: 75%;
+        margin-left: 8%;
     }
     article div.main-article{
         width: 100%;
