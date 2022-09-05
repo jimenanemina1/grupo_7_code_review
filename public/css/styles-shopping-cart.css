@@ -87,10 +87,7 @@ div.textarea textarea{
     width: 80%;
     height: 80px;
 }
-#footer{
-    position: static; 
-    
-}
+
 @media (max-width: 361px){
     div.spinner button.quantityMas{
         font-size: 1rem;

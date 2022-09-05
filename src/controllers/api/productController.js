@@ -5,7 +5,7 @@ const products = require("../data");
 module.exports = {
     
     listAll : async(req, res)  => {
-        const limit = 10;
+        const limit = 50;
         const offset = req.query.page && req.query.page > 0 ? req.query.page : 0;
         const url = 'localhost:3001/api/product/'
         let productsArray = [];

@@ -78,7 +78,6 @@ window.onload = function(){
                 ulErrors.innerHTML += `<li >  ${errors[i]} </li>`;
             };
         }else{
-            alert('La validación fué exitosa')
             form.submit();
         }
 
